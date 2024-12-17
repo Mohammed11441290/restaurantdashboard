@@ -1,0 +1,127 @@
+@media only screen and (max-width: 920px) {
+    .user-info-header {
+        display: flex;
+        justify-content: flex-start;
+        gap: 12px;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    .barcode-img {
+        position: relative !important;
+        top: 0px !important;
+    }
+    html[lang="ar"] .user-box {
+      right: -180px;
+      
+  }
+  .sidpar {
+    position: absolute;
+    z-index: 3;
+  }
+  .lang-1 {
+    display: none;
+    } 
+    // .lang-changer-2 {
+    //     display: block;
+    // }
+  }
+@media only screen and (max-width: 780px) {
+    .logo, 
+    .topbar-date, 
+    .option-one,
+    .user-info {
+        display: none !important; 
+    }
+    .admin-top-bar {
+        padding: 10px 0px;
+    }
+    #mobile-icon span {
+        width: 31px;
+        height: 5px;
+        background-color:var(--text-color-Normal);
+        display: block;
+        margin: 4px 0px;
+        border-radius: 20px;
+    }
+    .user-avatar{
+        border: 1px solid var(--surface-container);
+        border-radius: 6px;
+    }
+
+    .expanded {
+        display: block !important;
+        transition: all .3s ease-in;
+    }
+    .sidpar {
+        display: none;
+    }
+    .buttom-colection-one {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .buttom-colection-one h3 {
+        width: 49%;
+    }
+
+    #details1 li {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 33%;
+    }
+    .chart-container {
+        width: 75%;
+        margin-bottom: 15px;
+    }
+    .buttom-tow, .buttom-one  {
+        padding: 16px 3px;
+    }
+    .buttom-colection-one {
+        margin-top: 5px;
+    }
+    .order-page-header {
+        flex-direction: column;
+        align-items: first baseline;
+    }
+    .order-page-header .page-headrer-title {
+        margin-bottom: 11px;
+    }
+    .stepper-wrapper {
+        flex-wrap: wrap;
+      }
+    .stepper-item {
+        width: 49%;
+        flex: auto;
+        margin-bottom: 24px;
+        text-align: center;
+    }
+    .stepper-item::after {
+        position: relative !important;
+        content: none !important;
+    }
+    .stepper-item::before {
+        position: relative !important;
+        content: none !important; 
+    }
+
+    .main-section {
+        margin: 0px 0pxpx;
+        width: 48%;
+    }
+    .main-section {
+        margin: 0px px;
+    }
+    .user-info-header {
+        justify-content: flex-start;
+    }
+    .sm-mb-2 {
+        margin-bottom: 10px;
+    }
+    
+
+   
+}
+@media only screen and (max-width: 668px) {
+   
+}

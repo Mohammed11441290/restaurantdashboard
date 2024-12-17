@@ -1,0 +1,128 @@
+// root style
+
+:root {
+    --body-background:white;
+
+    /* prrimary yellow */
+    --primary-color-yellow-light: #fff8e6;
+    --primary-color-yellow-Light-hover: #fff5d9;
+    --primary-color-yellow-light-active: #ffeab0;
+    --primary-color-yellow-Normal: #ffba00;
+    --primary-color-yellow-Normal-hover:#e6a700 ;
+    --primary-color-yellow-Normal-active: #cc9500;
+
+    /* dark mode */
+    --primary-color-yellow-Dark: #bf8c00;
+    --primary-color-yellow-Dark-hover: #997000;
+    --primary-color-yellow-Dark-active: #735400;
+    --primary-color-yellow-Darker: #594100;
+  
+    /* primary red */
+    --primary-color-red-light: #fceaea;
+    --primary-color-red-Light-hover: #fbdfdf;
+    --primary-color-red-light-active: #f6bdbd;
+    --primary-color-red-Normal: #e32929;
+    --primary-color-red-Normal-hover:#cc2525 ;
+    --primary-color-red-Normal-active: #b62121;
+
+      /* dark mode */
+    --primary-color-red-Dark: #aa1f1f;
+    --primary-color-red-Dark-hover: #881919;
+    --primary-color-red-Dark-active: #661212;
+    --primary-color-red-Darker: #4f0e0e;
+
+
+/* color primary */
+    --primary-color-white:#FFFFFF;
+    --primary-color-Light:#EAEDFC;
+    --primary-color-Normal:#2F4CDD;
+    --primary-color-sucsess:#0d5f18;
+/* color socndary */
+--secondary-color-Normal:#FFA000;
+
+    /* icon background */
+    --icon-background:#d2d8c82e;
+    --secondary-color-avatar:#FFA000;
+
+    /* text-color */
+   
+    --text-color-light:#EBEEF2;
+    --text-color-Lighter:#B2BBC6;
+    --text-color-Normal:#546881;
+    --text-color-Dark:#1D242D;
+    --text-color-Darker:#090B0E;
+
+    /* background */
+    --surface-container:#EBEEF2;
+    --surface-bright:#F9FAFB;
+    --surface-dim:#F5F7F9;
+    --surface-dim-2:#F5F7F9;
+    --surface-dim-tow:#c3d5eb57;
+    --btn-gb-one:#98c0f038;
+
+
+    /* input color */
+    --input-border-color:#DAE2EB;
+    --input-background-color:#F2F4F7;
+    --input-placeholder-color:#A6B5C8;
+
+    /* font */
+
+    --cairo-ExtraLight:"cairo-ExtraLight";
+    --cairo-light:"cairo-Light";
+    --cairo-Regular:"cairo-Regular";
+    --cairo-Medium:"cairo-Medium";
+    --cairo-Bold:"cairo-Bold";
+    --cairo-Bold:"cairo-extrabold";
+    --cairo-simebold:"cairo-simebold";
+    --cairo-Black:"cairo-Black";
+
+    /* box-shadow */
+
+
+    // icon size
+    --size-icon-one:22px;
+    --size-icon-tow:20px;
+
+
+
+
+}
+
+// dark mode
+.dark-mode {
+/* color primary */
+--body-background:white;
+--primary-color-white:#FFFFFF;
+--primary-color-Light:#272B3C;;
+--primary-color-Normal:#2F4CDD;
+
+/* color socndary */
+--secondary-color-Normal:#FFA000;
+
+/* icon background */
+--icon-background:#d2d8c82e;
+--secondary-color-avatar:#FFA000;
+
+/* text-color */
+
+--text-color-light:#EBEEF2;
+--text-color-Lighter:#B2BBC6;
+--text-color-Normal:#ffffff;
+--text-color-Dark:#ffffff;
+--text-color-Darker:#ffffff;
+
+/* background */
+--surface-container:#121314;
+--surface-bright:#1f1c2d;
+--surface-dim:#0000009C;
+--surface-dark:#000000;
+--surface-dim-2:#f7f9fc;
+
+
+/* input color */
+--input-border-color:#DAE2EB;
+--input-background-color:#F2F4F7;
+--input-placeholder-color:#A6B5C8;
+
+}
