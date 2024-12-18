@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بيانات موظف</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- owl carousel  -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <!-- css style  -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.css">
+    <link rel="stylesheet" href="assets/css/vuesax.css">
+    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="stylesheet" href="assets/css/lib/datatable.css">
+    <link rel="stylesheet" href="assets/css/lib/air-datepicker.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/lib/jquery.mCustomScrollbar.css">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- 
+############################################
+## 1- language 
+############################################
+-->
+    <div class="show-option-menu">
+        <div class="option-box">
+            <div class="lang-option mb-2">
+                <p class="text-color-normal text-Small-Bolder mb-2">تغيير اللغة:</p>
+                <div class="lang-changer-2 bg-custom-color">
+                    <button id="btn-en-2" class="text-Small-Bold">EN</button>
+                    <button id="btn-ar-2" class="text-Small-Bold">AR</button>
+                </div>
+            </div>
+            <div class="color-settings">
+                <p class="text-color-normal text-Small-Bolder mb-2">اللون:</p>
+                <div class="colors-box d-flex">
+                    <button class="color-btn red" data-color="#FA5050"> </button>
+                    <button class="color-btn green" data-color="green"> </button>
+                    <button class="color-btn yellow" data-color="yellow"></button>
+                    <button class="color-btn orange" data-color="orange"></button>
+                    <button class="color-btn blue" data-color="blue"></button>
+                    <button class="color-btn purple" data-color="purple"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 
+############################################
+## 2- primary menu
+############################################
+ -->
+    <div class="container">
+        <!-- show export btn -->
+        <div class="modal-overlay" data-modal="export-data"></div>
+        <div class="modal-box" data-modal="export-data">
+            <div class=" text-color-normal mb-3 d-flex justify-content-between align-items-center">
+                <h3 class="text-Small-Bolder"> تصدير البيانات الى : </h3>
+                <h4 class="text-X-Small modal-close-icon-2 modal-close" data-modal="export-data"><i
+                        class="fa fa-close"></i></h4>
+                <!-- <span class="modal-close-icon"><i class="fa fa-close"></i></span> -->
+            </div>
+
+            <div class="invoice-section-five mt-2">
+                <a href="#" onclick="exporuserinfoToCSV()"><i class="fa fa-arrow-down"></i> CVS</a>
+                <a href="#" id="printuserinfo"><i class="fa fa-arrow-down"></i> PDF</a>
+                <a href="#" onclick="exportuserinfo()"> <i class="fa fa-arrow-down"></i> Excel</a>
+            </div>
+
+        </div>
+        <!-- show invoice -->
+        <div class="modal-overlay" data-modal="add-new-user"></div>
+        <div class="modal-box add-user-box" data-modal="add-new-user">
+            <div class="modal-box-header text-color-normal mb-3 d-flex justify-content-between align-items-center">
+                <h3 class="">اضافة موظف جديد </h3>
+                <h4 class="text-X-Small modal-close-icon-2 modal-close" data-modal="add-new-user"><i
+                        class="fa fa-close"></i></h4>
+                <!-- <span class="modal-close-icon"><i class="fa fa-close"></i></span> -->
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <label for="text mb-1" class="text-Small-light text-color-normal">اسم الموظف</label>
+
+                    <div class="add-user-input position-relative">
+                        <input type="text" class="input-one w-100 text-X-Small text-color-normal mt-2"
+                            placeholder="نص افتراضي">
+                        <i class="fa-regular fa-user"></i>
+
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <label for="text mb-1" class="text-Small-light text-color-normal"> اسم الموظف بالغة
+                        الانجليزية</label>
+
+                    <div class="add-user-input position-relative">
+                        <input type="text" class="input-one w-100 text-X-Small text-color-normal mt-2"
+                            placeholder="نص افتراضي">
+                        <i class="fa-regular fa-user"></i>
+
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <label for="text mb-1" class="text-Small-light text-color-normal">المنصب بالغة العربية</label>
+
+                    <div class="add-user-input position-relative">
+                        <input type="text" class="input-one w-100 text-X-Small text-color-normal mt-2"
+                            placeholder="نص افتراضي">
+                        <i class="fa-regular fa-user"></i>
+
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <label for="text mb-1" class="text-Small-light text-color-normal"> المنصب بالغة الانجليزية</label>
+
+                    <div class="add-user-input position-relative">
+                        <input type="text" class="input-one w-100 text-X-Small text-color-normal mt-2"
+                            placeholder="نص افتراضي">
+                        <i class="fa-regular fa-user"></i>
+
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <label for="text mb-1" class="text-Small-light text-color-normal"> رقم الجوال</label>
+
+                    <div class="add-user-input position-relative">
+                        <input type="text" class="input-one w-100 text-X-Small text-color-normal mt-2"
+                            placeholder="+249 99999999">
+                        <i class="fa-regular fa-user"></i>
+
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <label for="text mb-1" class="text-Small-light text-color-normal">الفرع</label>
+                    <div class="dropdown-tow w-100  mt-2">
+                        <select name="" id="" class="w-100  input-one text-Small-Bold text-color-normal">
+                            <option class="text-Small-Bold" value="">نص افتراضي</option>
+                            <option class="text-Small-Bold" value="">اختبار</option>
+                            <option class="text-Small-Bold" value="">خيار 2</option>
+
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <label for="text mb-1" class="text-Small-light text-color-normal"> عدد ساعات العمل</label>
+
+                    <div class="add-user-input position-relative">
+                        <input type="text" class="input-one w-100 text-X-Small text-color-normal mt-2"
+                            placeholder="نص افتراضي">
+                        <i class="fa-regular fa-watch-apple"></i>
+
+                    </div>
+                </div>
+                <div class="col-lg-12">
+
+                    <div class="add-day-items d-flex justify-content-between align-items-center mt-3">
+                        <label for="text mb-1" class="text-Small-light text-color-normal"> ايام العمل في الاسبوع</label>
+
+                        <div class="d-flex align-content-center">
+                            <input class="add-items-input-one ms-2 me-2" type="text" id="item-input"
+                                placeholder="اضافة يوم...">
+                            <button class="add-items-one" id="add-item">Add</button>
+                        </div>
+                    </div>
+
+                    <div class="add-user-input position-relative input-one list-items-one ">
+                        <!-- <input type="text" class="input-one w-100 text-X-Small text-color-normal mt-2" placeholder="+249 99999999">
+                     <i class="fa-regular fa-user"></i> -->
+
+
+
+                        <ul id="item-list"></ul>
+
+
+
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <label for="text mb-1" class="text-Small-light text-color-normal"> الصلاحيات</label>
+
+                    <div class="add-user-input position-relative">
+                        <input type="text" class="input-one w-100 text-X-Small text-color-normal mt-2"
+                            placeholder="+249 99999999">
+                        <i class="fa-regular fa-user"></i>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="invoice-section-five mt-2">
+                <a href="http://"><i class="fa fa-arrow-down w-50"></i> PDF</a>
+                <a href="http://"><i class="fa fa-arrow-down"></i> Excel</a>
+            </div>
+
+        </div>
+        <!-- add category -->
+        <div class="modal-overlay" data-modal="user-notification"></div>
+        <div class="modal-box" data-modal="user-notification">
+            <div class="modal-box-header text-color-normal mb-3 d-flex justify-content-between align-items-center">
+                <h3 class="">ملاحظات </h3>
+                <h4 class="text-X-Small modal-close-icon-2 modal-close" data-modal="user-notification"><i
+                        class="fa fa-close"></i></h4>
+                <!-- <span class="modal-close-icon"><i class="fa fa-close"></i></span> -->
+            </div>
+            <p class="text-X-Small text-color-normal">التاريخ: 10/10/2025 - الوقت:12/25 مساً</p>
+            <div class="order-deny-box ">
+                <textarea name="" class="" placeholder="يتم ظهور الملاحظة هنا لإن وجد.."> </textarea>
+            </div>
+
+
+
+
+        </div>
+        <!-- daily attendance -->
+        <div class="modal-overlay" data-modal="user-attendance"></div>
+        <div class="modal-box" data-modal="user-attendance">
+            <div class="modal-box-header text-color-normal mb-3 d-flex justify-content-between align-items-center">
+                <h3 class="">التحضير اليومي </h3>
+                <h4 class="text-X-Small modal-close-icon-2 modal-close" data-modal="user-attendance"><i
+                        class="fa fa-close"></i></h4>
+                <!-- <span class="modal-close-icon"><i class="fa fa-close"></i></span> -->
+            </div>
+            <div class="serach-one position-relative">
+                <input type="search" name="" id="" class="input-one w-100 text-X-Small "
+                    placeholder="بحث باسم او رقم الموظف">
+                <a class="search-btn"><i class="fa-regular fa-search"></i></a>
+            </div>
+            <div class="dropdown-tow">
+                <label for="" class="text-X-Small mb-1 text-color-normal">اسم الفرع</label>
+                <select name="" id="" class="w-100  input-one text-X-Small text-color-normal">
+                    <option class="text-Small-Bold" value="">الفرع الرئيسي</option>
+                    <option class="text-Small-Bold" value="">نسبة مئوية</option>
+                </select>
+            </div>
+            <div class="user-account-top bg-bright  rounded-5 p-1 mt-3 d-flex align-items-center justify-content-between icon-box position-relative"
+                data-target=".user-box">
+                <div class="d-flex align-items-center">
+                    <div class="user-avatar">
+                        <img src="assets/image/icon/02.png" alt="">
+                        <i class="icon-home"></i>
+                    </div>
+                    <div class="user-info">
+                        <h3 class="u-name text-Small-Bold text-color-darck">محمد عبد الحميد ناجي</h3>
+                        <p class="u-name text-color-normal text-X-Small">مسؤول مبيعات</p>
+                    </div>
+                </div>
+                <div class="icon-tow">
+                    <i class="fa fa-trash"></i>
+                </div>
+            </div>
+            <div class="dropdown-tow mt-2">
+                <label for="" class="text-X-Small mb-1 text-color-normal">نوع التحضير</label>
+                <select name="" id="" class="w-100  input-one text-X-Small text-color-normal">
+                    <option class="text-Small-Bold" value="">انصراف</option>
+                    <option class="text-Small-Bold" value="">استئذان</option>
+                    <option class="text-Small-Bold" value="">غياب</option>
+                </select>
+            </div>
+            <div class="time-tow row">
+                <div class="col-lg-6">
+                    <label for="text" class="text-small text-color-normal"> وقت الحضور</label>
+                    <div class="input-container position-relative mt-2">
+                        <input id="timpickers2" value="sdsdsd" type="text"
+                            class="position-relative input-one w-100 text-xxl-start text-color-normal"
+                            placeholder="12:00 AM">
+                        <span class="input-icon text-color-normal"><i class="fa-regular fa-clock"></i></span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <label for="text" class="text-small text-color-normal"> وقت الانصراف</label>
+                    <div class="input-container position-relative mt-2">
+                        <input id="timpickers2" value="sdsdsd" type="text"
+                            class="position-relative input-one w-100 text-xxl-start text-color-normal"
+                            placeholder="12:00 AM">
+                        <span class="input-icon text-color-normal"><i class="fa-regular fa-clock"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="order-deny-box ">
+                <textarea name="" class="" placeholder="اضافة تعليق"> </textarea>
+            </div>
+
+
+
+            <div class="model-btn d-flex justify-content-between mt-3">
+                <a class="cancle-btn-three modal-close  w-50 text-center" href="#" title="اغلاغ"
+                    data-modal="user-attendance">الغاء</a>
+                <a class="save-btn-three  w-50 text-center" href="#" title="حفظ">حفظ</a>
+            </div>
+        </div>
+        <!-- model- delete -->
+        <div class="modal-overlay" data-modal="delete-category"></div>
+        <div class="modal-box" data-modal="delete-category">
+            <div class="model-delete-icon text-center mb-2">
+                <i class="fa fa-trash-alt"></i>
+            </div>
+            <div class="delete-box-content text-center">
+                <h3 class="text-Small-Bold text-color-darck">هل انت متاكد من هذف الصنف</h3>
+                <p class="text-X-Small text-color-normal">يرجى العلم انه في حالة حذف الصنف لا يمكن استرجاعه مرة اخرى</p>
+            </div>
+
+            <div class="model-btn d-flex justify-content-between mt-3">
+                <a class="cancle-btn-one modal-close" href="#" title="اغلاغ" data-modal="delete-category">الغاء</a>
+                <a class="save-btn-one" href="#" title="اغلاغ">حفظ</a>
+            </div>
+        </div>
+    </div>
+    <div class="admin-top-bar">
+        <div class="container-fluid">
+            <div class="d-flex justify-content-between  align-items-center">
+                <div class="top-bar-right d-flex align-items-center">
+                    <div class="mobile-icon" id="mobile-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="logo">
+                        <a href=""> <img src="assets/image/Logo.png" alt=""></a>
+                    </div>
+                    <div class="topbar-date text-color-normal text-small ms-1 me-1">
+                        <p class="">الاربعاء</p>
+                        <p>11 فبراير 12:30 مساءا</p>
+                    </div>
+                </div>
+                <div class="top-bar-left d-flex align-items-center">
+                    <div class="lang-changer bg-custom-color lang-1">
+                        <button id="btn-en" class="text-Small-Bold">EN</button>
+                        <button id="btn-ar" class="text-Small-Bold">AR</button>
+                    </div>
+                    <div class="settings">
+                        <span class="bg-custom-color show-option-btn"><i class="fa fa-gear"></i></span>
+                    </div>
+                    <div class="order-status d-flex align-items-center me-2 ms-2">
+                        <span class="toggle-text text-X-Small text-color-darck"></span>
+                        <div class="toggle-btn" data-toggle-id="open-close-toggole" data-on-text="مفتوح"
+                            data-off-text="مغلق">
+                            <span class="toggle-circle noyes bg-custom-color"></span>
+                        </div>
+                    </div>
+                    <div class="website-mode" id="toggle-dark-mode">
+                        <span class="theme-color  icon-size-one"><i class="fa fa-moon"></i></span>
+                    </div>
+
+                    <div class="color-option d-flex position-relative">
+                        <a href="#" class="hide-mobile icon-box icon-size-one select-color theme-color"><i
+                                class="fa-solid fa-circle-half-stroke "></i></a>
+
+                        <div class="color-slection">
+                            <p class="text-color-normal text-small mb-2">اللون:</p>
+                            <div class="colors-box d-flex">
+                                <button class="color-btn red" data-color="#FA5050"> </button>
+                                <button class="color-btn green" data-color="green"> </button>
+                                <button class="color-btn yellow" data-color="yellow"></button>
+                                <button class="color-btn orange" data-color="orange"></button>
+                                <button class="color-btn blue" data-color="blue"></button>
+                                <button class="color-btn purple" data-color="purple"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notefication-icon d-flex position-relative">
+                        <a href="#" class=" hide-mobile icon-box icon-size-one theme-color"><i
+                                class="fa fa-basket-shopping"></i></a>
+                        <a href="#" class="icon-box icon-size-one theme-color position-relative"
+                            data-target=".notification"><span class="sms-notification bg-custom-color">18</span><i
+                                class="fa fa-bell"></i></a>
+                        <div class="popup-box notification">
+                            <div class="notification-box new-order notification-type-new-order d-flex">
+                                <div class="notification-icon">
+                                    <i class="fa fa-basket-shopping-plus"></i>
+                                </div>
+                                <div class="notification-content w-100">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <h3 class="user-name text-Small-Bold">طلب جديد</h3>
+                                        <p class="time text-small">5:19 AM</p>
+                                    </div>
+                                    <div class="notification-supcontent d-flex">
+                                        <h3 class="text-Small-light">رقم الطلب : <span
+                                                class="text-XX-Small">334222</span></h3>
+                                        <h3 class="text-Small-light">طريقة الدفع : <span class="text-XX-Small">حوالة
+                                                بنكية</span></h3>
+                                        <h3 class="text-Small-light">نوع الوحدة : <span class="text-XX-Small">هنا</span>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="notification-box order-done notification-type-done d-flex">
+                                <div class="notification-icon theme-color">
+                                    <i class="fa fa-check-circle"></i>
+                                </div>
+                                <div class="notification-content w-100">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <h3 class="user-name text-Small-Bold">تم تاكيد الحجز</h3>
+                                        <p class="time text-small">5:19 AM</p>
+                                    </div>
+                                    <div class="notification-supcontent d-flex">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="notification-box new-book notification-type-cancel-order d-flex">
+                                <div class="notification-icon theme-color">
+                                    <i class="fa fa-basket-shopping-plus"></i>
+                                </div>
+                                <div class="notification-content w-100">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <h3 class="user-name text-Small-Bold">طلب جديد</h3>
+                                        <p class="time text-small">AM 5:19 </p>
+                                    </div>
+                                    <div class="notification-supcontent d-flex">
+                                        <h3 class="text-Small-light">رقم الطلب : <span
+                                                class="text-XX-Small">334222</span></h3>
+                                        <h3 class="text-Small-light">اسم الموظف : <span class="text-XX-Small">حمد
+                                                هلال</span></h3>
+                                        <h3 class="text-Small-light">المبلغ : <span class="text-XX-Small">120
+                                                ريال</span></h3>
+                                        <h3 class="text-Small-light">طريقة الاستلام : <span class="text-XX-Small"> <i
+                                                    class="fa-regular fa-envelope"></i> البريد</span></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="notification-box cancel-order notification-type-new-order d-flex">
+                                <div class="notification-icon">
+                                    <i class="fa fa-circle-xmark"></i>
+                                </div>
+                                <div class="notification-content w-100">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <h3 class="user-name text-Small-Bold">طلب ملغي</h3>
+                                        <p class="time text-small">5:19 AM</p>
+                                    </div>
+                                    <div class="notification-supcontent d-flex justify-content-between">
+                                        <h3 class="text-Small-light">رقم الطلب : <span
+                                                class="text-XX-Small">334222</span></h3>
+                                        <h3 class="text-Small-light">اسم الموظف : <span class="text-XX-Small">حمد
+                                                هلال</span></h3>
+                                        <h3 class="text-Small-light">المبلغ : <span class="text-XX-Small">120
+                                                ريال</span></h3>
+                                        <h3 class="text-Small-light">طريقة الاستلام : <span class="text-XX-Small"> <i
+                                                    class="fa-thin fa-envelope"></i>البريد </span></h3>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <a href="" class="all-message text-Small-Bold">مشاهدة كل الاشعارات</a>
+                        </div>
+                        <a href="#" class="sms-popup icon-box icon-size-one theme-color position-relative"
+                            data-target=".sms"><span class="sms-notification bg-custom-color">12</span><i
+                                class="fa fa-envelope"></i></a>
+                        <div class="popup-box sms">
+                            <div class="message-box d-flex align-items-center">
+                                <div class="user-img">
+                                    <img src="assets/image/Avatar.png" alt="" width="50px" height="50px">
+                                </div>
+                                <div class="mesage-content">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <h3 class="user-name text-Small-Bold">حسن حسني</h3>
+                                        <p class="time text-small">5:19 AM</p>
+                                    </div>
+                                    <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، </p>
+                                </div>
+                            </div>
+                            <div class="message-box d-flex align-items-center">
+                                <div class="user-img">
+                                    <img src="assets/image/Avatar.png" alt="" width="50px" height="50px">
+                                </div>
+                                <div class="mesage-content">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <h3 class="user-name text-Small-Bold">حسن حسني</h3>
+                                        <p class="time text-small">5:19 AM</p>
+                                    </div>
+                                    <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، </p>
+                                </div>
+                            </div>
+                            <div class="message-box d-flex align-items-center">
+                                <div class="user-img">
+                                    <img src="assets/image/Avatar.png" alt="" width="50px" height="50px">
+                                </div>
+                                <div class="mesage-content">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <h3 class="user-name text-Small-Bold">حسن حسني</h3>
+                                        <p class="time text-small">5:19 AM</p>
+                                    </div>
+                                    <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، </p>
+                                </div>
+                            </div>
+                            <a href="" class="all-message text-Small-Bold">مشاهدة كل الرسائل</a>
+                        </div>
+                    </div>
+
+                    <div class="user-account-top d-flex align-items-center icon-box position-relative"
+                        data-target=".user-box">
+                        <div class="option-one">
+                            <img src="assets/image/icon/arrow-down.png" alt="">
+                        </div>
+                        <div class="user-info">
+                            <h3 class="u-name text-Small-Bold text-color-darck">محمد عبد الحميد ناجي</h3>
+                            <p class="u-name text-color-normal text-X-Small">مسؤول مبيعات</p>
+                        </div>
+                        <div class="user-avatar">
+                            <img src="assets/image/icon/02.png" alt="">
+                            <i class="icon-home"></i>
+
+                        </div>
+                        <div class="popup-box user-box">
+                            <ul class="user-list-links">
+                                <li class="text-X-Small text-color-normal"><span><i
+                                            class="fa-regular fa-pen-line"></i></span><a href=""
+                                        class="text-color-normal">تعديل بياناتي </a> </li>
+                                <li class="text-X-Small text-color-normal"><span><i
+                                            class="fa-regular fa-location-dot"></i></span><a href=""
+                                        class="text-color-normal">عنواني </a> </li>
+                                <li class="text-X-Small text-color-normal"><span><i
+                                            class="fa-regular fa-heart"></i></span><a href=""
+                                        class="text-color-normal">المفضلة </a> </li>
+                                <li class="text-X-Small text-color-normal"><span><i
+                                            class="fa-regular fa-cart-arrow-up"></i></span><a href=""
+                                        class="text-color-normal">طلباتي السابقة </a> </li>
+                                <li class="text-X-Small text-color-normal"><span><i
+                                            class="fa-regular fa-dashboard"></i></span><a href=""
+                                        class="text-color-normal">لوحة التحكم </a> </li>
+                                <li class="text-X-Small text-color-normal"><span><i
+                                            class="fa-regular fa-right-from-bracket"></i></span><a href=""
+                                        class="text-color-normal"> تسجيل الخروج</a> </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 
+############################################
+## main-content
+############################################
+-->
+    <div class="main-body">
+        <!-- 
+        ############################################
+        ## sidpar(main-menu)
+        ############################################
+        -->
+        <div class="sidpar">
+            <div class="main-menu " id="mein-menu">
+
+                <ul class="menu1">
+                    <li class="nav-link-1 active-link-one">
+                        <a href="24_creat-order.html"> <span class="theme-color icon-size-tow "><i
+                                    class="fa fa-user-group"></i></span> ادارةPOS </a>
+                    </li>
+                    <li class="nav-link-1">
+                        <a href="index.html"> <span class="theme-color icon-size-tow"><i
+                                    class="fa-light fa-display"></i></span> الاحصائيات والتقارير</a>
+                    </li>
+                    <!-- <li class="nav-link-1">
+                        <a href=""><span class="my-svg-object"><img src="assets/image/icon/category.png" alt=""></span> الاقسام والاصناف</a>
+                    </li> -->
+                    <li class="dropdown1 ">
+                        <a href="#" class="dropdown-btn nav-link-1 "><span class="theme-color icon-size-tow"><i
+                                    class="fa-regular fa-solid fa-grid-2"></i></span> الاقسام والاصناف <i
+                                class="fa fa-caret-down"></i> </a>
+                        <ul class="dropdown-container">
+                            <li class="nav-link-1"><a href="categorys.html" class=""><span
+                                        class="theme-color icon-size-tow active-dropdown"><i
+                                            class="fa-regular fa-diagram-cells"></i></span> الاقسام</a></li>
+                            <li class="nav-link-1"><a href="categorize.html"><span class="theme-color icon-size-tow"><i
+                                            class="fa-regular fa-grid-2"></i></span> الاصناف</a></li>
+                            <li class="nav-link-1"><a href="offer.html"><span class="theme-color icon-size-tow"><i
+                                            class="fa-regular fa-badge-percent"></i></span> العروض</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown1">
+                        <a href="#" class="dropdown-btn nav-link-1"><span class="theme-color icon-size-tow"><i
+                                    class="fa-regular fa-trash-can-undo"></i></span> إدارة الطلبات<i
+                                class="fa fa-caret-down"></i></a>
+                        <ul class="dropdown-container">
+                            <li class="nav-link-1"><a href="2_new-order.html" class=""><span
+                                        class="theme-color icon-size-tow active-dropdown"><i
+                                            class="fa-regular fa-arrow-right"></i></span> الطلبات الجديدة</a></li>
+                            <li class="nav-link-1"><a href="1_archiv-order.html"><span
+                                        class="theme-color icon-size-tow"><i class="fa-regular fa-archive"></i></span>
+                                    الطلبات المؤرشفة</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown1">
+                        <a href="#" class="dropdown-btn nav-link-1"><span class="theme-color icon-size-tow"> <i
+                                    class="fa fa-check-circle"></i></span> إدارة الحجوزات<i
+                                class="fa fa-caret-down"></i></a>
+                        <ul class="dropdown-container">
+                            <li class="nav-link-1"><a href="19_new-reserve.html"><span
+                                        class="theme-color icon-size-tow"><i
+                                            class="fa-regular fa-basket-shopping"></i></span> الحجوزات الجديدة</a></li>
+                            <li class="nav-link-1"><a href="20_old-reserved.html"><span
+                                        class="theme-color icon-size-tow"><i
+                                            class="fa-regular fa-basket-shopping-minus"></i></span> الحجوزات السابقة</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-link-1">
+                        <a href="4_user-managmet.html"><span class="theme-color icon-size-tow"><i
+                                    class="fa fa-user-group"></i></span> إدارة الموظفين</a>
+                    </li>
+                    <li class="nav-link-1">
+                        <a href="8_clints.html"><span class="theme-color icon-size-tow"><i
+                                    class="fa-regular fa-users"></i></span> العملاء</a>
+                    </li>
+                    <li class="dropdown1 ">
+                        <a href="#" class="dropdown-btn nav-link-1 "><span class="theme-color icon-size-tow "><i
+                                    class="fa-regular fa-solid fa-grid-2"></i></span> اعدادات المطعم <i
+                                class="fa fa-caret-down"></i> </a>
+                        <ul class="dropdown-container">
+                            <li class="nav-link-1"><a href="7_restrant-settings.html"><span
+                                        class="theme-color icon-size-tow"><i class="fa-regular fa-database"></i></span>
+                                    البيانات الاساسية</a></li>
+                            <li class="nav-link-1"><a href="11_manageing-delivery-offer.html"><span
+                                        class="theme-color icon-size-tow"><i
+                                            class="fa-regular fa-arrow-alt-right"></i></span> ادارة الطلبات والتوصيل</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown1">
+                        <a href="#" class=" dropdown-btn nav-link-1"><span class="theme-color icon-size-tow"><i
+                                    class=" fa-solid fa-gear"></i></span> الاعدادات <i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-container">
+                            <li class="nav-link-1"><a href="#"><span class="theme-color icon-size-tow"><i
+                                            class="fa-solid fa-section"></i></span> الاصناف</a></li>
+                            <li class="nav-link-1"><a href="#"><span class="theme-color icon-size-tow"><i
+                                            class="fa-solid fa-dial-off"></i></span> العروض</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="dropdown1">
+                        <a href="#" class=" dropdown-btn nav-link-1"><span class="theme-color icon-size-tow"><i
+                                    class="fa-regular fa-page"></i></span> إدارة الصفحات <i
+                                class="fa fa-caret-down"></i> </a>
+                        <ul class="dropdown-container">
+                            <li class="nav-link-1"><a href="15_privecy-policy.html"><span
+                                        class="theme-color icon-size-tow"><i
+                                            class="fa-regular fa-question-square"></i></span> سياية الخصوصية</a></li>
+                            <li class="nav-link-1"><a href="16_terms.html"><span class="theme-color icon-size-tow"><i
+                                            class="fa-regular fa-pager"></i></span> شروط الاستخدام</a></li>
+                            <li class="nav-link-1"><a href="17_about-us.html"><span class="theme-color icon-size-tow"><i
+                                            class="fa-regular fa-info-square"></i></span> من نحن</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-link-1">
+                        <a href="12_general-settings.html"><span class="theme-color icon-size-tow"><i
+                                    class="fa-regular fa-gear"></i></span> الإعدادات العامة</a>
+                    </li>
+                    <li class="nav-link-1">
+                        <a href="10_all-rating.html"><span class="theme-color icon-size-tow"><i
+                                    class="fa-solid fa-star-sharp-half-stroke"></i></span> التقييمات</a>
+                    </li>
+                    <li class="nav-link-1">
+                        <a href="14_cobon.html"><span class="theme-color icon-size-tow"><i
+                                    class="fa-solid fa-badge-percent"></i></span> القسائم الشرائية</a>
+                    </li>
+                    <li class="nav-link-1">
+                        <a href=""><span class="theme-color icon-size-tow"><i
+                                    class="fa-solid fa-barcode-read"></i></span> إدارة الباركود</a>
+                    </li>
+                    <li class="nav-link-1">
+                        <a href=""><span class="theme-color icon-size-tow"><i
+                                    class="fa-duotone fa-mountains"></i></span> إدارة الثيمات</a>
+                    </li>
+                    <li class="nav-link-1">
+                        <a href="29_seo.html"><span class="theme-color icon-size-tow"><i
+                                    class="fa-solid fa-link-horizontal-slash"></i></span> seo سيو</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 
+        ############################################
+        ## Pages content
+        ############################################
+        -->
+
+
+        <div class="main-content">
+            <div class="container-fluid">
+                <!-- 
+            ############################################
+            ## Pages headrer
+            ############################################
+            -->
+                <div class="page-header ">
+                    <div class="page-headrer-title flex-wrap row-gab">
+                        <h3 class="text-x-Small text-color-normal align-items-center"> ادارة الموظفين <i
+                                class="fa fa-arrow-right"></i></h3>
+                        <h4 class="text-color-normal"> بيانات الموظفين <i class="fa fa-arrow-right"></i></h4>
+                        <h4 class="text-color-darck"> بيانات موظف</h4>
+                    </div>
+                    <!-- <div class="page-headrer-button d-flex justify-content-between gap-2">
+                        <a id="open-modal" href="#" class="buttom-4 bg-custom-color open-modal" title="اضافة اسم " data-modal="add-new-user" >اضافة موظف جديد </a>
+                        <a href="4_edit-offer.html" class="buttom-five open-modal" title="اضافة اسم " data-modal="user-attendance"> <i class="fa fa-check-circle"></i> التحضير اليومي </a>
+                    </div> -->
+
+                </div>
+                <div class="page-header">
+                    <div class="user-info-header">
+                        <div class="row row-gab w-100">
+                            <div class="col-lg-3 col-md-4 col-12">
+                                <div class="main-section  w-100  user-account-top bg-bright  rounded-5 p-1 d-flex align-items-center justify-content-between  position-relative"
+                                    data-target=".user-box">
+                                    <div class="d-flex align-items-center">
+                                        <div class="user-avatar">
+                                            <img src="assets/image/icon/02.png" alt="">
+                                            <i class="icon-home"></i>
+                                        </div>
+                                        <div class="user-info-2">
+                                            <h3 class="u-name text-Small-Bold text-color-darck">محمد عبد الحميد ناجي
+                                            </h3>
+                                            <p class="u-name text-color-normal text-X-Small">شيف المعجنات</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6">
+                                <div class="main-section w-100 ">
+                                    <h3 class="text-color-normal text-X-Small mb-2">الفرع</h3>
+                                    <h3 class="text-color-darck text-Small-Bold">الفرع الرئيسي</h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6">
+                                <div class="main-section w-100 ">
+                                    <h3 class="text-color-normal text-X-Small mb-2">تاريخ بداية العمل</h3>
+                                    <h3 class="text-color-darck text-Small-Bold">4 فبراير 2024 </h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-6">
+                                <div class="main-section w-100">
+                                    <h3 class="text-color-normal text-X-Small mb-2">اجمالى ساعات العمل الشهري</h3>
+                                    <h3 class="text-color-darck text-Small-Bold">44 ساعة </h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-6 col-6">
+                                <div class="main-section w-100">
+                                    <h3 class="text-color-normal text-X-Small mb-2">رقم الجوال</h3>
+                                    <h3 class="text-color-darck text-Small-Bold"> +239 994866353 </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-content mt-3">
+                    <div class="filter-one mb-3">
+                        <div class="row row-gab">
+                            <div class="col-lg-8">
+                                <div class="row row-gab text-color-normal">
+                                    <div class="col-lg-3 col-md-3 col-6">
+                                        <div class="dropdown-tow">
+                                            <!-- <label for=""></label> -->
+                                            <input type="text" class="datepicker1 text-color-normal input-one w-100"
+                                                id="" placeholder="1/1/2025">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-6">
+                                        <div class="dropdown-tow">
+                                            <!-- <label for=""></label> -->
+                                            <input type="text" class="datepicker1 text-color-normal input-one w-100"
+                                                id="" placeholder="1/1/2025">
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-6">
+                                        <div class="dropdown-tow">
+                                            <!-- <label for=""></label> -->
+                                            <select name="" id=""
+                                                class="w-100  dropdown-three text-X-Small text-color-normal">
+                                                <option class="text-Small-Bold" value="">الحالة</option>
+                                                <option class="text-Small-Bold" value="">حاضر</option>
+                                                <option class="text-Small-Bold" value="">غياب</option>
+                                                <option class="text-Small-Bold" value=""> استاذن(2.س)</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-6">
+                                        <div class="serach-one position-relative">
+                                            <input type="search" name="" id="customSearchBox"
+                                                class="text-color-normal search-input-one w-100 text-X-Small "
+                                                placeholder="بحث باسم ال....ت">
+                                            <a class="search-btn"><i class="fa-regular fa-search"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <div class="dilter-btns d-flex justify-content-end align-items-center">
+                                    <!-- <a href="" class="filter-btn-one text-X-Small text-color-normal" > <i class="fa-regular fa-filter"></i> فلترة </a> -->
+                                    <a href=""
+                                        class="filter-btn-one sm-filter-btn-one text-X-Small text-color-normal open-modal "
+                                        data-modal="export-data"> <i class="fa-regular fa-file-export"></i> تصدير </a>
+                                    <!-- <a href="" class="filter-btn-one text-X-Small text-color-normal" > <i class="fa-regular fa-print"></i> طباعة </a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-container">
+                        <table class="table-one row-border stripe hover nowrap " id="datatable7">
+                            <thead class="table-headre bg-custom-color-2">
+                                <tr class="primary-text-color text-Small-Bold">
+                                    <th class="theme-color">اليوم </th>
+                                    <th class="theme-color">تسجيل الدخول </th>
+                                    <th class="theme-color">تسجيل الخروج</th>
+                                    <th class="text-center theme-color">عدد ساعات العمل</th>
+                                    <th class="text-center theme-color">الحالة</th>
+                                    <th class="text-center theme-color"> ملاحظات</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="text-x-Small">
+                                    <td>01/03</td>
+                                    <td class="text-XX-Small text-center">08:00 صباحا <br> اسم الموظف</td>
+                                    <td class="text-XX-Small text-center">08:00 صباحا <br> اسم الموظف</td>
+                                    <td class="text-XX-Small text-center">9 ساعات</td>
+
+                                    <td class="text-XX-Small text-center "><span class="red-alert-1">غياب</span></td>
+                                    <td class="text-XX-Small text-center open-modal-1 " data-modal="user-notification">
+                                        ---</td>
+
+                                </tr>
+                                <tr class="text-x-Small">
+                                    <td>01/03</td>
+                                    <td class="text-XX-Small text-center">08:00 صباحا <br> اسم الموظف</td>
+                                    <td class="text-XX-Small text-center">08:00 صباحا <br> اسم الموظف</td>
+                                    <td class="text-XX-Small text-center">9 ساعات</td>
+
+                                    <td class="text-XX-Small text-center "> <span class="green-alert-1">حاضر</span></td>
+                                    <td class="text-XX-Small text-center">يتم ظهور الملاحظة هنا لإن وجد..</td>
+
+                                </tr>
+                                <tr class="text-x-Small">
+                                    <td>01/03</td>
+                                    <td class="text-XX-Small text-center">08:00 صباحا <br> اسم الموظف</td>
+                                    <td class="text-XX-Small text-center">08:00 صباحا <br> اسم الموظف</td>
+                                    <td class="text-XX-Small text-center">9 ساعات</td>
+
+                                    <td class="text-XX-Small text-center "> <span
+                                            class="orange-alert-1">استاذن(2.س)</span></td>
+                                    <td class="text-XX-Small text-center">يتم ظهور الملاحظة هنا لإن وجد..</td>
+
+                                </tr>
+                                <tr class="text-x-Small">
+                                    <td>01/03</td>
+                                    <td class="text-XX-Small text-center">08:00 صباحا <br> اسم الموظف</td>
+                                    <td class="text-XX-Small text-center">08:00 صباحا <br> اسم الموظف</td>
+                                    <td class="text-XX-Small text-center">9 ساعات</td>
+
+                                    <td class="text-XX-Small text-center "> <span
+                                            class="orange-alert-1">استاذن(2.س)</span></td>
+                                    <td class="text-XX-Small text-center">يتم ظهور الملاحظة هنا لإن وجد..</td>
+
+                                </tr>
+                                <tr class="text-x-Small">
+                                    <td>01/03</td>
+                                    <td class="text-XX-Small text-center">08:00 صباحا <br> اسم الموظف</td>
+                                    <td class="text-XX-Small text-center">08:00 صباحا <br> اسم الموظف</td>
+                                    <td class="text-XX-Small text-center">9 ساعات</td>
+
+                                    <td class="text-XX-Small text-center "> <span
+                                            class="orange-alert-1">استاذن(2.س)</span></td>
+                                    <td class="text-XX-Small text-center">يتم ظهور الملاحظة هنا لإن وجد..</td>
+
+                                </tr>
+
+                                <tr class="text-x-Small">
+                                    <td>01/03</td>
+                                    <td class="text-XX-Small text-center">08:00 صباحا <br> اسم الموظف</td>
+                                    <td class="text-XX-Small text-center">08:00 صباحا <br> اسم الموظف</td>
+                                    <td class="text-XX-Small text-center">9 ساعات</td>
+
+                                    <td class="text-XX-Small text-center "><span class="red-alert-1">غياب</span></td>
+                                    <td class="text-XX-Small text-center open-modal-1 " data-modal="user-notification">
+                                        ---</td>
+
+                                </tr>
+                                <tr class="text-x-Small">
+                                    <td>01/03</td>
+                                    <td class="text-XX-Small text-center">08:00 صباحا <br> اسم الموظف</td>
+                                    <td class="text-XX-Small text-center">08:00 صباحا <br> اسم الموظف</td>
+                                    <td class="text-XX-Small text-center">9 ساعات</td>
+
+                                    <td class="text-XX-Small text-center "> <span class="green-alert-1">حاضر</span></td>
+                                    <td class="text-XX-Small text-center">يتم ظهور الملاحظة هنا لإن وجد..</td>
+
+                                </tr>
+                                <tr class="text-x-Small">
+                                    <td>01/03</td>
+                                    <td class="text-XX-Small text-center">08:00 صباحا <br> اسم الموظف</td>
+                                    <td class="text-XX-Small text-center">08:00 صباحا <br> اسم الموظف</td>
+                                    <td class="text-XX-Small text-center">9 ساعات</td>
+
+                                    <td class="text-XX-Small text-center "> <span
+                                            class="orange-alert-1">استاذن(2.س)</span></td>
+                                    <td class="text-XX-Small text-center">يتم ظهور الملاحظة هنا لإن وجد..</td>
+
+                                </tr>
+                                <tr class="text-x-Small">
+                                    <td>01/03</td>
+                                    <td class="text-XX-Small text-center">08:00 صباحا <br> اسم الموظف</td>
+                                    <td class="text-XX-Small text-center">08:00 صباحا <br> اسم الموظف</td>
+                                    <td class="text-XX-Small text-center">9 ساعات</td>
+
+                                    <td class="text-XX-Small text-center "> <span
+                                            class="orange-alert-1">استاذن(2.س)</span></td>
+                                    <td class="text-XX-Small text-center">يتم ظهور الملاحظة هنا لإن وجد..</td>
+
+                                </tr>
+                                <tr class="text-x-Small">
+                                    <td>01/03</td>
+                                    <td class="text-XX-Small text-center">08:00 صباحا <br> اسم الموظف</td>
+                                    <td class="text-XX-Small text-center">08:00 صباحا <br> اسم الموظف</td>
+                                    <td class="text-XX-Small text-center">9 ساعات</td>
+
+                                    <td class="text-XX-Small text-center "> <span
+                                            class="orange-alert-1">استاذن(2.س)</span></td>
+                                    <td class="text-XX-Small text-center">يتم ظهور الملاحظة هنا لإن وجد..</td>
+
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="pagination">
+                    <div class="pag-number">
+                        <ul class="d-flex">
+                            <li><a class="theme-color prev" href="#"><i class="fa fa-arrow-circle-right"></i></a></li>
+                            <li class="page-numbers d-flex"></li>
+                            <li><a class="theme-color next" href="#"><i class="fa fa-arrow-circle-left"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="pag-text">
+                        <p class="text-X-Small text-color-normal" id="pageInfoText">اظهار1 الي 10 من اصل 34 مدخل</p>
+                        <div class="filter-one">
+                            <div class="dropdown-one theme-color">
+                                <select name="" id="itemsPerPage" class="theme-color">
+                                    <option value="5">5</option>
+                                    <option value="10">10</option>
+                                    <option value="15">15</option>
+                                    <option value="20">20</option>
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 
+############################################
+## footer 
+############################################
+-->
+    <div class="footer">
+        <p class="text-color-normal text-small">Arabia food 2024</p>
+    </div>
+
+    <script src="assets/script/lib/jquery.min.js"></script>
+    <script src="assets/script/lib/owl.carousel.min.js"></script>
+    <script src="assets/script/lib/chartjs.min.js"></script>
+    <script src="assets/script/lib/chartone.min.js"></script>
+    <script src="assets/script/chart.min.js"></script>
+    <script src="assets/script/lib/datatable-bootstrapp.js"></script>
+    <script src="assets/script/lib/datatables.js"></script>
+    <script src="assets/script/lib/air-datepicker.js"></script>
+    <script src="assets/script/data.js"></script>
+
+    <script src="assets/script/lib/xlsx.full.min.js"></script>
+    <script src="assets/script/lib/printThis.js"></script>
+    <script src="assets/script/export.js"></script>
+    <script src="assets/script/table.js"></script>
+    <script src="assets/script/lib/jquery.mousewheel.js"></script>
+    <script src="assets/script/lib/jquery.mCustomScrollbar.js"></script>
+
+    <script src="assets/script/mian.js"></script>
+
+</body>
+
+</html>

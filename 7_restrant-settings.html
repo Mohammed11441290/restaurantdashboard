@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بيانات الموظفين</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- owl carousel  -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <!-- css style  -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="assets/css/international-telephone-input.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.css">
+    <link rel="stylesheet" href="assets/css/lib/multi-select-tag.css">
+    <link rel="stylesheet" href="assets/css/vuesax.css">
+    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/lib/air-datepicker.css">
+    <link rel="stylesheet" href="assets/css/lib/selectize.min.css">
+    <link rel="stylesheet" href="assets/css/lib/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- 
+############################################
+## 1- language 
+############################################
+-->
+    <div class="show-option-menu">
+        <div class="option-box">
+            <div class="lang-option mb-2">
+                <p class="text-color-normal text-Small-Bolder mb-2">تغيير اللغة:</p>
+                <div class="lang-changer-2 bg-custom-color">
+                    <button id="btn-en-2" class="text-Small-Bold">EN</button>
+                    <button id="btn-ar-2" class="text-Small-Bold">AR</button>
+                </div>
+            </div>
+            <div class="color-settings">
+                <p class="text-color-normal text-Small-Bolder mb-2">اللون:</p>
+                <div class="colors-box d-flex">
+                    <button class="color-btn red" data-color="#FA5050"> </button>
+                    <button class="color-btn green" data-color="green"> </button>
+                    <button class="color-btn yellow" data-color="yellow"></button>
+                    <button class="color-btn orange" data-color="orange"></button>
+                    <button class="color-btn blue" data-color="blue"></button>
+                    <button class="color-btn purple" data-color="purple"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 
+############################################
+## 2- primary menu
+############################################
+ -->
+    <div class="admin-top-bar">
+        <div class="container-fluid">
+            <div class="d-flex justify-content-between  align-items-center">
+                <div class="top-bar-right d-flex align-items-center">
+                    <div class="mobile-icon" id="mobile-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="logo">
+                        <a href=""> <img src="assets/image/Logo.png" alt=""></a>
+                    </div>
+                    <div class="topbar-date text-color-normal text-small ms-1 me-1">
+                        <p class="">الاربعاء</p>
+                        <p>11 فبراير 12:30 مساءا</p>
+                    </div>
+                </div>
+                <div class="top-bar-left d-flex align-items-center">
+                    <div class="lang-changer bg-custom-color lang-1">
+                        <button id="btn-en" class="text-Small-Bold">EN</button>
+                        <button id="btn-ar" class="text-Small-Bold">AR</button>
+                    </div>
+                    <div class="settings">
+                        <span class="bg-custom-color show-option-btn"><i class="fa fa-gear"></i></span>
+                    </div>
+                    <div class="order-status d-flex align-items-center me-2 ms-2">
+                        <span class="toggle-text text-X-Small text-color-darck">مغلق</span>
+                        <div class="toggle-btn" data-toggle-id="open-close-toggole" data-on-text="مفتوح"
+                            data-off-text="مغلق">
+                            <span class="toggle-circle noyes bg-custom-color"></span>
+                        </div>
+                    </div>
+                    <div class="website-mode" id="toggle-dark-mode">
+                        <span class="theme-color  icon-size-one"><i class="fa fa-moon"></i></span>
+                    </div>
+
+                    <div class="color-option d-flex position-relative">
+                        <a href="#" class="hide-mobile icon-box icon-size-one select-color theme-color"><i
+                                class="fa-solid fa-circle-half-stroke "></i></a>
+
+                        <div class="color-slection">
+                            <p class="text-color-normal text-small mb-2">اللون:</p>
+                            <div class="colors-box d-flex">
+                                <button class="color-btn red" data-color="#FA5050"> </button>
+                                <button class="color-btn green" data-color="green"> </button>
+                                <button class="color-btn yellow" data-color="yellow"></button>
+                                <button class="color-btn orange" data-color="orange"></button>
+                                <button class="color-btn blue" data-color="blue"></button>
+                                <button class="color-btn purple" data-color="purple"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notefication-icon d-flex position-relative">
+                        <a href="#" class=" hide-mobile icon-box icon-size-one theme-color"><i
+                                class="fa fa-basket-shopping"></i></a>
+                        <a href="#" class="icon-box icon-size-one theme-color position-relative"
+                            data-target=".notification"><span class="sms-notification bg-custom-color">18</span><i
+                                class="fa fa-bell"></i></a>
+                        <div class="popup-box notification">
+                            <div class="notification-box new-order notification-type-new-order d-flex">
+                                <div class="notification-icon">
+                                    <i class="fa fa-basket-shopping-plus"></i>
+                                </div>
+                                <div class="notification-content w-100">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <h3 class="user-name text-Small-Bold">طلب جديد</h3>
+                                        <p class="time text-small">5:19 AM</p>
+                                    </div>
+                                    <div class="notification-supcontent d-flex">
+                                        <h3 class="text-Small-light">رقم الطلب : <span
+                                                class="text-XX-Small">334222</span></h3>
+                                        <h3 class="text-Small-light">طريقة الدفع : <span class="text-XX-Small">حوالة
+                                                بنكية</span></h3>
+                                        <h3 class="text-Small-light">نوع الوحدة : <span class="text-XX-Small">هنا</span>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="notification-box order-done notification-type-done d-flex">
+                                <div class="notification-icon theme-color">
+                                    <i class="fa fa-check-circle"></i>
+                                </div>
+                                <div class="notification-content w-100">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <h3 class="user-name text-Small-Bold">تم تاكيد الحجز</h3>
+                                        <p class="time text-small">5:19 AM</p>
+                                    </div>
+                                    <div class="notification-supcontent d-flex">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="notification-box new-book notification-type-cancel-order d-flex">
+                                <div class="notification-icon theme-color">
+                                    <i class="fa fa-basket-shopping-plus"></i>
+                                </div>
+                                <div class="notification-content w-100">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <h3 class="user-name text-Small-Bold">طلب جديد</h3>
+                                        <p class="time text-small">AM 5:19 </p>
+                                    </div>
+                                    <div class="notification-supcontent d-flex">
+                                        <h3 class="text-Small-light">رقم الطلب : <span
+                                                class="text-XX-Small">334222</span></h3>
+                                        <h3 class="text-Small-light">اسم الموظف : <span class="text-XX-Small">حمد
+                                                هلال</span></h3>
+                                        <h3 class="text-Small-light">المبلغ : <span class="text-XX-Small">120
+                                                ريال</span></h3>
+                                        <h3 class="text-Small-light">طريقة الاستلام : <span class="text-XX-Small"> <i
+                                                    class="fa-regular fa-envelope"></i> البريد</span></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="notification-box cancel-order notification-type-new-order d-flex">
+                                <div class="notification-icon">
+                                    <i class="fa fa-circle-xmark"></i>
+                                </div>
+                                <div class="notification-content w-100">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <h3 class="user-name text-Small-Bold">طلب ملغي</h3>
+                                        <p class="time text-small">5:19 AM</p>
+                                    </div>
+                                    <div class="notification-supcontent d-flex justify-content-between">
+                                        <h3 class="text-Small-light">رقم الطلب : <span
+                                                class="text-XX-Small">334222</span></h3>
+                                        <h3 class="text-Small-light">اسم الموظف : <span class="text-XX-Small">حمد
+                                                هلال</span></h3>
+                                        <h3 class="text-Small-light">المبلغ : <span class="text-XX-Small">120
+                                                ريال</span></h3>
+                                        <h3 class="text-Small-light">طريقة الاستلام : <span class="text-XX-Small"> <i
+                                                    class="fa-thin fa-envelope"></i>البريد </span></h3>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <a href="" class="all-message text-Small-Bold">مشاهدة كل الاشعارات</a>
+                        </div>
+                        <a href="#" class="sms-popup icon-box icon-size-one theme-color position-relative"
+                            data-target=".sms"><span class="sms-notification bg-custom-color">12</span><i
+                                class="fa fa-envelope"></i></a>
+                        <div class="popup-box sms">
+                            <div class="message-box d-flex align-items-center">
+                                <div class="user-img">
+                                    <img src="assets/image/Avatar.png" alt="" width="50px" height="50px">
+                                </div>
+                                <div class="mesage-content">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <h3 class="user-name text-Small-Bold">حسن حسني</h3>
+                                        <p class="time text-small">5:19 AM</p>
+                                    </div>
+                                    <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، </p>
+                                </div>
+                            </div>
+                            <div class="message-box d-flex align-items-center">
+                                <div class="user-img">
+                                    <img src="assets/image/Avatar.png" alt="" width="50px" height="50px">
+                                </div>
+                                <div class="mesage-content">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <h3 class="user-name text-Small-Bold">حسن حسني</h3>
+                                        <p class="time text-small">5:19 AM</p>
+                                    </div>
+                                    <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، </p>
+                                </div>
+                            </div>
+                            <div class="message-box d-flex align-items-center">
+                                <div class="user-img">
+                                    <img src="assets/image/Avatar.png" alt="" width="50px" height="50px">
+                                </div>
+                                <div class="mesage-content">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <h3 class="user-name text-Small-Bold">حسن حسني</h3>
+                                        <p class="time text-small">5:19 AM</p>
+                                    </div>
+                                    <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، </p>
+                                </div>
+                            </div>
+                            <a href="" class="all-message text-Small-Bold">مشاهدة كل الرسائل</a>
+                        </div>
+                    </div>
+
+                    <div class="user-account-top d-flex align-items-center icon-box position-relative"
+                        data-target=".user-box">
+                        <div class="option-one">
+                            <img src="assets/image/icon/arrow-down.png" alt="">
+                        </div>
+                        <div class="user-info">
+                            <h3 class="u-name text-Small-Bold text-color-darck">محمد عبد الحميد ناجي</h3>
+                            <p class="u-name text-color-normal text-X-Small">مسؤول مبيعات</p>
+                        </div>
+                        <div class="user-avatar">
+                            <img src="assets/image/icon/02.png" alt="">
+                            <i class="icon-home"></i>
+
+                        </div>
+                        <div class="popup-box user-box">
+                            <ul class="user-list-links">
+                                <li class="text-X-Small text-color-normal"><span><i
+                                            class="fa-regular fa-pen-line"></i></span><a href=""
+                                        class="text-color-normal">تعديل بياناتي </a> </li>
+                                <li class="text-X-Small text-color-normal"><span><i
+                                            class="fa-regular fa-location-dot"></i></span><a href=""
+                                        class="text-color-normal">عنواني </a> </li>
+                                <li class="text-X-Small text-color-normal"><span><i
+                                            class="fa-regular fa-heart"></i></span><a href=""
+                                        class="text-color-normal">المفضلة </a> </li>
+                                <li class="text-X-Small text-color-normal"><span><i
+                                            class="fa-regular fa-cart-arrow-up"></i></span><a href=""
+                                        class="text-color-normal">طلباتي السابقة </a> </li>
+                                <li class="text-X-Small text-color-normal"><span><i
+                                            class="fa-regular fa-dashboard"></i></span><a href=""
+                                        class="text-color-normal">لوحة التحكم </a> </li>
+                                <li class="text-X-Small text-color-normal"><span><i
+                                            class="fa-regular fa-right-from-bracket"></i></span><a href=""
+                                        class="text-color-normal"> تسجيل الخروج</a> </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- 
+############################################
+## main-content
+############################################
+-->
+    <div class="main-body">
+        <!-- 
+        ############################################
+        ## sidpar(main-menu)
+        ############################################
+        -->
+        <div class="sidpar">
+            <div class="main-menu " id="mein-menu">
+
+                <ul class="menu1">
+                    <li class="nav-link-1">
+                        <a href="24_creat-order.html"> <span class="theme-color icon-size-tow "><i
+                                    class="fa fa-user-group"></i></span> ادارةPOS </a>
+                    </li>
+                    <li class="nav-link-1">
+                        <a href="index.html"> <span class="theme-color icon-size-tow"><i
+                                    class="fa-light fa-display"></i></span> الاحصائيات والتقارير</a>
+                    </li>
+                    <!-- <li class="nav-link-1">
+                        <a href=""><span class="my-svg-object"><img src="assets/image/icon/category.png" alt=""></span> الاقسام والاصناف</a>
+                    </li> -->
+                    <li class="dropdown1 ">
+                        <a href="#" class="dropdown-btn nav-link-1 "><span class="theme-color icon-size-tow"><i
+                                    class="fa-regular fa-solid fa-grid-2"></i></span> الاقسام والاصناف <i
+                                class="fa fa-caret-down"></i> </a>
+                        <ul class="dropdown-container">
+                            <li class="nav-link-1"><a href="categorys.html" class=""><span
+                                        class="theme-color icon-size-tow active-dropdown"><i
+                                            class="fa-regular fa-diagram-cells"></i></span> الاقسام</a></li>
+                            <li class="nav-link-1"><a href="categorize.html"><span class="theme-color icon-size-tow"><i
+                                            class="fa-regular fa-grid-2"></i></span> الاصناف</a></li>
+                            <li class="nav-link-1"><a href="offer.html"><span class="theme-color icon-size-tow"><i
+                                            class="fa-regular fa-badge-percent"></i></span> العروض</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown1">
+                        <a href="#" class="dropdown-btn nav-link-1"><span class="theme-color icon-size-tow"><i
+                                    class="fa-regular fa-trash-can-undo"></i></span> إدارة الطلبات<i
+                                class="fa fa-caret-down"></i></a>
+                        <ul class="dropdown-container">
+                            <li class="nav-link-1"><a href="2_new-order.html" class=""><span
+                                        class="theme-color icon-size-tow active-dropdown"><i
+                                            class="fa-regular fa-arrow-right"></i></span> الطلبات الجديدة</a></li>
+                            <li class="nav-link-1"><a href="1_archiv-order.html"><span
+                                        class="theme-color icon-size-tow"><i class="fa-regular fa-archive"></i></span>
+                                    الطلبات المؤرشفة</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown1">
+                        <a href="#" class="dropdown-btn nav-link-1"><span class="theme-color icon-size-tow"> <i
+                                    class="fa fa-check-circle"></i></span> إدارة الحجوزات<i
+                                class="fa fa-caret-down"></i></a>
+                        <ul class="dropdown-container">
+                            <li class="nav-link-1"><a href="19_new-reserve.html"><span
+                                        class="theme-color icon-size-tow"><i
+                                            class="fa-regular fa-basket-shopping"></i></span> الحجوزات الجديدة</a></li>
+                            <li class="nav-link-1"><a href="20_old-reserved.html"><span
+                                        class="theme-color icon-size-tow"><i
+                                            class="fa-regular fa-basket-shopping-minus"></i></span> الحجوزات السابقة</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-link-1">
+                        <a href="4_user-managmet.html"><span class="theme-color icon-size-tow"><i
+                                    class="fa fa-user-group"></i></span> إدارة الموظفين</a>
+                    </li>
+                    <li class="nav-link-1">
+                        <a href="8_clints.html"><span class="theme-color icon-size-tow"><i
+                                    class="fa-regular fa-users"></i></span> العملاء</a>
+                    </li>
+                    <li class="dropdown1 ">
+                        <a href="#" class="dropdown-btn nav-link-1 active-link-one"><span
+                                class="theme-color icon-size-tow "><i class="fa-regular fa-solid fa-grid-2"></i></span>
+                            اعدادات المطعم <i class="fa fa-caret-down"></i> </a>
+                        <ul class="dropdown-container">
+                            <li class="nav-link-1"><a href="7_restrant-settings.html"><span
+                                        class="theme-color icon-size-tow"><i class="fa-regular fa-database"></i></span>
+                                    البيانات الاساسية</a></li>
+                            <li class="nav-link-1"><a href="11_manageing-delivery-offer.html"><span
+                                        class="theme-color icon-size-tow"><i
+                                            class="fa-regular fa-arrow-alt-right"></i></span> ادارة الطلبات والتوصيل</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown1">
+                        <a href="#" class=" dropdown-btn nav-link-1"><span class="theme-color icon-size-tow"><i
+                                    class=" fa-solid fa-gear"></i></span> الاعدادات <i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-container">
+                            <li class="nav-link-1"><a href="#"><span class="theme-color icon-size-tow"><i
+                                            class="fa-solid fa-section"></i></span> الاصناف</a></li>
+                            <li class="nav-link-1"><a href="#"><span class="theme-color icon-size-tow"><i
+                                            class="fa-solid fa-dial-off"></i></span> العروض</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="dropdown1">
+                        <a href="#" class=" dropdown-btn nav-link-1"><span class="theme-color icon-size-tow"><i
+                                    class="fa-regular fa-page"></i></span> إدارة الصفحات <i
+                                class="fa fa-caret-down"></i> </a>
+                        <ul class="dropdown-container">
+                            <li class="nav-link-1"><a href="15_privecy-policy.html"><span
+                                        class="theme-color icon-size-tow"><i
+                                            class="fa-regular fa-question-square"></i></span> سياية الخصوصية</a></li>
+                            <li class="nav-link-1"><a href="16_terms.html"><span class="theme-color icon-size-tow"><i
+                                            class="fa-regular fa-pager"></i></span> شروط الاستخدام</a></li>
+                            <li class="nav-link-1"><a href="17_about-us.html"><span class="theme-color icon-size-tow"><i
+                                            class="fa-regular fa-info-square"></i></span> من نحن</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-link-1">
+                        <a href="12_general-settings.html"><span class="theme-color icon-size-tow"><i
+                                    class="fa-regular fa-gear"></i></span> الإعدادات العامة</a>
+                    </li>
+                    <li class="nav-link-1">
+                        <a href="10_all-rating.html"><span class="theme-color icon-size-tow"><i
+                                    class="fa-solid fa-star-sharp-half-stroke"></i></span> التقييمات</a>
+                    </li>
+                    <li class="nav-link-1">
+                        <a href="14_cobon.html"><span class="theme-color icon-size-tow"><i
+                                    class="fa-solid fa-badge-percent"></i></span> القسائم الشرائية</a>
+                    </li>
+                    <li class="nav-link-1">
+                        <a href=""><span class="theme-color icon-size-tow"><i
+                                    class="fa-solid fa-barcode-read"></i></span> إدارة الباركود</a>
+                    </li>
+                    <li class="nav-link-1">
+                        <a href=""><span class="theme-color icon-size-tow"><i
+                                    class="fa-duotone fa-mountains"></i></span> إدارة الثيمات</a>
+                    </li>
+                    <li class="nav-link-1">
+                        <a href="29_seo.html"><span class="theme-color icon-size-tow"><i
+                                    class="fa-solid fa-link-horizontal-slash"></i></span> seo سيو</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 
+        ############################################
+        ## Pages content
+        ############################################
+        -->
+        <!-- show invoice -->
+        <div class="modal-overlay" data-modal="department-details"></div>
+        <div class="modal-box add-user-box" data-modal="department-details">
+            <div class="modal-box-header text-color-normal mb-3 d-flex justify-content-between align-items-center">
+                <h3 class="">اضافة بيانات الفرع </h3>
+                <h4 class="text-X-Small modal-close-icon-2 modal-close" data-modal="department-details"><i
+                        class="fa fa-close"></i></h4>
+                <!-- <span class="modal-close-icon"><i class="fa fa-close"></i></span> -->
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <label for="text mb-1" class="text-Small-light text-color-normal">اسم الفرع</label>
+
+                    <div class="add-user-input position-relative">
+                        <input type="text" class="input-one w-100 text-X-Small text-color-normal mt-2"
+                            placeholder="نص افتراضي">
+                        <i class="fa-regular fa-user"></i>
+
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <label for="text mb-1" class="text-Small-light text-color-normal"> اسم الدولة</label>
+
+                    <div class="add-user-input position-relative">
+                        <input type="text" class="input-one w-100 text-X-Small text-color-normal mt-2"
+                            placeholder="نص افتراضي">
+                        <i class="fa-regular fa-user"></i>
+
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <label for="text mb-1" class="text-Small-light text-color-normal">المدينة</label>
+                    <input type="text " class="w-100 mt-2 input-one text-X-Small text-color-norma"
+                        placeholder="اكتب اسم المدينة">
+                </div>
+                <div class="col-lg-12">
+                    <label for="text mb-1" class="text-Small-light text-color-normal">العنوان</label>
+
+                    <div class="add-user-input position-relative">
+                        <input type="text" class="input-one w-100 text-X-Small text-color-normal mt-2"
+                            placeholder="نص افتراضي">
+                        <i class="fa-regular fa-user"></i>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <label for="text mb-1" class="text-Small-light text-color-normal">العنوان على جوجل ماب</label>
+
+                    <div class="add-user-input position-relative">
+                        <input type="text" class="input-one w-100 text-X-Small text-color-normal mt-2"
+                            placeholder="الصق الرابط من قوقل ماب">
+                        <i class="fa-regular fa-user"></i>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <label for="text mb-1" class="text-Small-light text-color-normal"> رقم الجوال</label>
+
+                    <div class="add-user-input position-relative">
+                        <input t type="tel" name="phone" class="input-one w-100 text-X-Small text-color-normal mt-2"
+                            placeholder="+249 99999999">
+
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="model-btn d-flex sm-btn-100 justify-content-between mt-3">
+                <a class="cancle-btn-three modal-close sm-w-100  w-50 text-center" href="#" title="اغلاغ"
+                    data-modal="department-details">الغاء</a>
+                <a class="save-btn-three sm-w-100  w-50 text-center" href="#" title="حفظ">اضافة الفرع</a>
+            </div>
+
+        </div>
+        <!-- edit department info -->
+        <div class="modal-overlay" data-modal="edit-department-details"></div>
+        <div class="modal-box add-user-box" data-modal="edit-department-details">
+            <div class="modal-box-header text-color-normal mb-3 d-flex justify-content-between align-items-center">
+                <h3 class="">تعديل بيانات الفرع </h3>
+                <h4 class="text-X-Small modal-close-icon-2 modal-close" data-modal="edit-department-details"><i
+                        class="fa fa-close"></i></h4>
+                <!-- <span class="modal-close-icon"><i class="fa fa-close"></i></span> -->
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <label for="text mb-1" class="text-Small-light text-color-normal">اسم الفرع</label>
+
+                    <div class="add-user-input position-relative">
+                        <input type="text" class="input-one w-100 text-X-Small text-color-normal mt-2"
+                            placeholder="نص افتراضي">
+                        <i class="fa-regular fa-user"></i>
+
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <label for="text mb-1" class="text-Small-light text-color-normal"> اسم الدولة</label>
+
+                    <div class="add-user-input position-relative">
+                        <input type="text" class="input-one w-100 text-X-Small text-color-normal mt-2"
+                            placeholder="نص افتراضي">
+                        <i class="fa-regular fa-user"></i>
+
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <label for="text mb-1" class="text-Small-light text-color-normal">المدينة</label>
+                    <div class="dropdown-tow w-100  mt-2">
+                        <select name="" id="" class="w-100  input-one text-Small-Bold text-color-normal">
+                            <option class="text-Small-Bold" value="">نص افتراضي</option>
+                            <option class="text-Small-Bold" value="">اختبار</option>
+                            <option class="text-Small-Bold" value="">خيار 2</option>
+
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <label for="text mb-1" class="text-Small-light text-color-normal">العنوان</label>
+
+                    <div class="add-user-input position-relative">
+                        <input type="text" class="input-one w-100 text-X-Small text-color-normal mt-2"
+                            placeholder="نص افتراضي">
+                        <i class="fa-regular fa-user"></i>
+
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <label for="text mb-1" class="text-Small-light text-color-normal">العنوان على جوجل ماب</label>
+
+                    <div class="add-user-input position-relative">
+                        <input type="text" class="input-one w-100 text-X-Small text-color-normal mt-2"
+                            placeholder="نص افتراضي">
+                        <i class="fa-regular fa-user"></i>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <label for="text mb-1" class="text-Small-light text-color-normal"> رقم الجوال</label>
+
+                    <div class="add-user-input position-relative">
+                        <input t type="tel" name="phone" class="input-one w-100 text-X-Small text-color-normal mt-2"
+                            placeholder="+249 99999999">
+
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="model-btn d-flex justify-content-between mt-3">
+                <a class="cancle-btn-three modal-close  w-50 text-center" href="#" title="اغلاغ"
+                    data-modal="edit-department-details">الغاء</a>
+                <a class="save-btn-three  w-50 text-center" href="#" title="حفظ">حفظ</a>
+            </div>
+
+        </div>
+        <!-- note -->
+        <div class="modal-overlay" data-modal="user-notification"></div>
+        <div class="modal-box" data-modal="user-notification">
+            <div class="modal-box-header text-color-normal mb-3 d-flex justify-content-between align-items-center">
+                <h3 class="">ملاحظات </h3>
+                <h4 class="text-X-Small modal-close-icon-2 modal-close" data-modal="user-notification"><i
+                        class="fa fa-close"></i></h4>
+                <!-- <span class="modal-close-icon"><i class="fa fa-close"></i></span> -->
+            </div>
+            <div class="order-deny-box ">
+                <textarea name="" class="" placeholder="اضافة تعليق"> </textarea>
+            </div>
+
+
+
+            <div class="model-btn d-flex justify-content-between mt-3">
+                <a class="cancle-btn-three modal-close  w-50 text-center" href="#" title="اغلاغ"
+                    data-modal="user-notification">الغاء</a>
+                <a class="save-btn-three  w-50 text-center" href="#" title="حفظ">حفظ</a>
+            </div>
+        </div>
+        <!-- daily attendance -->
+        <div class="modal-overlay" data-modal="user-attendance"></div>
+        <div class="modal-box" data-modal="user-attendance">
+            <div class="modal-box-header text-color-normal mb-3 d-flex justify-content-between align-items-center">
+                <h3 class="">التحضير اليومي </h3>
+                <h4 class="text-X-Small modal-close-icon-2 modal-close" data-modal="user-attendance"><i
+                        class="fa fa-close"></i></h4>
+                <!-- <span class="modal-close-icon"><i class="fa fa-close"></i></span> -->
+            </div>
+            <div class="serach-one position-relative">
+                <input type="search" name="" id="" class="input-one w-100 text-X-Small "
+                    placeholder="بحث باسم او رقم الموظف">
+                <a class="search-btn"><i class="fa-regular fa-search"></i></a>
+            </div>
+            <div class="dropdown-tow">
+                <label for="" class="text-X-Small mb-1 text-color-normal">اسم الفرع</label>
+                <select name="" id="" class="w-100  input-one text-X-Small text-color-normal">
+                    <option class="text-Small-Bold" value="">الفرع الرئيسي</option>
+                    <option class="text-Small-Bold" value="">نسبة مئوية</option>
+                </select>
+            </div>
+            <div class="user-account-top bg-bright  rounded-5 p-1 mt-3 d-flex align-items-center justify-content-between icon-box position-relative"
+                data-target=".user-box">
+                <div class="d-flex align-items-center">
+                    <div class="user-avatar">
+                        <img src="assets/image/icon/02.png" alt="">
+                        <i class="icon-home"></i>
+                    </div>
+                    <div class="user-info">
+                        <h3 class="u-name text-Small-Bold text-color-darck">محمد عبد الحميد ناجي</h3>
+                        <p class="u-name text-color-normal text-X-Small">مسؤول مبيعات</p>
+                    </div>
+                </div>
+                <div class="icon-tow">
+                    <i class="fa fa-trash"></i>
+                </div>
+            </div>
+            <div class="dropdown-tow mt-2">
+                <label for="" class="text-X-Small mb-1 text-color-normal">نوع التحضير</label>
+                <select name="" id="" class="w-100  input-one text-X-Small text-color-normal">
+                    <option class="text-Small-Bold" value="">انصراف</option>
+                    <option class="text-Small-Bold" value="">استئذان</option>
+                    <option class="text-Small-Bold" value="">غياب</option>
+                </select>
+            </div>
+            <div class="time-tow row">
+                <div class="col-lg-6">
+                    <label for="text" class="text-small text-color-normal"> وقت الحضور</label>
+                    <div class="input-container position-relative mt-2">
+                        <input id="" value="03:30 PM" type="text"
+                            class="position-relative input-one w-100 text-xxl-start text-color-normal"
+                            placeholder="12:00 AM">
+                        <span class="input-icon text-color-normal"><i class="fa-regular fa-clock"></i></span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <label for="text" class="text-small text-color-normal"> وقت الانصراف</label>
+                    <div class="input-container position-relative mt-2">
+                        <input id="" value="03:30 AM" type="text"
+                            class="position-relative input-one w-100 text-xxl-start text-color-normal"
+                            placeholder="12:00 AM">
+                        <span class="input-icon text-color-normal"><i class="fa-regular fa-clock"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="order-deny-box ">
+                <textarea name="" class="" placeholder="اضافة تعليق"> </textarea>
+            </div>
+
+
+
+            <div class="model-btn d-flex justify-content-between mt-3">
+                <a class="cancle-btn-three modal-close  w-50 text-center" href="#" title="اغلاغ"
+                    data-modal="user-attendance">الغاء</a>
+                <a class="save-btn-three  w-50 text-center" href="#" title="حفظ">حفظ</a>
+            </div>
+        </div>
+        <!-- model- delete -->
+        <div class="modal-overlay" data-modal="delete-category"></div>
+        <div class="modal-box" data-modal="delete-category">
+            <div class="model-delete-icon text-center mb-2">
+                <i class="fa fa-trash-alt"></i>
+            </div>
+            <div class="delete-box-content text-center">
+                <h3 class="text-Small-Bolder text-color-darck mb-2">هل انت متاكد من هذف الصنف</h3>
+                <p class="text-X-Small text-color-normal">يرجى العلم انه في حالة حذف الصنف لا يمكن استرجاعه مرة اخرى</p>
+            </div>
+
+            <div class="model-btn d-flex justify-content-between mt-3">
+                <a class="cancle-btn-one modal-close w-50 text-center" href="#" title="اغلاغ"
+                    data-modal="delete-category">الغاء</a>
+                <a class="save-btn-one w-50 text-center" href="#" title="اغلاغ">حفظ</a>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="container-fluid">
+                <!-- 
+            ############################################
+            ## Pages headrer
+            ############################################
+            -->
+                <div class="page-header mb-3">
+                    <div class="page-headrer-title">
+                        <h3 class="text-x-Small text-color-normal align-items-center"> ادارة المطعم <i
+                                class="fa fa-arrow-right"></i></h3>
+                        <h4 class="text-color-darck">البييانات الاساسية</h4>
+                    </div>
+                </div>
+                <div class="page-content bg-none p-0">
+                    <div class="row">
+                        <div class="col-lg-8 sm-mb-2 ">
+                            <div class="restrant-data main-bg rounded-10 p-10">
+                                <div class="card-title-tow mb-3  row justify-content-between align-items-center">
+
+
+                                    <h3 class="text-Small-lighter ">اسم المنشاة</h3>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6 mb-3">
+                                        <div
+                                            class="mb-2 card-title-tow text-color-normal  d-flex justify-content-between align-items-center">
+                                            <h3 class="text-Small-lighter ">الاسم بالعربي</h3>
+                                        </div>
+                                        <input type="text" class="w-100 input-one text-X-Small text-color-normal"
+                                            placeholder="نص افتراضي">
+                                    </div>
+                                    <div class="col-lg-6 mb-3">
+                                        <div
+                                            class="mb-2 card-title-tow text-color-normal  d-flex justify-content-between align-items-center">
+                                            <h3 class="text-Small-lighter ">English Name</h3>
+                                        </div>
+                                        <input type="text" class="w-100 input-one text-X-Small text-color-normal"
+                                            placeholder="نص افتراضي">
+                                    </div>
+                                    <div class="col-lg-6 mb-3">
+                                        <div
+                                            class="mb-2 card-title-tow text-color-normal  d-flex justify-content-between align-items-center">
+                                            <h3 class="text-Small-lighter ">نبذة</h3>
+                                            <i class="fa-regular fa-pen-line"></i>
+                                        </div>
+                                        <textarea name="" id=""
+                                            class="textarea-tow w-100 text-X-Small text-color-normal"
+                                            placeholder="اكتب هنا">  </textarea>
+                                    </div>
+                                    <div class="col-lg-6 mb-3">
+                                        <div
+                                            class="mb-2 card-title-tow text-color-normal  d-flex justify-content-between align-items-center">
+                                            <h3 class="text-Small-lighter ">About</h3>
+                                            <i class="fa-regular fa-pen-line"></i>
+                                        </div>
+                                        <textarea name="" id=""
+                                            class="textarea-tow w-100 text-X-Small text-color-normal"
+                                            placeholder="اكتب هنا">  </textarea>
+                                    </div>
+                                    <div class="col-lg-6 mb-3">
+                                        <div
+                                            class="mb-2 card-title-tow text-color-normal  d-flex justify-content-between align-items-center">
+                                            <h3 class="text-Small-lighter ">المميزات</h3>
+                                            <i class="fa-regular fa-pen-line"></i>
+                                        </div>
+                                        <textarea name="" id=""
+                                            class="textarea-tow w-100 text-X-Small text-color-normal  "
+                                            placeholder="اكتب هنا">  </textarea>
+                                    </div>
+                                    <div class="col-lg-6 mb-3">
+                                        <div
+                                            class="mb-2 card-title-tow text-color-normal  d-flex justify-content-between align-items-center">
+                                            <h3 class="text-Small-lighter ">Our Features</h3>
+                                            <i class="fa-regular fa-pen-line"></i>
+                                        </div>
+                                        <textarea name="" id=""
+                                            class="textarea-tow w-100 text-X-Small text-color-normal"
+                                            placeholder="اكتب هنا">  </textarea>
+                                    </div>
+                                    <div class="col-lg-6 mb-3">
+                                        <div
+                                            class="mb-2 card-title-tow text-color-normal  d-flex justify-content-between align-items-center">
+                                            <h3 class="text-Small-lighter ">الخدمات</h3>
+                                            <i class="fa-regular fa-pen-line"></i>
+                                        </div>
+                                        <textarea name="" id=""
+                                            class="textarea-tow w-100 text-X-Small text-color-normal"
+                                            placeholder="اكتب هنا">  </textarea>
+                                    </div>
+                                    <div class="col-lg-6 mb-3">
+                                        <div
+                                            class="mb-2 card-title-tow text-color-normal  d-flex justify-content-between align-items-center">
+                                            <h3 class="text-Small-lighter ">Our Services</h3>
+                                            <i class="fa-regular fa-pen-line"></i>
+                                        </div>
+                                        <textarea name="" id=""
+                                            class="textarea-tow w-100 text-X-Small text-color-normal"
+                                            placeholder="اكتب هنا">  </textarea>
+                                    </div>
+                                    <div class="col-lg-6 mb-3">
+                                        <div
+                                            class="mb-2 card-title-tow text-color-normal  d-flex justify-content-between align-items-center">
+                                            <h3 class="text-Small-lighter ">النص الترحيبي</h3>
+                                            <i class="fa-regular fa-pen-line"></i>
+                                        </div>
+                                        <textarea name="" id=""
+                                            class="textarea-tow w-100 text-X-Small text-color-normal"
+                                            placeholder="اكتب هنا">  </textarea>
+                                    </div>
+                                    <div class="col-lg-6 mb-3">
+                                        <div
+                                            class="mb-2 card-title-tow text-color-normal  d-flex justify-content-between align-items-center">
+                                            <h3 class="text-Small-lighter ">Wolcom Text </h3>
+                                            <i class="fa-regular fa-pen-line"></i>
+                                        </div>
+                                        <textarea name="" id=""
+                                            class="textarea-tow w-100 text-X-Small text-color-normal"
+                                            placeholder="اكتب هنا">  </textarea>
+                                    </div>
+
+                                </div>
+                                <h3 class="text-Small-Bold text-color-darck mb-2">حسابات التواصل الاجتماعي</h3>
+
+                                <div class="row">
+                                    <div class="col-lg-4 mb-2">
+                                        <div class="input-container position-relative ">
+                                            <input type="url"
+                                                class="position-relative input-one w-100 text-X-Small text-color-normal"
+                                                placeholder="Facebook.com/YourID">
+                                            <span class="input-icon-one  text-color-normal"><i
+                                                    class="fa-brands fa-facebook"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 mb-2">
+                                        <div class="input-container position-relative ">
+                                            <input type="url"
+                                                class="position-relative input-one w-100 text-X-Small text-color-normal"
+                                                placeholder="x.com/YourID">
+                                            <span class="input-icon-one  text-color-normal"><i
+                                                    class="fa-brands fa-x-twitter"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 mb-2">
+                                        <div class="input-container position-relative ">
+                                            <input type="url"
+                                                class="position-relative input-one w-100 text-X-Small text-color-normal"
+                                                placeholder="instagram.com/YourID">
+                                            <span class="input-icon-one  text-color-normal"><i
+                                                    class="fa-brands fa-instagram"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 mb-2">
+                                        <div class="input-container position-relative ">
+                                            <input type="text"
+                                                class="position-relative input-one w-100 text-X-Small text-color-normal"
+                                                placeholder="snapchat.com/YourID">
+                                            <span class="input-icon-one  text-color-normal"><i
+                                                    class="fa-brands fa-snapchat"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 mb-2">
+                                        <div class="input-container position-relative ">
+                                            <input type="text"
+                                                class="position-relative input-one w-100 text-X-Small text-color-normal"
+                                                placeholder="tiktok.com/YourID">
+                                            <span class="input-icon-one  text-color-normal"><i
+                                                    class="fa-brands fa-tiktok"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 mb-2">
+                                        <div class="input-container position-relative ">
+                                            <input type="text"
+                                                class="position-relative input-one w-100 text-X-Small text-color-normal"
+                                                placeholder="youtube.com/YourID">
+                                            <span class="input-icon-one  text-color-normal"><i
+                                                    class="fa-brands fa-youtube"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 mb-2">
+                                        <div class="input-container position-relative ">
+                                            <input value="" type="text"
+                                                class="position-relative input-one w-100 text-X-Small text-color-normal"
+                                                placeholder="www.yourwebsite.com">
+                                            <span class="input-icon-one  text-color-normal"><i
+                                                    class="fa fa-earth"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 mb-2">
+                                        <div class="input-container position-relative ">
+                                            <input type="text"
+                                                class="position-relative input-one w-100 text-X-Small text-color-normal"
+                                                placeholder="email@gmail.com">
+                                            <span class="input-icon-one  text-color-normal"><i
+                                                    class="fa-regular fa-envelope"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 mt-2">
+                                    <label for="text" class="text-Small-Bold text-color-normal mb-2"> رابط
+                                        الموقع</label>
+                                    <div class="input-container position-relative ">
+                                        <input type="url"
+                                            class="position-relative input-one w-100 text-X-Small text-color-normal"
+                                            placeholder="www.example.com">
+                                        <span class="input-icon-one  text-color-normal"><i
+                                                class="fa-regular fa-earth"></i></span>
+                                    </div>
+                                </div>
+                                <h3 class="text-Small-Bold text-color-darck mb-1 mt-3">روابط التطبيق</h3>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <h3 class="text-X-Small text-color-normal mb-2">متجر جوجل ستور</h3>
+                                        <div class="input-container position-relative ">
+                                            <input type="text"
+                                                class="position-relative input-one w-100 text-X-Small text-color-normal"
+                                                placeholder="Facebook.com/YourID">
+                                            <span class="input-icon text-color-normal"><i
+                                                    class="fa-brands fa-google-play"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <h3 class="text-X-Small text-color-normal mb-2">متجر ابل ستور</h3>
+
+                                        <div class="input-container position-relative ">
+                                            <input type="text"
+                                                class="position-relative input-one w-100 text-X-Small text-color-normal"
+                                                placeholder="apple.con/store">
+                                            <span class="input-icon text-color-normal"><i
+                                                    class="fa-brands fa-apple"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <h3 class="text-X-Small text-color-normal mb-2">متجر هواوى </h3>
+
+                                        <div class="input-container position-relative ">
+
+                                            <input type="text"
+                                                class="position-relative input-one w-100 text-X-Small text-color-normal"
+                                                placeholder="h.com/YourID">
+                                            <span class="input-icon text-color-normal"><img
+                                                    src="assets/image/icone/Huawei Vertical Black.svg" alt=""></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 mt-3">
+                                    <h3 class="text-Small-Bold text-color-darck mb-2">لغات التواصل</h3>
+                                    <div class="dayly-works">
+                                        <div class="qtagselect isw360">
+                                            <select id="languageselector" multiple>
+                                                <option value="1" class="ispurple" selected>العربية</option>
+                                                <option value="2" class="isblue">الانجليزية</option>
+                                                <option value="3" class="isblue">الفرنسية</option>
+                                                <option value="4" class="isblue">الالمانية</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="col-lg-12 mt-3">
+                                    <h3 class="text-Small-Bold text-color-darck mb-2">نوع النشاط</h3>
+                                    <div class="dayly-works">
+                                        <div class="qtagselect isw360 ">
+                                            <select class="" id="activityselector">
+                                                <option value="1" class="ispurple" selected>النشاط 1</option>
+                                                <option value="2" class="isblue" selected>النشاط2</option>
+                                                <option value="3" class="isblue">النشاط 3</option>
+                                                <option value="4" class="isblue">النشاط 4</option>
+                                                <option value="5" class="isblue">النشاط 5</option>
+                                                <option value="6" class="isblue">الجمعة</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h3 class="text-Small-Bold text-color-darck mb-3 mt-3">مواعيد العمل</h3>
+                                <div class="row">
+                                    <div class="col-lg-6 mb-2">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h3 class="text-Small-Bold text-color-normal w-30 ">السبت</h3>
+                                            <div class="d-flex justify-content-end align-items-center">
+                                                <div class="input-container position-relative w-40">
+                                                    <input id="" type="text"
+                                                        class="timepicker position-relative input-one w-100 text-Small-Bold text-color-normal"
+                                                        placeholder="12:00 AM">
+                                                    <span class="input-icon text-color-normal"><i
+                                                            class="fa-regular fa-clock"></i></span>
+                                                </div>
+                                                <span class="me-2 ms-2"> <i class="fa-regular fa-arrow-alt-right"></i>
+                                                </span>
+                                                <div class="input-container position-relative  w-40">
+                                                    <input id="" type="text"
+                                                        class="timepicker position-relative input-one w-100 text-Small-Bold text-color-normal"
+                                                        placeholder="12:00 AM">
+                                                    <span class="input-icon text-color-normal"><i
+                                                            class="fa-regular fa-clock"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 mb-2">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h3 class="text-Small-Bold text-color-normal w-30 ">الاحد</h3>
+                                            <div class="d-flex justify-content-end align-items-center">
+                                                <div class="input-container position-relative w-40">
+                                                    <input id="" type="text"
+                                                        class="timepicker position-relative input-one w-100 text-Small-Bold text-color-normal"
+                                                        placeholder="12:00 AM">
+                                                    <span class="input-icon text-color-normal"><i
+                                                            class="fa-regular fa-clock"></i></span>
+                                                </div>
+                                                <span class="me-2 ms-2"> <i class="fa-regular fa-arrow-alt-right"></i>
+                                                </span>
+                                                <div class="input-container position-relative  w-40">
+                                                    <input id="" type="text"
+                                                        class="timepicker position-relative input-one w-100 text-Small-Bold text-color-normal"
+                                                        placeholder="12:00 AM">
+                                                    <span class="input-icon text-color-normal"><i
+                                                            class="fa-regular fa-clock"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 mb-2">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h3 class="text-Small-Bold text-color-normal w-30 ">الاثنين</h3>
+                                            <div class="d-flex justify-content-end align-items-center">
+                                                <div class="input-container position-relative w-40">
+                                                    <input id="" type="text"
+                                                        class="timepicker position-relative input-one w-100 text-Small-Bold text-color-normal"
+                                                        placeholder="12:00 AM">
+                                                    <span class="input-icon text-color-normal"><i
+                                                            class="fa-regular fa-clock"></i></span>
+                                                </div>
+                                                <span class="me-2 ms-2"> <i class="fa-regular fa-arrow-alt-right"></i>
+                                                </span>
+                                                <div class="input-container position-relative  w-40">
+                                                    <input id="" type="text"
+                                                        class="timepicker position-relative input-one w-100 text-Small-Bold text-color-normal"
+                                                        placeholder="12:00 AM">
+                                                    <span class="input-icon text-color-normal"><i
+                                                            class="fa-regular fa-clock"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 mb-2">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h3 class="text-Small-Bold text-color-normal w-30 ">الثلاثاء</h3>
+                                            <div class="d-flex justify-content-end align-items-center">
+                                                <div class="input-container position-relative w-40">
+                                                    <input id="" type="text"
+                                                        class="timepicker position-relative input-one w-100 text-Small-Bold text-color-normal"
+                                                        placeholder="12:00 AM">
+                                                    <span class="input-icon text-color-normal"><i
+                                                            class="fa-regular fa-clock"></i></span>
+                                                </div>
+                                                <span class="me-2 ms-2"> <i class="fa-regular fa-arrow-alt-right"></i>
+                                                </span>
+                                                <div class="input-container position-relative  w-40">
+                                                    <input id="" type="text"
+                                                        class="timepicker position-relative input-one w-100 text-Small-Bold text-color-normal"
+                                                        placeholder="12:00 AM">
+                                                    <span class="input-icon text-color-normal"><i
+                                                            class="fa-regular fa-clock"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 mb-2">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h3 class="text-Small-Bold text-color-normal w-30 ">الاربعاء</h3>
+                                            <div class="d-flex justify-content-end align-items-center">
+                                                <div class="input-container position-relative w-40">
+                                                    <input id="" type="text"
+                                                        class="timepicker position-relative input-one w-100 text-Small-Bold text-color-normal"
+                                                        placeholder="12:00 AM">
+                                                    <span class="input-icon text-color-normal"><i
+                                                            class="fa-regular fa-clock"></i></span>
+                                                </div>
+                                                <span class="me-2 ms-2"> <i class="fa-regular fa-arrow-alt-right"></i>
+                                                </span>
+                                                <div class="input-container position-relative  w-40">
+                                                    <input id="" type="text"
+                                                        class="timepicker position-relative input-one w-100 text-Small-Bold text-color-normal"
+                                                        placeholder="12:00 AM">
+                                                    <span class="input-icon text-color-normal"><i
+                                                            class="fa-regular fa-clock"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 mb-2">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h3 class="text-Small-Bold text-color-normal w-30 ">الخميس</h3>
+                                            <div class="d-flex justify-content-end align-items-center">
+                                                <div class="input-container position-relative w-40">
+                                                    <input id="" type="text"
+                                                        class="timepicker position-relative input-one w-100 text-Small-Bold text-color-normal"
+                                                        placeholder="12:00 AM">
+                                                    <span class="input-icon text-color-normal"><i
+                                                            class="fa-regular fa-clock"></i></span>
+                                                </div>
+                                                <span class="me-2 ms-2"> <i class="fa-regular fa-arrow-alt-right"></i>
+                                                </span>
+                                                <div class="input-container position-relative  w-40">
+                                                    <input id="" type="text"
+                                                        class="timepicker position-relative input-one w-100 text-Small-Bold text-color-normal"
+                                                        placeholder="12:00 AM">
+                                                    <span class="input-icon text-color-normal"><i
+                                                            class="fa-regular fa-clock"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 mb-2">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h3 class="text-Small-Bold text-color-normal w-30 ">الجمعة</h3>
+                                            <div class="d-flex justify-content-end align-items-center">
+                                                <div class="input-container position-relative w-40">
+                                                    <input id="" type="text"
+                                                        class="timepicker position-relative input-one w-100 text-Small-Bold text-color-normal"
+                                                        placeholder="12:00 AM">
+                                                    <span class="input-icon text-color-normal"><i
+                                                            class="fa-regular fa-clock"></i></span>
+                                                </div>
+                                                <span class="me-2 ms-2"> <i class="fa-regular fa-arrow-alt-right"></i>
+                                                </span>
+                                                <div class="input-container position-relative  w-40">
+                                                    <input id="" type="text"
+                                                        class="timepicker position-relative input-one w-100 text-Small-Bold text-color-normal"
+                                                        placeholder="12:00 AM">
+                                                    <span class="input-icon text-color-normal"><i
+                                                            class="fa-regular fa-clock"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="col-lg-12 mt-2">
+                                    <label for="text" class="text-Small-Bold text-color-normal mb-2"> اللوكيشن</label>
+                                    <div class="input-container position-relative ">
+                                        <input value="" type="text"
+                                            class="position-relative input-one w-100 text-Small-Bold text-color-normal"
+                                            placeholder="الصق اللوكيشن من قوقل ماب">
+                                        <span class="input-icon text-color-normal"><i
+                                                class="fa fa-location-dot"></i></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 mt-2">
+                                    <div class="order-status d-flex align-items-center me-2 ms-2">
+                                        <span class="toggle-text text-X-Small text-color-darck"></span>
+                                        <div class="toggle-btn" data-toggle-id="open-close-toggole" data-on-text="مفتوح"
+                                            data-off-text="مغلق">
+                                            <span class="toggle-circle noyes bg-custom-color"></span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-12 mt-2">
+                                    <div class="d-flex align-items-center">
+                                        <p class="text-color-normal text-Small-Bold toggle-text ">ادخل الرقم الضريبي</p>
+                                        <input type="" class="number-input input-one ms-3 me-3 text-color-normal"
+                                            placeholder="87764589394384737434">
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mt-4">
+                                    <h3 class="text-Small-Bolder text-color-normal">الفروع</h3>
+                                    <a href="#" class="buttom-4 open-modal" title="اضافة فرع "
+                                        data-modal="department-details"> <i class="fa fa-plus"></i> اضافة فرع </a>
+                                </div>
+                                <div class=" mt-4">
+
+                                    <div
+                                        class="restrant-cat-box text-color-normal car-box-three restrant-cat-type-new-order align-items-center d-flex justify-content-between">
+                                        <div class="d-flex">
+                                            <div class="restrant-cat-icon">
+                                                <i class="fa fa-shop-lock"></i>
+                                            </div>
+                                            <div class="restrant-cat-content w-100 mb-1 ms-2 me-2 mt-2">
+                                                <div class="">
+                                                    <h3 class="user-name text-Small-Bold">اسم الفرع هنا</h3>
+                                                </div>
+                                                <div class="restrant-cat-supcontent ">
+                                                    <h3 class=""><span class="text-Small-Bolder"><i
+                                                                class="fa-regular fa-location-dot"></i></span><span
+                                                            class="text-X-Small ms-1 me-1">السودية/الرياض/23شارع 232 -
+                                                            فكتوريا المعادي</span></h3>
+                                                    <h3 class=""><span class="text-Small-Bolder"><i
+                                                                class="fa-light fa-mobile-retro"></i></span><span
+                                                            class="text-X-Small ms-1 me-1">+249 999299292</span></h3>
+                                                    <h3 class=""><span class="text-Small-Bolder"><i
+                                                                class="fa-regular fa-location"></i></span><span
+                                                            class="text-X-Small ms-1 me-1"><a href="">لينك قوقل
+                                                                ماب</a></span></h3>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-one-icon d-flex">
+                                            <span class="theme-color open-modal-1 "
+                                                data-modal="edit-department-details"><i
+                                                    class="fa fa-square-pen"></i></span>
+                                            <span class="open-modal red-bg-light" data-modal="delete-category"><i
+                                                    class="fa fa-trash"></i></span>
+
+                                        </div>
+
+                                    </div>
+                                    <div
+                                        class="restrant-cat-box car-box-three text-color-normal restrant-cat-type-new-order align-items-center d-flex justify-content-between">
+                                        <div class="d-flex">
+                                            <div class="restrant-cat-icon">
+                                                <i class="fa fa-shop-lock"></i>
+                                            </div>
+                                            <div class="restrant-cat-content w-100 mb-1 ms-2 me-2 mt-2">
+                                                <div class="">
+                                                    <h3 class="user-name text-Small-Bold">اسم الفرع هنا</h3>
+                                                </div>
+                                                <div class="restrant-cat-supcontent ">
+                                                    <h3 class=""><span class="text-Small-Bolder"><i
+                                                                class="fa-regular fa-location-dot"></i></span><span
+                                                            class="text-X-Small ms-1 me-1">السودية/الرياض/23شارع 232 -
+                                                            فكتوريا المعادي</span></h3>
+                                                    <h3 class=""><span class="text-Small-Bolder"><i
+                                                                class="fa-light fa-mobile-retro"></i></span><span
+                                                            class="text-X-Small ms-1 me-1">+249 999299292</span></h3>
+                                                    <h3 class=""><span class="text-Small-Bolder"><i
+                                                                class="fa-regular fa-location"></i></span><span
+                                                            class="text-X-Small ms-1 me-1"><a href="">لينك قوقل
+                                                                ماب</a></span></h3>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-one-icon d-flex">
+                                            <span class="theme-color open-modal-1 "
+                                                data-modal="edit-department-details"><i
+                                                    class="fa fa-square-pen"></i></span>
+                                            <span class="open-modal red-bg-light" data-modal="delete-category"><i
+                                                    class="fa fa-trash"></i></span>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- <div class="col-lg-12 mt-2">
+                                       <div class="add-day-items d-flex justify-content-between align-items-center mt-3">
+                                        <label for="text"  class="text-Small-Bold text-color-normal mb-2"> لغة التواصل</label>
+                
+                                        <div class="d-flex align-content-center"> 
+                                            <input class="add-items-input-one ms-2 me-2 item-input" type="text" id="" placeholder="اضافة يوم...">
+                                            <button class="add-items-one text-Small-Bold add-item" id="">اضافة</button>
+                                        </div>
+                                        </div>
+                
+                                        <div class="add-items-to-ul position-relative input-one list-items-one ">
+                                            <ul class="item-list"></ul>
+                                        </div>
+                                    </div> -->
+
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4 sm-mb-2">
+                            <div class="card-tow rounded-10">
+                                <div
+                                    class="upload-container restrant-setting-uploads upload-offer position-relative mt-0 border-one">
+                                    <h3 class="text-Small-Bold text-color-normal mb-3">ارفاق الشعار</h3>
+                                    <div class="image-box position-relative">
+                                        <input type="file" class="file-upload" id="file-upload-1" accept="image/*">
+
+                                        <div class="upload-box">
+                                            <label for="file-upload-1"
+                                                class="upload-label text-Small-Bold text-color-normal">
+                                                <i class="fa-regular fa-file-upload"></i>
+                                            </label>
+                                            <img class="uploaded-image" src="" alt="">
+                                        </div>
+
+                                    </div>
+                                    <div class="img-info">
+                                        <div
+                                            class="image-info mb-2 mt-2 d-flex justify-content-between align-items-center">
+                                            <p class="text-Small-Bold"> صورة رقم 1 </p>
+                                            <div class="d-flex align-items-center">
+                                                <a href="#" class="icon-box-tow me-2 ms-2"> <i
+                                                        class="fas fa-pencil-square"></i> </a>
+                                                <h3 class="delete-icon delete-icon-id icon-bg-one"><i
+                                                        class="fas fa-trash"></i></h3>
+                                            </div>
+                                            <!-- <p  class="text-color-normal" >  <span id="image-size"></span></p> -->
+                                        </div>
+                                        <div class="img-info" style="display: none;">
+                                            <div class="image-info-one">
+                                                <!-- <p class="text-color-normal">
+                                                    <span class="image-size"></span>
+                                                </p>
+                                                <span class="delete-icon" style="display: none;">
+                                                    <i class="fas fa-trash"></i>
+                                                </span> -->
+                                            </div>
+                                            <div class="progress-bar-container" style="display: none;">
+                                                <div class="progress-bar"></div>
+                                                <p class="text-color-normal">
+                                                    <span class="upload-percentage">0%</span>
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                    <p class="completion-message text-Small-Bold">تم الرفع بنجاح !</p>
+                                </div>
+                                <div
+                                    class="upload-container restrant-setting-uploads upload-offer position-relative border-one">
+                                    <h3 class="text-Small-Bold text-color-normal mb-3">ارفاق الملف التعريفي</h3>
+                                    <div class="image-box position-relative">
+                                        <input type="file" class="file-upload" id="file-upload-1"
+                                            accept="application/pdf">
+
+                                        <div class="upload-box">
+                                            <div class="pdf-img" style="display: none;">
+                                                <img src="assets/image/items/acrobat-file-pdf-seeklogo.svg" alt="">
+                                            </div>
+                                            <label for="file-upload-1"
+                                                class="upload-label text-Small-Bold text-color-normal">
+                                                <i class="fa-regular fa-file-pdf"></i>
+                                                <p class="uploaded-text"> ملف PDF مرفق </p>
+                                            </label>
+
+                                        </div>
+                                    </div>
+                                    <div class="img-info">
+                                        <div
+                                            class="image-info mb-2 mt-2 d-flex justify-content-between align-items-center">
+                                            <p class="text-Small-Bold">اقصى حجم 20 MB</p>
+                                            <div class="d-flex align-items-center">
+                                                <a href="#" class="icon-box-tow me-2 ms-2"> <i
+                                                        class="fas fa-pencil-square"></i> </a>
+                                                <h3 class="delete-icon delete-icon-id icon-bg-one"><i
+                                                        class="fas fa-trash"></i></h3>
+                                            </div>
+                                        </div>
+                                        <div class="img-info-one" style="display: none;"></div>
+                                        <div class="progress-bar-container" style="display: none;">
+                                            <div class="progress-bar"></div>
+                                            <p class="text-color-normal">
+                                                <span class="upload-percentage">0%</span>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <p class="completion-message text-Small-Bold">تم الرفع بنجاح !</p>
+                                </div>
+                                <div
+                                    class="upload-container restrant-setting-uploads upload-offer position-relative  border-one">
+                                    <h3 class="text-Small-Bold text-color-normal mb-3">ارفاق صورة الغلاف</h3>
+                                    <div class="image-box position-relative">
+
+                                        <input type="file" class="file-upload" id="file-upload-1" accept="image/*">
+
+                                        <div class="upload-box">
+                                            <label for="file-upload-1"
+                                                class="upload-label text-Small-Bold text-color-normal">
+                                                <i class="fa-regular fa-file-upload"></i>
+                                            </label>
+
+                                            <img class="uploaded-image" src="" alt="">
+                                        </div>
+
+                                    </div>
+                                    <div class="img-info">
+                                        <div
+                                            class="image-info mb-2 mt-2 d-flex justify-content-between align-items-center">
+                                            <p class="text-Small-Bold"> صورة رقم 1 </p>
+                                            <div class="d-flex align-items-center">
+                                                <a href="#" class="icon-box-tow me-2 ms-2"> <i
+                                                        class="fas fa-pencil-square"></i> </a>
+                                                <h3 class="delete-icon delete-icon-id icon-bg-one"><i
+                                                        class="fas fa-trash"></i></h3>
+                                            </div>
+                                            <!-- <p  class="text-color-normal" >  <span id="image-size"></span></p> -->
+                                        </div>
+                                        <div class="img-info" style="display: none;">
+                                            <div class="image-info-one">
+                                                <!-- <p class="text-color-normal">
+                                                    <span class="image-size"></span>
+                                                </p>
+                                                <span class="delete-icon" style="display: none;">
+                                                    <i class="fas fa-trash"></i>
+                                                </span> -->
+                                            </div>
+                                            <div class="progress-bar-container" style="display: none;">
+                                                <div class="progress-bar"></div>
+                                                <p class="text-color-normal">
+                                                    <span class="upload-percentage">0%</span>
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                    <p class="completion-message text-Small-Bold mb-2">تم الرفع بنجاح !</p>
+
+                                    <a href="" class="buttom-4">اضافة غلاف</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 
+############################################
+## footer 
+############################################
+-->
+    <div class="footer">
+        <p class="text-color-normal text-small">Arabia food 2024</p>
+    </div>
+
+    <script src="assets/script/lib/jquery.min.js"></script>
+    <script src="assets/script/lib/owl.carousel.min.js"></script>
+    <script src="assets/script/lib/international-telephone-input.js"></script>
+
+    <script src="assets/script/lib/chartjs.min.js"></script>
+    <script src="assets/script/lib/chartone.min.js"></script>
+    <script src="assets/script/chart.min.js"></script>
+    <script src="assets/script/lib/air-datepicker.js"></script>
+    <script src="assets/script/data.js"></script>
+    <script src="assets/script/lib/jquery.mousewheel.js"></script>
+    <script src="assets/script/lib/jquery.mCustomScrollbar.js"></script>
+
+    <script src="assets/script/lib/selectize.min.js"></script>
+
+    <script src="assets/script/mian.js"></script>
+
+</body>
+
+</html>

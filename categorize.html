@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الاصناف</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- owl carousel  -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <!-- css style  -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.css">
+    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="stylesheet" href="assets/css/lib/datatable.css">
+    <link rel="stylesheet" href="assets/css/lib/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- 
+############################################
+## 1- language 
+############################################
+-->
+    <div class="show-option-menu">
+        <div class="option-box">
+            <div class="lang-option mb-2">
+                <p class="text-color-normal text-Small-Bolder mb-2">تغيير اللغة:</p>
+                <div class="lang-changer-2 bg-custom-color">
+                    <button id="btn-en-2" class="text-Small-Bold">EN</button>
+                    <button id="btn-ar-2" class="text-Small-Bold">AR</button>
+                </div>
+            </div>
+            <div class="color-settings">
+                <p class="text-color-normal text-Small-Bolder mb-2">اللون:</p>
+                <div class="colors-box d-flex">
+                    <button class="color-btn red" data-color="#FA5050"> </button>
+                    <button class="color-btn green" data-color="green"> </button>
+                    <button class="color-btn yellow" data-color="yellow"></button>
+                    <button class="color-btn orange" data-color="orange"></button>
+                    <button class="color-btn blue" data-color="blue"></button>
+                    <button class="color-btn purple" data-color="purple"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 
+############################################
+## 2- primary menu
+############################################
+ -->
+    <div class="admin-top-bar">
+        <div class="container-fluid">
+            <div class="d-flex justify-content-between  align-items-center">
+                <div class="top-bar-right d-flex align-items-center">
+                    <div class="mobile-icon" id="mobile-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="logo">
+                        <a href=""> <img src="assets/image/Logo.png" alt=""></a>
+                    </div>
+                    <div class="topbar-date text-color-normal text-small ms-1 me-1">
+                        <p class="">الاربعاء</p>
+                        <p>11 فبراير 12:30 مساءا</p>
+                    </div>
+                </div>
+                <div class="top-bar-left d-flex align-items-center">
+                    <div class="lang-changer bg-custom-color lang-1">
+                        <button id="btn-en" class="text-Small-Bold">EN</button>
+                        <button id="btn-ar" class="text-Small-Bold">AR</button>
+                    </div>
+                    <div class="settings">
+                        <span class="bg-custom-color show-option-btn"><i class="fa fa-gear"></i></span>
+                    </div>
+                    <div class="order-status d-flex align-items-center me-2 ms-2">
+                        <span class="toggle-text text-X-Small text-color-darck"></span>
+                        <div class="toggle-btn" data-toggle-id="open-close-toggole" data-on-text="مفتوح"
+                            data-off-text="مغلق">
+                            <span class="toggle-circle noyes bg-custom-color"></span>
+                        </div>
+                    </div>
+                    <div class="website-mode" id="toggle-dark-mode">
+                        <span class="theme-color  icon-size-one"><i class="fa fa-moon"></i></span>
+                    </div>
+
+                    <div class="color-option d-flex position-relative">
+                        <a href="#" class="hide-mobile icon-box icon-size-one select-color theme-color"><i
+                                class="fa-solid fa-circle-half-stroke "></i></a>
+
+                        <div class="color-slection">
+                            <p class="text-color-normal text-small mb-2">اللون:</p>
+                            <div class="colors-box d-flex">
+                                <button class="color-btn red" data-color="#FA5050"> </button>
+                                <button class="color-btn green" data-color="green"> </button>
+                                <button class="color-btn yellow" data-color="yellow"></button>
+                                <button class="color-btn orange" data-color="orange"></button>
+                                <button class="color-btn blue" data-color="blue"></button>
+                                <button class="color-btn purple" data-color="purple"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notefication-icon d-flex position-relative">
+                        <a href="#" class=" hide-mobile icon-box icon-size-one theme-color"><i
+                                class="fa fa-basket-shopping"></i></a>
+                        <a href="#" class="icon-box icon-size-one theme-color position-relative"
+                            data-target=".notification"><span class="sms-notification bg-custom-color">18</span><i
+                                class="fa fa-bell"></i></a>
+                        <div class="popup-box notification">
+                            <div class="notification-box new-order notification-type-new-order d-flex">
+                                <div class="notification-icon">
+                                    <i class="fa fa-basket-shopping-plus"></i>
+                                </div>
+                                <div class="notification-content w-100">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <h3 class="user-name text-Small-Bold">طلب جديد</h3>
+                                        <p class="time text-small">5:19 AM</p>
+                                    </div>
+                                    <div class="notification-supcontent d-flex">
+                                        <h3 class="text-Small-light">رقم الطلب : <span
+                                                class="text-XX-Small">334222</span></h3>
+                                        <h3 class="text-Small-light">طريقة الدفع : <span class="text-XX-Small">حوالة
+                                                بنكية</span></h3>
+                                        <h3 class="text-Small-light">نوع الوحدة : <span class="text-XX-Small">هنا</span>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="notification-box order-done notification-type-done d-flex">
+                                <div class="notification-icon theme-color">
+                                    <i class="fa fa-check-circle"></i>
+                                </div>
+                                <div class="notification-content w-100">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <h3 class="user-name text-Small-Bold">تم تاكيد الحجز</h3>
+                                        <p class="time text-small">5:19 AM</p>
+                                    </div>
+                                    <div class="notification-supcontent d-flex">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="notification-box new-book notification-type-cancel-order d-flex">
+                                <div class="notification-icon theme-color">
+                                    <i class="fa fa-basket-shopping-plus"></i>
+                                </div>
+                                <div class="notification-content w-100">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <h3 class="user-name text-Small-Bold">طلب جديد</h3>
+                                        <p class="time text-small">AM 5:19 </p>
+                                    </div>
+                                    <div class="notification-supcontent d-flex">
+                                        <h3 class="text-Small-light">رقم الطلب : <span
+                                                class="text-XX-Small">334222</span></h3>
+                                        <h3 class="text-Small-light">اسم الموظف : <span class="text-XX-Small">حمد
+                                                هلال</span></h3>
+                                        <h3 class="text-Small-light">المبلغ : <span class="text-XX-Small">120
+                                                ريال</span></h3>
+                                        <h3 class="text-Small-light">طريقة الاستلام : <span class="text-XX-Small"> <i
+                                                    class="fa-regular fa-envelope"></i> البريد</span></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="notification-box cancel-order notification-type-new-order d-flex">
+                                <div class="notification-icon">
+                                    <i class="fa fa-circle-xmark"></i>
+                                </div>
+                                <div class="notification-content w-100">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <h3 class="user-name text-Small-Bold">طلب ملغي</h3>
+                                        <p class="time text-small">5:19 AM</p>
+                                    </div>
+                                    <div class="notification-supcontent d-flex justify-content-between">
+                                        <h3 class="text-Small-light">رقم الطلب : <span
+                                                class="text-XX-Small">334222</span></h3>
+                                        <h3 class="text-Small-light">اسم الموظف : <span class="text-XX-Small">حمد
+                                                هلال</span></h3>
+                                        <h3 class="text-Small-light">المبلغ : <span class="text-XX-Small">120
+                                                ريال</span></h3>
+                                        <h3 class="text-Small-light">طريقة الاستلام : <span class="text-XX-Small"> <i
+                                                    class="fa-thin fa-envelope"></i>البريد </span></h3>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <a href="" class="all-message text-Small-Bold">مشاهدة كل الاشعارات</a>
+                        </div>
+                        <a href="#" class="sms-popup icon-box icon-size-one theme-color position-relative"
+                            data-target=".sms"><span class="sms-notification bg-custom-color">12</span><i
+                                class="fa fa-envelope"></i></a>
+                        <div class="popup-box sms">
+                            <div class="message-box d-flex align-items-center">
+                                <div class="user-img">
+                                    <img src="assets/image/Avatar.png" alt="" width="50px" height="50px">
+                                </div>
+                                <div class="mesage-content">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <h3 class="user-name text-Small-Bold">حسن حسني</h3>
+                                        <p class="time text-small">5:19 AM</p>
+                                    </div>
+                                    <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، </p>
+                                </div>
+                            </div>
+                            <div class="message-box d-flex align-items-center">
+                                <div class="user-img">
+                                    <img src="assets/image/Avatar.png" alt="" width="50px" height="50px">
+                                </div>
+                                <div class="mesage-content">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <h3 class="user-name text-Small-Bold">حسن حسني</h3>
+                                        <p class="time text-small">5:19 AM</p>
+                                    </div>
+                                    <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، </p>
+                                </div>
+                            </div>
+                            <div class="message-box d-flex align-items-center">
+                                <div class="user-img">
+                                    <img src="assets/image/Avatar.png" alt="" width="50px" height="50px">
+                                </div>
+                                <div class="mesage-content">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <h3 class="user-name text-Small-Bold">حسن حسني</h3>
+                                        <p class="time text-small">5:19 AM</p>
+                                    </div>
+                                    <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، </p>
+                                </div>
+                            </div>
+                            <a href="" class="all-message text-Small-Bold">مشاهدة كل الرسائل</a>
+                        </div>
+                    </div>
+
+                    <div class="user-account-top d-flex align-items-center icon-box position-relative"
+                        data-target=".user-box">
+                        <div class="option-one">
+                            <img src="assets/image/icon/arrow-down.png" alt="">
+                        </div>
+                        <div class="user-info">
+                            <h3 class="u-name text-Small-Bold text-color-darck">محمد عبد الحميد ناجي</h3>
+                            <p class="u-name text-color-normal text-X-Small">مسؤول مبيعات</p>
+                        </div>
+                        <div class="user-avatar">
+                            <img src="assets/image/icon/02.png" alt="">
+                            <i class="icon-home"></i>
+
+                        </div>
+                        <div class="popup-box user-box">
+                            <ul class="user-list-links">
+                                <li class="text-X-Small text-color-normal"><span><i
+                                            class="fa-regular fa-pen-line"></i></span><a href=""
+                                        class="text-color-normal">تعديل بياناتي </a> </li>
+                                <li class="text-X-Small text-color-normal"><span><i
+                                            class="fa-regular fa-location-dot"></i></span><a href=""
+                                        class="text-color-normal">عنواني </a> </li>
+                                <li class="text-X-Small text-color-normal"><span><i
+                                            class="fa-regular fa-heart"></i></span><a href=""
+                                        class="text-color-normal">المفضلة </a> </li>
+                                <li class="text-X-Small text-color-normal"><span><i
+                                            class="fa-regular fa-cart-arrow-up"></i></span><a href=""
+                                        class="text-color-normal">طلباتي السابقة </a> </li>
+                                <li class="text-X-Small text-color-normal"><span><i
+                                            class="fa-regular fa-dashboard"></i></span><a href=""
+                                        class="text-color-normal">لوحة التحكم </a> </li>
+                                <li class="text-X-Small text-color-normal"><span><i
+                                            class="fa-regular fa-right-from-bracket"></i></span><a href=""
+                                        class="text-color-normal"> تسجيل الخروج</a> </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 
+############################################
+## main-content
+############################################
+-->
+    <div class="main-body">
+        <!-- 
+        ############################################
+        ## sidpar(main-menu)
+        ############################################
+        -->
+        <div class="sidpar">
+            <div class="main-menu " id="mein-menu">
+
+                <ul class="menu1">
+                    <li class="nav-link-1 ">
+                        <a href="24_creat-order.html"> <span class="theme-color icon-size-tow "><i
+                                    class="fa fa-user-group"></i></span> ادارةPOS </a>
+                    </li>
+                    <li class="nav-link-1">
+                        <a href="index.html"> <span class="theme-color icon-size-tow"><i
+                                    class="fa-light fa-display"></i></span> الاحصائيات والتقارير</a>
+                    </li>
+                    <!-- <li class="nav-link-1">
+                        <a href=""><span class="my-svg-object"><img src="assets/image/icon/category.png" alt=""></span> الاقسام والاصناف</a>
+                    </li> -->
+                    <li class="dropdown1 ">
+                        <a href="#" class="dropdown-btn nav-link-1 active-link-one"><span
+                                class="theme-color icon-size-tow"><i class="fa-regular fa-solid fa-grid-2"></i></span>
+                            الاقسام والاصناف <i class="fa fa-caret-down"></i> </a>
+                        <ul class="dropdown-container">
+                            <li class="nav-link-1"><a href="categorys.html" class=""><span
+                                        class="theme-color icon-size-tow active-dropdown"><i
+                                            class="fa-regular fa-diagram-cells"></i></span> الاقسام</a></li>
+                            <li class="nav-link-1"><a href="categorize.html  active-link-one"><span
+                                        class="theme-color icon-size-tow"><i class="fa-regular fa-grid-2"></i></span>
+                                    الاصناف</a></li>
+                            <li class="nav-link-1"><a href="offer.html"><span class="theme-color icon-size-tow"><i
+                                            class="fa-regular fa-badge-percent"></i></span> العروض</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown1">
+                        <a href="#" class="dropdown-btn nav-link-1"><span class="theme-color icon-size-tow"><i
+                                    class="fa-regular fa-trash-can-undo"></i></span> إدارة الطلبات<i
+                                class="fa fa-caret-down"></i></a>
+                        <ul class="dropdown-container">
+                            <li class="nav-link-1"><a href="2_new-order.html" class=""><span
+                                        class="theme-color icon-size-tow active-dropdown"><i
+                                            class="fa-regular fa-arrow-right"></i></span> الطلبات الجديدة</a></li>
+                            <li class="nav-link-1"><a href="1_archiv-order.html"><span
+                                        class="theme-color icon-size-tow"><i class="fa-regular fa-archive"></i></span>
+                                    الطلبات المؤرشفة</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown1">
+                        <a href="#" class="dropdown-btn nav-link-1"><span class="theme-color icon-size-tow"> <i
+                                    class="fa fa-check-circle"></i></span> إدارة الحجوزات<i
+                                class="fa fa-caret-down"></i></a>
+                        <ul class="dropdown-container">
+                            <li class="nav-link-1"><a href="19_new-reserve.html"><span
+                                        class="theme-color icon-size-tow"><i
+                                            class="fa-regular fa-basket-shopping"></i></span> الحجوزات الجديدة</a></li>
+                            <li class="nav-link-1"><a href="20_old-reserved.html"><span
+                                        class="theme-color icon-size-tow"><i
+                                            class="fa-regular fa-basket-shopping-minus"></i></span> الحجوزات السابقة</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-link-1">
+                        <a href="4_user-managmet.html"><span class="theme-color icon-size-tow"><i
+                                    class="fa fa-user-group"></i></span> إدارة الموظفين</a>
+                    </li>
+                    <li class="nav-link-1">
+                        <a href="8_clints.html"><span class="theme-color icon-size-tow"><i
+                                    class="fa-regular fa-users"></i></span> العملاء</a>
+                    </li>
+                    <li class="dropdown1 ">
+                        <a href="#" class="dropdown-btn nav-link-1 "><span class="theme-color icon-size-tow "><i
+                                    class="fa-regular fa-solid fa-grid-2"></i></span> اعدادات المطعم <i
+                                class="fa fa-caret-down"></i> </a>
+                        <ul class="dropdown-container">
+                            <li class="nav-link-1"><a href="7_restrant-settings.html"><span
+                                        class="theme-color icon-size-tow"><i class="fa-regular fa-database"></i></span>
+                                    البيانات الاساسية</a></li>
+                            <li class="nav-link-1"><a href="11_manageing-delivery-offer.html"><span
+                                        class="theme-color icon-size-tow"><i
+                                            class="fa-regular fa-arrow-alt-right"></i></span> ادارة الطلبات والتوصيل</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown1">
+                        <a href="#" class=" dropdown-btn nav-link-1"><span class="theme-color icon-size-tow"><i
+                                    class=" fa-solid fa-gear"></i></span> الاعدادات <i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-container">
+                            <li class="nav-link-1"><a href="#"><span class="theme-color icon-size-tow"><i
+                                            class="fa-solid fa-section"></i></span> الاصناف</a></li>
+                            <li class="nav-link-1"><a href="#"><span class="theme-color icon-size-tow"><i
+                                            class="fa-solid fa-dial-off"></i></span> العروض</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="dropdown1">
+                        <a href="#" class=" dropdown-btn nav-link-1"><span class="theme-color icon-size-tow"><i
+                                    class="fa-regular fa-page"></i></span> إدارة الصفحات <i
+                                class="fa fa-caret-down"></i> </a>
+                        <ul class="dropdown-container">
+                            <li class="nav-link-1"><a href="15_privecy-policy.html"><span
+                                        class="theme-color icon-size-tow"><i
+                                            class="fa-regular fa-question-square"></i></span> سياية الخصوصية</a></li>
+                            <li class="nav-link-1"><a href="16_terms.html"><span class="theme-color icon-size-tow"><i
+                                            class="fa-regular fa-pager"></i></span> شروط الاستخدام</a></li>
+                            <li class="nav-link-1"><a href="17_about-us.html"><span class="theme-color icon-size-tow"><i
+                                            class="fa-regular fa-info-square"></i></span> من نحن</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-link-1">
+                        <a href="12_general-settings.html"><span class="theme-color icon-size-tow"><i
+                                    class="fa-regular fa-gear"></i></span> الإعدادات العامة</a>
+                    </li>
+                    <li class="nav-link-1">
+                        <a href="10_all-rating.html"><span class="theme-color icon-size-tow"><i
+                                    class="fa-solid fa-star-sharp-half-stroke"></i></span> التقييمات</a>
+                    </li>
+                    <li class="nav-link-1">
+                        <a href="14_cobon.html"><span class="theme-color icon-size-tow"><i
+                                    class="fa-solid fa-badge-percent"></i></span> القسائم الشرائية</a>
+                    </li>
+                    <li class="nav-link-1">
+                        <a href=""><span class="theme-color icon-size-tow"><i
+                                    class="fa-solid fa-barcode-read"></i></span> إدارة الباركود</a>
+                    </li>
+                    <li class="nav-link-1">
+                        <a href=""><span class="theme-color icon-size-tow"><i
+                                    class="fa-duotone fa-mountains"></i></span> إدارة الثيمات</a>
+                    </li>
+                    <li class="nav-link-1">
+                        <a href="29_seo.html"><span class="theme-color icon-size-tow"><i
+                                    class="fa-solid fa-link-horizontal-slash"></i></span> seo سيو</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 
+        ############################################
+        ## Pages content
+        ############################################
+        -->
+        <!-- show export btn -->
+        <div class="modal-overlay" data-modal="export-data"></div>
+        <div class="modal-box" data-modal="export-data">
+            <div class=" text-color-normal mb-3 d-flex justify-content-between align-items-center">
+                <h3 class="text-Small-Bolder"> تصدير البيانات الى : </h3>
+                <h4 class="text-X-Small modal-close-icon-2 modal-close" data-modal="export-data"><i
+                        class="fa fa-close"></i></h4>
+                <!-- <span class="modal-close-icon"><i class="fa fa-close"></i></span> -->
+            </div>
+
+            <div class="invoice-section-five mt-2">
+                <a href="#" onclick="exportcategorizeToCSV()"><i class="fa fa-arrow-down"></i> CVS</a>
+                <a href="#" id="printcategorize"><i class="fa fa-arrow-down"></i> PDF</a>
+                <a href="#" onclick="exportcategorize()"> <i class="fa fa-arrow-down"></i> Excel</a>
+            </div>
+
+        </div>
+        <!-- model- delete -->
+        <div class="modal-overlay" data-modal="delete-category"></div>
+        <div class="modal-box" data-modal="delete-category">
+            <div class="model-delete-icon text-center mb-2">
+                <i class="fa fa-trash-alt"></i>
+            </div>
+            <div class="delete-box-content text-center">
+                <h3 class="text-Small-Bolder mb-2 text-color-darck">هل انت متاكد من هذف الصنف</h3>
+                <p class="text-X-Small text-color-normal">يرجى العلم انه في حالة حذف الصنف لا يمكن استرجاعه مرة اخرى</p>
+            </div>
+
+            <div class="model-btn d-flex justify-content-between mt-3">
+                <a class="cancle-btn-one modal-close w-50 text-center" href="#" title="اغلاغ"
+                    data-modal="delete-category">الغاء</a>
+                <a class="save-btn-one w-50 text-center" href="#" title="save">حفظ</a>
+            </div>
+        </div>
+        <!-- model save -->
+        <div class="modal-overlay" data-modal="save-category"></div>
+        <div class="modal-box" data-modal="save-category">
+            <div class="model-delete-icon text-center mb-2">
+                <img src="assets/image/items/Group.png" alt="">
+            </div>
+            <div class="delete-box-content text-center">
+                <h3 class="text-Small-Bolder text-color-darck mb-2">هل انت متاكد من نشر وحفظ الصنف؟</h3>
+                <p class="text-X-Small text-color-normal mt-2">مجرد زصف للاكشن</p>
+            </div>
+
+            <div class="model-btn d-flex justify-content-between mt-3">
+                <a class="cancle-btn-one modal-close w-50 text-center" href="#" title="اغلاغ"
+                    data-modal="save-category">الغاء</a>
+                <a class="save-btn-one  w-50 text-center" href="#" title="save">حفظ</a>
+            </div>
+        </div>
+        <!-- active category -->
+        <div class="modal-overlay" data-modal="active-gategorys"></div>
+        <div class="modal-box" data-modal="active-gategorys">
+            <div class="modal-box-header text-color-normal mb-3 d-flex justify-content-between align-items-center">
+                <h3 class="">تفعيل صنف</h3>
+                <h4 class="text-Small-Bold modal-close-icon modal-close" data-modal="add-gategorys"><i
+                        class="fa fa-close"></i></h4>
+                <!-- <span class="modal-close-icon"><i class="fa fa-close"></i></span> -->
+            </div>
+            <div class="active-category-img">
+                <img src="assets/image/items/salade.png" alt="">
+            </div>
+            <h3 class="text-Small-Bold mt-2">تفعيل صنف (<span class="text-X-Small">السلطات والخضروات</span>)</h3>
+
+            <div class="model-btn d-flex justify-content-between mt-3">
+                <a class=" w-100  text-center save-btn-one modal-close" href="http://" title="اغلاغ"
+                    data-modal="add-gategorys">حسنا</a>
+                <!-- <a class="save-btn-one" href="http://" title="اغلاغ">حفظ</a> -->
+            </div>
+        </div>
+        <!-- finsh category -->
+        <div class="modal-overlay" data-modal="active-gategorys"></div>
+        <div class="modal-box" data-modal="active-gategorys">
+            <div class="modal-box-header text-color-normal mb-3 d-flex justify-content-between align-items-center">
+                <h3 class="">صنف منتهي</h3>
+                <!-- <h4 class="text-Small-Bold modal-close-icon modal-close"  data-modal="add-gategorys"><i class="fa fa-close"></i></h4> -->
+                <!-- <span class="modal-close-icon"><i class="fa fa-close"></i></span> -->
+            </div>
+            <div class="active-category-img">
+                <img src="assets/image/items/tow.PNG" alt="">
+            </div>
+            <h3 class="text-Small-Bolder mt-2 text-center">انتهاء صنف (<span class="text-X-Small">السلطات
+                    والخضروات</span>)</h3>
+            <h3 class="text-X-Small mt-1 text-center"> سوف يتم اضافة الصنف غدا </h3>
+
+            <div class="model-btn d-flex justify-content-between mt-3">
+                <a class=" w-100  text-center save-btn-one modal-close" href="#" title="اغلاغ"
+                    data-modal="active-gategorys">حسنا</a>
+                <!-- <a class="save-btn-one" href="http://" title="اغلاغ">حفظ</a> -->
+            </div>
+        </div>
+
+
+        <div class="main-content">
+            <div class="container-fluid">
+                <!-- 
+            ############################################
+            ## Pages headrer
+            ############################################
+            -->
+                <div class="page-header d-block">
+                    <div class="row row-gab align-items-center">
+                        <div class="col-lg-4 col-md-12">
+                            <div class="page-headrer-title justify-content-start">
+                                <h3 class="text-x-Small text-color-normal align-items-center">الاقسام والاصناف <i
+                                        class="fa fa-arrow-right"></i></h3>
+                                <h4 class="text-color-darck">الاصناف</h4>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-8">
+                            <div class="number d-flex justify-content-between align-items-center me-2 ms-2">
+                                <p class="text-color-normal text-small text-center">عدد الصور</p>
+                                <div class="d-flex me-2 ms-2">
+                                    <div class="number-of-img text-center ms-1 me-1">
+                                        <p class="text-color-normal text-small text-center">المتبقي</p>
+                                        <h3>50</h3>
+                                    </div>
+                                    <div class="number-of-img text-center ms-1 me-1">
+                                        <p class="text-color-normal text-small text-center">الاجمالي</p>
+                                        <h3>20</h3>
+                                    </div>
+                                </div>
+                                <a href="" class="add-iamge bg-custom-color" title="add image">اضافة صورة</a>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4">
+                            <div class="page-headrer-button d-flex justify-content-end gap-2">
+                                <a id="open-modal" href="26_add-categroize.html" class="buttom-three bg-custom-color"
+                                    title="اضافة اسم "> <i class="fa fa-plus"></i> اضافة صنف </a>
+                                <a href="#" class="buttom-four open-modal" title="اضافة اسم "
+                                    data-modal="save-category">حفظ </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="page-content mt-3">
+                    <div class="row justify-content-between mb-2">
+                        <div class="col-lg-3 col-md-6 col-12 sm-mb-2">
+                            <div class="serach-one position-relative">
+                                <input type="search" name="" id="customSearchBox"
+                                    class="input-one text-color-normal w-100 text-X-Small "
+                                    placeholder="بحث باسم العرض">
+                                <a class="search-btn"><i class="fa-regular fa-search"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-12 ">
+                            <div class="dilter-btns d-flex justify-content-end align-items-center">
+                                <a href=""
+                                    class="filter-btn-one sm-filter-btn-one text-X-Small text-color-normal open-modal"
+                                    data-modal="export-data"> <i class="fa-regular fa-file-export"></i> تصدير </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-container">
+                        <table class="table-one row-border stripe hover " id="datatable4">
+                            <thead class="table-headre">
+                                <tr class="primary-text-color text-X-Small">
+                                    <th>صورة </th>
+                                    <th class="theme-color">اسم الصنف </th>
+                                    <th class="theme-color">Items Name </th>
+                                    <th class="theme-color">القسم</th>
+                                    <th class="theme-color">السعر </th>
+                                    <th class="text-center theme-color">مفضلة </th>
+                                    <th class="text-center theme-color">الاجراءات</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="text-x-Small">
+                                    <td>
+                                        <div class="table-img"><img src="assets/image/items/salade.png" alt=""></div>
+                                    </td>
+                                    <td class="text-x-Small">السلطات والخضروات</td>
+                                    <td class="text-x-Small">salade and vegetables</td>
+                                    <td class="text-x-Small text-center">القسم رقم1</td>
+                                    <td class="text-x-Small text-center">24 ريال</td>
+                                    <td class="text-x-Small text-center">34 </td>
+                                    <td>
+                                        <div class="acction-one">
+                                            <div class="order-status d-flex align-items-center">
+
+                                                <div class="toggle-btn open-modal" data-modal="active-gategorys"
+                                                    data-toggle-id="categorize-toggle-1" data-on-text="متوفر"
+                                                    data-off-text="منتهي">
+                                                    <span class="toggle-circle bg-custom-color"></span>
+                                                </div>
+                                                <span class="toggle-text"></span>
+                                            </div>
+                                            <div class="table-one-icon d-flex">
+                                                <a href="27_edit-categorize.html"><span class="theme-color "><i
+                                                            class="fa fa-square-pen"></i></span> </a>
+                                                <span class="theme-color open-modal" data-modal="delete-category"><i
+                                                        class="fa fa-trash"></i></span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="text-x-Small">
+                                    <td>
+                                        <div class="table-img"><img src="assets/image/items/salade.png" alt=""></div>
+                                    </td>
+                                    <td class="text-x-Small">المقبلات والمعجنات</td>
+                                    <td class="text-x-Small">salade and vegetables</td>
+                                    <td class="text-x-Small text-center">القسم رق21</td>
+                                    <td class="text-x-Small text-center">54 ريال</td>
+                                    <td class="text-x-Small text-center">343 </td>
+                                    <td>
+                                        <div class="acction-one">
+                                            <div class="order-status d-flex align-items-center">
+                                                <div class="toggle-btn open-modal" data-modal="active-gategorys"
+                                                    data-toggle-id="categorize-toggle-2" data-on-text="متوفر"
+                                                    data-off-text="منتهي">
+                                                    <span class="toggle-circle bg-custom-color"></span>
+                                                </div>
+                                                <span class="toggle-text"></span>
+                                            </div>
+                                            <div class="table-one-icon d-flex">
+                                                <a href="27_edit-categorize.html"><span class="theme-color "><i
+                                                            class="fa fa-square-pen"></i></span> </a>
+                                                <span class="theme-color open-modal" data-modal="delete-category"><i
+                                                        class="fa fa-trash"></i></span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="text-x-Small">
+                                    <td>
+                                        <div class="table-img"><img src="assets/image/items/salade.png" alt=""></div>
+                                    </td>
+                                    <td class="text-x-Small">البتزا والفطائر</td>
+                                    <td class="text-x-Small">salade and vegetables</td>
+                                    <td class="text-x-Small text-center">القسم رقم1</td>
+                                    <td class="text-x-Small text-center">24 ريال</td>
+                                    <td class="text-x-Small text-center">34 </td>
+                                    <td>
+                                        <div class="acction-one">
+                                            <div class="order-status d-flex align-items-center">
+                                                <div class="toggle-btn open-modal" data-modal="active-gategorys"
+                                                    data-toggle-id="categorize-toggle-3" data-on-text="متوفر"
+                                                    data-off-text="منتهي">
+                                                    <span class="toggle-circle bg-custom-color"></span>
+                                                </div>
+                                                <span class="toggle-text"></span>
+                                            </div>
+                                            <div class="table-one-icon d-flex">
+                                                <a href="27_edit-categorize.html"><span class="theme-color "><i
+                                                            class="fa fa-square-pen"></i></span> </a>
+                                                <span class="theme-color open-modal" data-modal="delete-category"><i
+                                                        class="fa fa-trash"></i></span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="text-x-Small">
+                                    <td>
+                                        <div class="table-img"><img src="assets/image/items/salade.png" alt=""></div>
+                                    </td>
+                                    <td class="text-x-Small">برجر اللحم والفراخ</td>
+                                    <td class="text-x-Small">salade and vegetables</td>
+                                    <td class="text-x-Small text-center">القسم رق21</td>
+                                    <td class="text-x-Small text-center">54 ريال</td>
+                                    <td class="text-x-Small text-center">343 </td>
+                                    <td>
+                                        <div class="acction-one">
+                                            <div class="order-status d-flex align-items-center">
+                                                <div class="toggle-btn open-modal" data-modal="active-gategorys"
+                                                    data-toggle-id="categorize-toggle-4" data-on-text="متوفر"
+                                                    data-off-text="منتهي">
+                                                    <span class="toggle-circle bg-custom-color"></span>
+                                                </div>
+                                                <span class="toggle-text"></span>
+                                            </div>
+                                            <div class="table-one-icon d-flex">
+                                                <a href="27_edit-categorize.html"><span class="theme-color "><i
+                                                            class="fa fa-square-pen"></i></span> </a>
+                                                <span class="theme-color open-modal" data-modal="delete-category"><i
+                                                        class="fa fa-trash"></i></span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="text-x-Small">
+                                    <td>
+                                        <div class="table-img"><img src="assets/image/items/salade.png" alt=""></div>
+                                    </td>
+                                    <td class="text-x-Small">الحلويات والفواكه</td>
+                                    <td class="text-x-Small">salade and vegetables</td>
+                                    <td class="text-x-Small text-center">القسم رقم1</td>
+                                    <td class="text-x-Small text-center">24 ريال</td>
+                                    <td class="text-x-Small text-center">34 </td>
+                                    <td>
+                                        <div class="acction-one">
+                                            <div class="order-status d-flex align-items-center">
+                                                <div class="toggle-btn open-modal" data-modal="active-gategorys"
+                                                    data-toggle-id="categorize-toggle-4" data-on-text="متوفر"
+                                                    data-off-text="منتهي">
+                                                    <span class="toggle-circle bg-custom-color"></span>
+                                                </div>
+                                                <span class="toggle-text"></span>
+                                            </div>
+                                            <div class="table-one-icon d-flex">
+                                                <a href="27_edit-categorize.html"><span class="theme-color "><i
+                                                            class="fa fa-square-pen"></i></span> </a>
+                                                <span class="theme-color open-modal" data-modal="delete-category"><i
+                                                        class="fa fa-trash"></i></span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="text-x-Small">
+                                    <td>
+                                        <div class="table-img"><img src="assets/image/items/salade.png" alt=""></div>
+                                    </td>
+                                    <td class="text-x-Small">الباسطة والمكرونة</td>
+                                    <td class="text-x-Small">salade and vegetables</td>
+                                    <td class="text-x-Small text-center">القسم رق21</td>
+                                    <td class="text-x-Small text-center">54 ريال</td>
+                                    <td class="text-x-Small text-center">343 </td>
+                                    <td>
+                                        <div class="acction-one">
+                                            <div class="order-status d-flex align-items-center">
+                                                <div class="toggle-btn open-modal" data-modal="active-gategorys"
+                                                    data-toggle-id="categorize-toggle-5" data-on-text="متوفر"
+                                                    data-off-text="منتهي">
+                                                    <span class="toggle-circle bg-custom-color"></span>
+                                                </div>
+                                                <span class="toggle-text"></span>
+                                            </div>
+                                            <div class="table-one-icon d-flex">
+                                                <a href="27_edit-categorize.html"><span class="theme-color "><i
+                                                            class="fa fa-square-pen"></i></span> </a>
+                                                <span class="theme-color open-modal" data-modal="delete-category"><i
+                                                        class="fa fa-trash"></i></span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="text-x-Small">
+                                    <td>
+                                        <div class="table-img"><img src="assets/image/items/salade.png" alt=""></div>
+                                    </td>
+                                    <td class="text-x-Small">الحلويات والفواكه</td>
+                                    <td class="text-x-Small">salade and vegetables</td>
+                                    <td class="text-x-Small text-center">القسم رق21</td>
+                                    <td class="text-x-Small text-center">54 ريال</td>
+                                    <td class="text-x-Small text-center">343 </td>
+                                    <td>
+                                        <div class="acction-one">
+                                            <div class="order-status d-flex align-items-center">
+                                                <div class="toggle-btn open-modal" data-modal="active-gategorys"
+                                                    data-toggle-id="categorize-toggle-6" data-on-text="متوفر"
+                                                    data-off-text="منتهي">
+                                                    <span class="toggle-circle bg-custom-color"></span>
+                                                </div>
+                                                <span class="toggle-text"></span>
+                                            </div>
+                                            <div class="table-one-icon d-flex">
+                                                <a href="27_edit-categorize.html"><span class="theme-color "><i
+                                                            class="fa fa-square-pen"></i></span> </a>
+                                                <span class="theme-color open-modal" data-modal="delete-category"><i
+                                                        class="fa fa-trash"></i></span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="text-x-Small">
+                                    <td>
+                                        <div class="table-img"><img src="assets/image/items/salade.png" alt=""></div>
+                                    </td>
+                                    <td class="text-x-Small">المقبلات و المعجنات</td>
+                                    <td class="text-x-Small">salade and vegetables</td>
+                                    <td class="text-x-Small text-center">القسم رق21</td>
+                                    <td class="text-x-Small text-center">54 ريال</td>
+                                    <td class="text-x-Small text-center">343 </td>
+                                    <td>
+                                        <div class="acction-one">
+                                            <div class="order-status d-flex align-items-center">
+                                                <div class="toggle-btn open-modal" data-modal="active-gategorys"
+                                                    data-toggle-id="categorize-toggle-7" data-on-text="متوفر"
+                                                    data-off-text="منتهي">
+                                                    <span class="toggle-circle bg-custom-color"></span>
+                                                </div>
+                                                <span class="toggle-text"></span>
+                                            </div>
+                                            <div class="table-one-icon d-flex">
+                                                <a href="27_edit-categorize.html"><span class="theme-color "><i
+                                                            class="fa fa-square-pen"></i></span> </a>
+                                                <span class="theme-color open-modal" data-modal="delete-category"><i
+                                                        class="fa fa-trash"></i></span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="pagination">
+                    <div class="pag-number">
+                        <ul class="d-flex">
+                            <li><a class="theme-color prev" href="#"><i class="fa fa-arrow-circle-right"></i></a></li>
+                            <li class="page-numbers d-flex"></li>
+                            <li><a class="theme-color next" href="#"><i class="fa fa-arrow-circle-left"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="pag-text">
+                        <p class="text-X-Small text-color-normal" id="pageInfoText">اظهار1 الي 10 من اصل 34 مدخل</p>
+                        <div class="filter-one">
+                            <div class="dropdown-one theme-color">
+                                <select name="" id="itemsPerPage" class="theme-color">
+                                    <option value="5">5</option>
+                                    <option value="10">10</option>
+                                    <option value="15">15</option>
+                                    <option value="20">20</option>
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 
+############################################
+## footer 
+############################################
+-->
+    <div class="footer">
+        <p class="text-color-normal text-small">Arabia food 2024</p>
+    </div>
+
+    <script src="assets/script/lib/jquery.min.js"></script>
+    <script src="assets/script/lib/owl.carousel.min.js"></script>
+    <script src="assets/script/lib/chartjs.min.js"></script>
+    <script src="assets/script/lib/chartone.min.js"></script>
+    <script src="assets/script/chart.min.js"></script>
+    <script src="assets/script/lib/datatable-bootstrapp.js"></script>
+    <script src="assets/script/lib/datatables.js"></script>
+
+    <script src="assets/script/lib/xlsx.full.min.js"></script>
+    <script src="assets/script/lib/printThis.js"></script>
+    <script src="assets/script/export.js"></script>
+    <script src="assets/script/table.js"></script>
+    <script src="assets/script/lib/jquery.mousewheel.js"></script>
+    <script src="assets/script/lib/jquery.mCustomScrollbar.js"></script>
+
+    <script src="assets/script/mian.js"></script>
+
+
+</body>
+
+</html>

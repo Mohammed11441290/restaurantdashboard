@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ادارة الباركود</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- owl carousel  -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <!-- css style  -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="assets/css/international-telephone-input.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.css">
+    <!-- <link rel="stylesheet" href="assets/css/lib/multi-select-tag.css">     -->
+    <link rel="stylesheet" href="assets/css/vuesax.css">
+    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/lib/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="assets/css/lib/barcode.css">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-149838823-1');
+    </script> -->
+</head>
+
+<body>
+    <!-- 
+############################################
+## 1- language 
+############################################
+-->
+    <div class="show-option-menu">
+        <div class="option-box">
+            <div class="lang-option mb-2">
+                <p class="text-color-normal text-Small-Bolder mb-2">تغيير اللغة:</p>
+                <div class="lang-changer-2 bg-custom-color">
+                    <button id="btn-en-2" class="text-Small-Bold">EN</button>
+                    <button id="btn-ar-2" class="text-Small-Bold">AR</button>
+                </div>
+            </div>
+            <div class="color-settings">
+                <p class="text-color-normal text-Small-Bolder mb-2">اللون:</p>
+                <div class="colors-box d-flex">
+                    <button class="color-btn red" data-color="#FA5050"> </button>
+                    <button class="color-btn green" data-color="green"> </button>
+                    <button class="color-btn yellow" data-color="yellow"></button>
+                    <button class="color-btn orange" data-color="orange"></button>
+                    <button class="color-btn blue" data-color="blue"></button>
+                    <button class="color-btn purple" data-color="purple"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="lang-changer bg-custom-color">
+        <button id="btn-en">EN</button>
+        <button id="btn-ar">AR</button>
+    </div> -->
+    <!-- 
+############################################
+## 2- primary menu
+############################################
+ -->
+    <div class="admin-top-bar">
+        <div class="container-fluid">
+            <div class="d-flex justify-content-between  align-items-center">
+                <div class="top-bar-right d-flex align-items-center">
+                    <div class="mobile-icon" id="mobile-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="logo">
+                        <a href=""> <img src="assets/image/Logo.png" alt=""></a>
+                    </div>
+                    <div class="topbar-date text-color-normal text-small ms-1 me-1">
+                        <p class="">الاربعاء</p>
+                        <p>11 فبراير 12:30 مساءا</p>
+                    </div>
+                </div>
+
+                <div class="top-bar-left d-flex align-items-center">
+                    <div class="lang-changer bg-custom-color lang-1">
+                        <button id="btn-en" class="text-Small-Bold">EN</button>
+                        <button id="btn-ar" class="text-Small-Bold">AR</button>
+                    </div>
+                    <div class="settings">
+                        <span class="bg-custom-color show-option-btn"><i class="fa fa-gear"></i></span>
+                    </div>
+                    <div class="order-status d-flex align-items-center me-2 ms-2">
+                        <span class="toggle-text text-X-Small text-color-darck"></span>
+                        <div class="toggle-btn" data-toggle-id="open-close-toggole" data-on-text="مفتوح"
+                            data-off-text="مغلق">
+                            <span class="toggle-circle noyes bg-custom-color"></span>
+                        </div>
+                    </div>
+                    <div class="website-mode" id="toggle-dark-mode">
+                        <span class="theme-color  icon-size-one"><i class="fa fa-moon"></i></span>
+                    </div>
+
+                    <div class="color-option d-flex position-relative">
+                        <a href="#" class="hide-mobile icon-box icon-size-one select-color theme-color"><i
+                                class="fa-solid fa-circle-half-stroke "></i></a>
+
+                        <div class="color-slection">
+                            <p class="text-color-normal text-small mb-2">اللون:</p>
+                            <div class="colors-box d-flex">
+                                <button class="color-btn red" data-color="#FA5050"> </button>
+                                <button class="color-btn green" data-color="green"> </button>
+                                <button class="color-btn yellow" data-color="yellow"></button>
+                                <button class="color-btn orange" data-color="orange"></button>
+                                <button class="color-btn blue" data-color="blue"></button>
+                                <button class="color-btn purple" data-color="purple"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notefication-icon d-flex position-relative">
+                        <a href="#" class=" hide-mobile icon-box icon-size-one theme-color"><i
+                                class="fa fa-basket-shopping"></i></a>
+                        <a href="#" class="icon-box icon-size-one theme-color position-relative"
+                            data-target=".notification"><span class="sms-notification bg-custom-color">18</span><i
+                                class="fa fa-bell"></i></a>
+                        <div class="popup-box notification">
+                            <div class="notification-box new-order notification-type-new-order d-flex">
+                                <div class="notification-icon">
+                                    <i class="fa fa-basket-shopping-plus"></i>
+                                </div>
+                                <div class="notification-content w-100">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <h3 class="user-name text-Small-Bold">طلب جديد</h3>
+                                        <p class="time text-small">5:19 AM</p>
+                                    </div>
+                                    <div class="notification-supcontent d-flex">
+                                        <h3 class="text-Small-light">رقم الطلب : <span
+                                                class="text-XX-Small">334222</span></h3>
+                                        <h3 class="text-Small-light">طريقة الدفع : <span class="text-XX-Small">حوالة
+                                                بنكية</span></h3>
+                                        <h3 class="text-Small-light">نوع الوحدة : <span class="text-XX-Small">هنا</span>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="notification-box order-done notification-type-done d-flex">
+                                <div class="notification-icon theme-color">
+                                    <i class="fa fa-check-circle"></i>
+                                </div>
+                                <div class="notification-content w-100">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <h3 class="user-name text-Small-Bold">تم تاكيد الحجز</h3>
+                                        <p class="time text-small">5:19 AM</p>
+                                    </div>
+                                    <div class="notification-supcontent d-flex">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="notification-box new-book notification-type-cancel-order d-flex">
+                                <div class="notification-icon theme-color">
+                                    <i class="fa fa-basket-shopping-plus"></i>
+                                </div>
+                                <div class="notification-content w-100">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <h3 class="user-name text-Small-Bold">طلب جديد</h3>
+                                        <p class="time text-small">AM 5:19 </p>
+                                    </div>
+                                    <div class="notification-supcontent d-flex">
+                                        <h3 class="text-Small-light">رقم الطلب : <span
+                                                class="text-XX-Small">334222</span></h3>
+                                        <h3 class="text-Small-light">اسم الموظف : <span class="text-XX-Small">حمد
+                                                هلال</span></h3>
+                                        <h3 class="text-Small-light">المبلغ : <span class="text-XX-Small">120
+                                                ريال</span></h3>
+                                        <h3 class="text-Small-light">طريقة الاستلام : <span class="text-XX-Small"> <i
+                                                    class="fa-regular fa-envelope"></i> البريد</span></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="notification-box cancel-order notification-type-new-order d-flex">
+                                <div class="notification-icon">
+                                    <i class="fa fa-circle-xmark"></i>
+                                </div>
+                                <div class="notification-content w-100">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <h3 class="user-name text-Small-Bold">طلب ملغي</h3>
+                                        <p class="time text-small">5:19 AM</p>
+                                    </div>
+                                    <div class="notification-supcontent d-flex justify-content-between">
+                                        <h3 class="text-Small-light">رقم الطلب : <span
+                                                class="text-XX-Small">334222</span></h3>
+                                        <h3 class="text-Small-light">اسم الموظف : <span class="text-XX-Small">حمد
+                                                هلال</span></h3>
+                                        <h3 class="text-Small-light">المبلغ : <span class="text-XX-Small">120
+                                                ريال</span></h3>
+                                        <h3 class="text-Small-light">طريقة الاستلام : <span class="text-XX-Small"> <i
+                                                    class="fa-thin fa-envelope"></i>البريد </span></h3>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <a href="" class="all-message text-Small-Bold">مشاهدة كل الاشعارات</a>
+                        </div>
+                        <a href="#" class="sms-popup icon-box icon-size-one theme-color position-relative"
+                            data-target=".sms"><span class="sms-notification bg-custom-color">12</span><i
+                                class="fa fa-envelope"></i></a>
+                        <div class="popup-box sms">
+                            <div class="message-box d-flex align-items-center">
+                                <div class="user-img">
+                                    <img src="assets/image/Avatar.png" alt="" width="50px" height="50px">
+                                </div>
+                                <div class="mesage-content">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <h3 class="user-name text-Small-Bold">حسن حسني</h3>
+                                        <p class="time text-small">5:19 AM</p>
+                                    </div>
+                                    <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، </p>
+                                </div>
+                            </div>
+                            <div class="message-box d-flex align-items-center">
+                                <div class="user-img">
+                                    <img src="assets/image/Avatar.png" alt="" width="50px" height="50px">
+                                </div>
+                                <div class="mesage-content">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <h3 class="user-name text-Small-Bold">حسن حسني</h3>
+                                        <p class="time text-small">5:19 AM</p>
+                                    </div>
+                                    <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، </p>
+                                </div>
+                            </div>
+                            <div class="message-box d-flex align-items-center">
+                                <div class="user-img">
+                                    <img src="assets/image/Avatar.png" alt="" width="50px" height="50px">
+                                </div>
+                                <div class="mesage-content">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <h3 class="user-name text-Small-Bold">حسن حسني</h3>
+                                        <p class="time text-small">5:19 AM</p>
+                                    </div>
+                                    <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، </p>
+                                </div>
+                            </div>
+                            <a href="" class="all-message text-Small-Bold">مشاهدة كل الرسائل</a>
+                        </div>
+                    </div>
+
+                    <div class="user-account-top d-flex align-items-center icon-box position-relative"
+                        data-target=".user-box">
+                        <div class="option-one">
+                            <img src="assets/image/icon/arrow-down.png" alt="">
+                        </div>
+                        <div class="user-info">
+                            <h3 class="u-name text-Small-Bold text-color-darck">محمد عبد الحميد ناجي</h3>
+                            <p class="u-name text-color-normal text-X-Small">مسؤول مبيعات</p>
+                        </div>
+                        <div class="user-avatar">
+                            <img src="assets/image/icon/02.png" alt="">
+                            <i class="icon-home"></i>
+
+                        </div>
+                        <div class="popup-box user-box">
+                            <ul class="user-list-links">
+                                <li class="text-X-Small text-color-normal"><span><i
+                                            class="fa-regular fa-pen-line"></i></span><a href=""
+                                        class="text-color-normal">تعديل بياناتي </a> </li>
+                                <li class="text-X-Small text-color-normal"><span><i
+                                            class="fa-regular fa-location-dot"></i></span><a href=""
+                                        class="text-color-normal">عنواني </a> </li>
+                                <li class="text-X-Small text-color-normal"><span><i
+                                            class="fa-regular fa-heart"></i></span><a href=""
+                                        class="text-color-normal">المفضلة </a> </li>
+                                <li class="text-X-Small text-color-normal"><span><i
+                                            class="fa-regular fa-cart-arrow-up"></i></span><a href=""
+                                        class="text-color-normal">طلباتي السابقة </a> </li>
+                                <li class="text-X-Small text-color-normal"><span><i
+                                            class="fa-regular fa-dashboard"></i></span><a href=""
+                                        class="text-color-normal">لوحة التحكم </a> </li>
+                                <li class="text-X-Small text-color-normal"><span><i
+                                            class="fa-regular fa-right-from-bracket"></i></span><a href=""
+                                        class="text-color-normal"> تسجيل الخروج</a> </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- 
+############################################
+## main-content
+############################################
+-->
+    <div class="main-body">
+        <!-- 
+        ############################################
+        ## sidpar(main-menu)
+        ############################################
+        -->
+        <div class="sidpar">
+            <div class="main-menu">
+                <ul class="menu1">
+                    <li>
+                        <a href="24_creat-order.html"> <span class="theme-color icon-size-tow "><i
+                                    class="fa fa-user-group"></i></span> ادارةPOS </a>
+                    </li>
+                    <li>
+                        <a href="index.html"> <span class="theme-color icon-size-tow"><i
+                                    class="fa-light fa-display"></i></span> الاحصائيات والتقارير</a>
+                    </li>
+                    <!-- <li>
+                        <a href=""><span class="my-svg-object"><img src="assets/image/icon/category.png" alt=""></span> الاقسام والاصناف</a>
+                    </li> -->
+                    <li class="dropdown1">
+                        <a href="#" class="dropdown-btn active-menu-item "><span
+                                class="theme-color icon-size-tow active-menu-item "><i
+                                    class="fa-regular fa-solid fa-grid-2"></i></span> الاقسام والاصناف <i
+                                class="fa fa-caret-down"></i> </a>
+                        <ul class="dropdown-container">
+                            <li><a href="categorys.html" class=""><span
+                                        class="theme-color icon-size-tow active-dropdown"><i
+                                            class="fa-regular fa-diagram-cells"></i></span> الاقسام</a></li>
+                            <li><a href="categorize.html"><span class="theme-color icon-size-tow"><i
+                                            class="fa-regular fa-grid-2"></i></span> الاصناف</a></li>
+                            <li><a href="offer.html"><span class="theme-color icon-size-tow"><i
+                                            class="fa-regular fa-badge-percent"></i></span> العروض</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown1">
+                        <a href="#" class="dropdown-btn"><span class="theme-color icon-size-tow"><i
+                                    class="fa-regular fa-trash-can-undo"></i></span> إدارة الطلبات<i
+                                class="fa fa-caret-down"></i></a>
+                        <ul class="dropdown-container">
+                            <li><a href="2_new-order.html" class=""><span
+                                        class="theme-color icon-size-tow active-dropdown"><i
+                                            class="fa-regular fa-arrow-right"></i></span> الطلبات الجديدة</a></li>
+                            <li><a href="1_archiv-order.html"><span class="theme-color icon-size-tow"><i
+                                            class="fa-regular fa-archive"></i></span> الطلبات المؤرشفة</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown1">
+                        <a href="#" class="dropdown-btn"><span class="theme-color icon-size-tow"> <i
+                                    class="fa fa-check-circle"></i></span> إدارة الحجوزات<i
+                                class="fa fa-caret-down"></i></a>
+                        <ul class="dropdown-container">
+                            <li><a href="19_new-reserve.html"><span class="theme-color icon-size-tow"><i
+                                            class="fa-regular fa-basket-shopping"></i></span> الحجوزات الجديدة</a></li>
+                            <li><a href="20_old-reserved.html"><span class="theme-color icon-size-tow"><i
+                                            class="fa-regular fa-basket-shopping-minus"></i></span> الحجوزات السابقة</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="4_user-managmet.html"><span class="theme-color icon-size-tow"><i
+                                    class="fa fa-user-group"></i></span> إدارة الموظفين</a>
+                    </li>
+                    <li>
+                        <a href="8_clints.html"><span class="theme-color icon-size-tow"><i
+                                    class="fa-regular fa-users"></i></span> العملاء</a>
+                    </li>
+                    <li class="dropdown1">
+                        <a href="#" class="dropdown-btn active-menu-item "><span
+                                class="theme-color icon-size-tow active-menu-item "><i
+                                    class="fa-regular fa-solid fa-grid-2"></i></span> اعدادات المطعم <i
+                                class="fa fa-caret-down"></i> </a>
+                        <ul class="dropdown-container">
+                            <li><a href="7_restrant-settings.html"><span class="theme-color icon-size-tow"><i
+                                            class="fa-regular fa-database"></i></span> البيانات الاساسية</a></li>
+                            <li><a href="11_manageing-delivery-offer.html"><span class="theme-color icon-size-tow"><i
+                                            class="fa-regular fa-arrow-alt-right"></i></span> ادارة الطلبات والتوصيل</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown1">
+                        <a href="#" class=" dropdown-btn"><span class="theme-color icon-size-tow"><i
+                                    class=" fa-solid fa-gear"></i></span> الاعدادات <i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-container">
+                            <li><a href=""><span class="theme-color icon-size-tow"><i c open-modall
+                                            data-modal="user-notification" ass="fa-solid fa-file-lines"></i></span>
+                                    الاقسام</a></li>
+                            <li><a href=""><span class="theme-color icon-size-tow"><i
+                                            class="fa-solid fa-section"></i></span> الاصناف</a></li>
+                            <li><a href=""><span class="theme-color icon-size-tow"><i
+                                            class="fa-solid fa-dial-off"></i></span> العروض</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="dropdown1">
+                        <a href="#" class=" dropdown-btn"><span class="theme-color icon-size-tow"><i
+                                    class="fa-regular fa-page"></i></span> إدارة الصفحات <i
+                                class="fa fa-caret-down"></i> </a>
+                        <ul class="dropdown-container">
+                            <li><a href="15_privecy-policy.html"><span class="theme-color icon-size-tow"><i
+                                            class="fa-regular fa-question-square"></i></span> سياية الخصوصية</a></li>
+                            <li><a href="16_terms.html"><span class="theme-color icon-size-tow"><i
+                                            class="fa-regular fa-pager"></i></span> شروط الاستخدام</a></li>
+                            <li><a href="17_about-us.html"><span class="theme-color icon-size-tow"><i
+                                            class="fa-regular fa-info-square"></i></span> من نحن</a></li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="12_general-settings.html"><span class="theme-color icon-size-tow"><i
+                                    class="fa-regular fa-gear"></i></span> الإعدادات العامة</a>
+                    </li>
+                    <li>
+                        <a href="10_all-rating.html"><span class="theme-color icon-size-tow"><i
+                                    class="fa-solid fa-star-sharp-half-stroke"></i></span> التقييمات</a>
+                    </li>
+                    <li>
+                        <a href="14_cobon.html"><span class="theme-color icon-size-tow"><i
+                                    class="fa-solid fa-badge-percent"></i></span> القسائم الشرائية</a>
+                    </li>
+                    <li>
+                        <a href=""><span class="theme-color icon-size-tow"><i
+                                    class="fa-solid fa-barcode-read"></i></span> إدارة الباركود</a>
+                    </li>
+                    <li>
+                        <a href=""><span class="theme-color icon-size-tow"><i
+                                    class="fa-duotone fa-mountains"></i></span> إدارة الثيمات</a>
+                    </li>
+                    <li>
+                        <a href=""><span class="theme-color icon-size-tow"><i
+                                    class="fa-solid fa-link-horizontal-slash"></i></span> seo سيو</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 
+        ############################################
+        ## Pages content
+        ############################################
+        -->
+
+
+
+        <div class="main-content">
+            <div class="container-fluid">
+                <!-- 
+            ############################################
+            ## Pages headrer
+            ############################################
+            -->
+                <div class="page-header mb-3">
+                    <div class="page-headrer-title">
+                        <h3 class="text-x-Small text-color-normal align-items-center"> ادارة الباركود </h3>
+
+                    </div>
+                    <div class="page-headrer-button d-flex justify-content-between gap-2">
+                        <a id="open-modal" href="#" class="buttom-4 bg-custom-color open-modal" title="اضافة اسم "
+                            data-modal="save-offer">حفظ </a>
+                        <a href="7_restrant-settings.html" class="cancle-btn-three " title="اضافة اسم "
+                            data-modal="user-attendance"> الغاء </a>
+                    </div>
+
+                </div>
+                <div class="row row-gab">
+                    <div class="col-lg-4">
+                        <div class="barcode-one card-tow  rounded-10">
+                            <section class=" " id="qr-description">
+                            </section>
+                            <section class=" barcode-one card-tow rounded-10 p-2">
+                                <div class="row row--body">
+                                    <form class="qr-form" id="form">
+                                        <button type="button" class="accordion text-Small-Bold mt-2 mb-2">انشاء
+                                            كوبون</button>
+                                        <div class="panel panel--open">
+                                            <div class="mt-2">
+                                                <input class="input-one text-color-normal" node="data"
+                                                    node-change-event="oninput" id="form-data" type="text"
+                                                    placeholder="https://yourlinke.com" />
+                                            </div>
+                                            <div class=" text-color-darck">
+                                                <h3 class="text-Small-Bold text-color-normal mt-3">رفع صورة</h3>
+                                                <div class="upload-container p-0" data-instance="1">
+                                                    <input node="image" node-data-field="files" type="file"
+                                                        class="file-upload" id="file-upload-1" accept="image/*"
+                                                        style="display: none;">
+
+                                                    <div class="image-box">
+                                                        <div class="upload-box"
+                                                            style="height: 73px !important; width: 84px !important;">
+                                                            <label for="file-upload-1"
+                                                                class="upload-label text-Small-Bold text-color-normal">
+                                                                <i class="fa-regular fa-file-upload"></i>
+                                                            </label>
+                                                            <img class="uploaded-image" src="" alt="">
+                                                        </div>
+                                                        <div class="img-info" style="display: none;">
+                                                            <div class="image-info-one">
+                                                                <p class="text-color-normal">
+                                                                    <span class="image-size"></span>
+                                                                </p>
+                                                                <span class=" delete-icon" style="display: none;">
+                                                                    <i class="fas fa-trash"></i>
+                                                                </span>
+                                                            </div>
+                                                            <div class="progress-bar-container" style="display: none;">
+                                                                <div class="progress-bar"></div>
+                                                                <p class="text-color-normal">
+                                                                    <span class="upload-percentage">0%</span>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <p class="completion-message text-Small-Bold" style="display: none;">تم الرفع بنجاح !</p> -->
+                                                </div>
+
+                                                <div class="buttons-container mt-2">
+                                                    <a href="#" class="cancle-btn-three" id="button-cancel"> بدون صورة
+                                                    </a>
+                                                    <label for="form-image-file"></label>
+                                                    <!-- <input id="button-cancel" type="checkbox" name="" id=""> -->
+                                                    <!-- <input style="display: none;" node="image" node-data-field="files"
+                                                        id="form-image-file" type="file" /> -->
+                                                    <!-- <button type="button" id="button-cancel">Cancel</button> -->
+                                                </div>
+                                            </div>
+                                            <label for="form-dots-type "></label>
+                                            <h3 class="text-small mb-2 text-color-normal">اختر نوع التنسيق</h3>
+                                            <div>
+                                                <select node="dotsOptions.type" id="form-dots-type"
+                                                    class="input-one text-small text-color-darck text-color-normal">
+                                                    <!-- <option value=" select" class="text-small">اختر النوع</option> -->
+                                                    <option value="square">مربع</option>
+                                                    <option value="dots">نقطي</option>
+                                                    <option value="rounded">دائري</option>
+                                                    <option value="extra-rounded" selected>Extra rounded</option>
+                                                    <option value="classy">كلاسيك</option>
+                                                    <option value="classy-rounded">كلاسيك دائري</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="">
+
+                                                <h3 class="text-small mb-2 text-color-normal">نوع اللون</h3>
+
+                                                <div class=" d-flex align-items-center">
+                                                    <div class="d-flex align-items-center ">
+                                                        <input node-data-field="checked"
+                                                            node="dotsOptionsHelper.colorType.single"
+                                                            id="form-dots-color-type-single" type="radio"
+                                                            name="dots-color-type" checked />
+                                                        <!-- <label for="form-dots-color-type-single text-small"> </label> -->
+                                                        <h3 class="text-small  text-color-normal me-1 ms-1">لون واحد
+                                                        </h3>
+                                                    </div>
+                                                    <div class="d-flex align-items-center ">
+                                                        <input node-data-field="checked"
+                                                            node="dotsOptionsHelper.colorType.gradient"
+                                                            id="form-dots-color-type-gradient" type="radio"
+                                                            name="dots-color-type" />
+                                                        <h3 class="text-small  text-color-normal me-1 ms-1">الوان تدرجية
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <label
+                                                class="dotsOptionsHelper.colorType.single text-small text-color-darck"
+                                                for="form-dots-color">لون
+                                                النقاط الداخلية</label>
+                                            <div class="dotsOptionsHelper.colorType.single">
+                                                <input node="dotsOptions.color" id="form-dots-color" type="color"
+                                                    value="#6a1a4c" />
+                                            </div>
+                                            <label class="dotsOptionsHelper.colorType.gradient "></label>
+                                            <h3 class="dotsOptionsHelper.colorType.gradient  text-small  text-color-normal me-1 ms-1 mb-2"
+                                                style="visibility: hidden; height: 0">نوع التدرج
+                                            </h3>
+                                            <div class="dotsOptionsHelper.colorType.gradient "
+                                                style="visibility: hidden; height: 0">
+                                                <div class="d-flex align-items-center">
+                                                    <input node-data-field="checked"
+                                                        node="dotsOptionsHelper.gradient.linear"
+                                                        id="form-dots-gradient-type-linear" type="radio"
+                                                        name="dots-gradient-type" checked />
+                                                    <h3 class="text-small  text-color-normal me-1 ms-1">خطي
+                                                    </h3>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <input node-data-field="checked"
+                                                        node="dotsOptionsHelper.gradient.radial"
+                                                        id="form-dots-gradient-type-radial" type="radio"
+                                                        name="dots-gradient-type" />
+                                                    <h3 class="text-small  text-color-normal me-1 ms-1">من الوسط
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                            <label
+                                                class="dotsOptionsHelper.colorType.gradient text-color-darck text-small "
+                                                style="visibility: hidden; height: 0">لون النقاط الداخلية</label>
+                                            <div class="dotsOptionsHelper.colorType.gradient"
+                                                style="visibility: hidden; height: 0">
+                                                <input node="dotsOptionsHelper.gradient.color1" type="color"
+                                                    value="#6a1a4c" />
+                                                <input node="dotsOptionsHelper.gradient.color2" type="color"
+                                                    value="#6a1a4c" />
+                                            </div>
+
+                                        </div>
+                                        <button type="button"
+                                            class="accordion accordion--open text-color-normal text-small  mt-2 mb-2">الحجم</button>
+                                        <div class=" panel panel--open mb-3">
+                                            <div class="row">
+                                                <div class="col-lg-4  col-4">
+                                                    <label for="form-width "
+                                                        class="text-color-normal text-Small-regular">العرض</label>
+                                                    <div>
+                                                        <input node="width" class="input-one w-100" id="form-width"
+                                                            type="number" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-4">
+                                                    <label for="form-height"
+                                                        class="text-color-normal text-Small-regular">الارتفاع</label>
+                                                    <div>
+                                                        <input node="height" class="input-one w-100" id="form-height"
+                                                            type="number" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-4">
+                                                    <label for="form-height"
+                                                        class="text-color-normal text-Small-regular">الحدود
+                                                    </label>
+                                                    <div>
+                                                        <input node="margin" id="form-margin" class="input-one w-100"
+                                                            type="number" min="0" max="10000" value="0" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="button"
+                                            class="accordion text-color-normal text-Small-Bold  mt-2 mb-2">اعدادت
+                                            المربعات الجانبية</button>
+                                        <div class="panel">
+                                            <div class="d-flex align-items-center justify-content-between ">
+                                                <label for="form-corners-square-type"
+                                                    class="text-small text-color-normal">النوع</label>
+                                                <div>
+                                                    <select node="cornersSquareOptions.type"
+                                                        class="input-one text-color-darck text-small"
+                                                        id=" form-corners-square-type"
+                                                        class="text-color-normal text-Small-Bold">
+                                                        <option value="">افتراضي</option>
+                                                        <option value="square">مربع</option>
+                                                        <option value="dot">دائري</option>
+                                                        <option value="extra-rounded" selected>نصف دائري</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="">
+                                                <label class="text-color-normal text-Small-Bold ">نوع اللون</label>
+                                                <div class="space-between-container">
+                                                    <div>
+                                                        <input node-data-field="checked"
+                                                            node="cornersSquareOptionsHelper.colorType.single"
+                                                            id="form-corners-square-color-type-single" type="radio"
+                                                            name="corners-square-color-type" checked />
+                                                        <label for="form-corners-square-color-type-single"
+                                                            class="text-color-normal text-Small-Bold">لون واحد</label>
+                                                    </div>
+                                                    <div>
+                                                        <input node-data-field="checked"
+                                                            node="cornersSquareOptionsHelper.colorType.gradient"
+                                                            id="form-corners-square-color-type-gradient" type="radio"
+                                                            name="corners-square-color-type" />
+                                                        <label for="form-corners-square-color-type-gradient"
+                                                            class="text-color-normal text-Small-Bold">لون
+                                                            تدرجي</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="">
+                                                <label
+                                                    class="mb-1  cornersSquareOptionsHelper.colorType.single text-small text-color-normal"
+                                                    for="form-corners-square-color">لون حدود المبرع</label>
+                                                <div
+                                                    class=" d-flex  align-items-center .colorType.single buttons-container">
+                                                    <input node="cornersSquareOptions.color"
+                                                        id="form-corners-square-color" type="color" value="#000000" />
+                                                    <button type="button" id="button-clear-corners-square-color"
+                                                        class="default-color">اللون الافتراضي</button>
+                                                </div>
+                                            </div>
+                                            <label
+                                                class="cornersSquareOptionsHelper.colorType.gradient text-color-normal text-Small-Bold"
+                                                style="visibility: hidden; height: 0">نوع التدرج</label>
+                                            <div class="cornersSquareOptionsHelper.colorType.gradient space-between-container"
+                                                style="visibility: hidden; height: 0">
+                                                <div>
+                                                    <input node-data-field="checked"
+                                                        node="cornersSquareOptionsHelper.gradient.linear"
+                                                        id="form-corners-square-gradient-type-linear" type="radio"
+                                                        name="corners-square-gradient-type" checked />
+                                                    <label for="form-corners-square-gradient-type-linear"
+                                                        class="text-color-normal text-Small-Bold">خطي</label>
+                                                </div>
+                                                <div>
+                                                    <input node-data-field="checked"
+                                                        node="cornersSquareOptionsHelper.gradient.radial"
+                                                        id="form-corners-square-gradient-type-radial" type="radio"
+                                                        name="corners-square-gradient-type" />
+                                                    <label for="form-corners-square-gradient-type-radial"
+                                                        class="text-color-normal text-small">في
+                                                        المنتصف</label>
+                                                </div>
+                                            </div>
+                                            <label
+                                                class="cornersSquareOptionsHelper.colorType.gradient text-small text-color-normal"
+                                                style="visibility: hidden; height: 0">تدرج لوني</label>
+                                            <div class="cornersSquareOptionsHelper.colorType.gradient"
+                                                style="visibility: hidden; height: 0">
+                                                <input node="cornersSquareOptionsHelper.gradient.color1" type="color"
+                                                    value="#000000" />
+                                                <input node="cornersSquareOptionsHelper.gradient.color2" type="color"
+                                                    value="#000000" />
+                                            </div>
+
+                                        </div>
+                                        <button type="button"
+                                            class="accordion text-color-normal text-Small-Bold  mt-2 mb-2">
+                                            المربع
+                                            الداخلي</button>
+                                        <div class="panel">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <label for="form-corners-dot-type"
+                                                    class="text-small text-color-normal">نوع
+                                                    المربع الداخلي</label>
+                                                <div>
+                                                    <select node="cornersDotOptions.type" id="form-corners-dot-type">
+                                                        class="text-small text-color-normal" <option value="" selected>
+                                                            افتراضي
+                                                        </option>
+                                                        <option value="square">مربع </option>
+                                                        <option value="dot">دائري</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <label class="text-color-normal text-small">نوع اللون</label>
+                                            <div class="space-between-container">
+                                                <div>
+                                                    <input node-data-field="checked"
+                                                        node="cornersDotOptionsHelper.colorType.single"
+                                                        id="form-corners-dot-color-type-single" type="radio"
+                                                        name="corners-dot-color-type" checked />
+                                                    <label for="form-corners-dot-color-type-single"
+                                                        class="text-color-normal text-small">لون واحد</label>
+                                                </div>
+                                                <div>
+                                                    <input node-data-field="checked"
+                                                        node="cornersDotOptionsHelper.colorType.gradient"
+                                                        id="form-corners-dot-color-type-gradient" type="radio"
+                                                        name="corners-dot-color-type" />
+                                                    <label for="form-corners-dot-color-type-gradient"
+                                                        class="text-color-normal text-small"> تدرج لوني
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <label
+                                                class="cornersDotOptionsHelper.colorType.single text-color-normal text-small""
+                                                for=" form-corners-dot-color">
+                                                اختر اللون
+                                            </label>
+                                            <div class="cornersDotOptionsHelper.colorType.single buttons-container">
+                                                <input node="cornersDotOptions.color" id="form-corners-dot-color"
+                                                    type="color" value="#000000" />
+                                                <button type="button" class="default-color"
+                                                    id="button-clear-corners-dot-color">افتراضي</button>
+                                            </div>
+                                            <label
+                                                class="cornersDotOptionsHelper.colorType.gradient text-color-normal text-small"
+                                                style="visibility: hidden; height: 0">تدرج لوني</label>
+                                            <div class="cornersDotOptionsHelper.colorType.gradient space-between-container"
+                                                style="visibility: hidden; height: 0">
+                                                <div>
+                                                    <input node-data-field="checked"
+                                                        node="cornersDotOptionsHelper.gradient.linear"
+                                                        id="form-corners-dot-gradient-type-linear" type="radio"
+                                                        name="corners-dot-gradient-type" checked />
+                                                    <label for="form-corners-dot-gradient-type-linear"
+                                                        class="text-color-normal text-small">خطي</label>
+                                                </div>
+                                                <div>
+                                                    <input node-data-field="checked"
+                                                        node="cornersDotOptionsHelper.gradient.radial"
+                                                        id="form-corners-dot-gradient-type-radial" type="radio"
+                                                        name="corners-dot-gradient-type" />
+                                                    <label for="form-corners-dot-gradient-type-radial"
+                                                        class="text-color-normal text-small">في المتوسط</label>
+                                                </div>
+                                            </div>
+                                            <label
+                                                class="cornersDotOptionsHelper.colorType.gradient text-color-normal text-small mb-1"
+                                                style="visibility: hidden; height: 0">اختر الالوان</label>
+                                            <div class="cornersDotOptionsHelper.colorType.gradient"
+                                                style="visibility: hidden; height: 0">
+                                                <input node="cornersDotOptionsHelper.gradient.color1" type="color"
+                                                    value="#000000" />
+                                                <input node="cornersDotOptionsHelper.gradient.color2" type="color"
+                                                    value="#000000" />
+                                            </div>
+
+                                        </div>
+                                        <button type="button"
+                                            class="accordion text-color-normal text-Small-Bold  mt-2 mb-2">خيارات
+                                            الخلفية</button>
+                                        <div class="panel">
+                                            <label class="text-color-normal text-small">نوع اللون</label>
+                                            <div class="space-between-container">
+                                                <div>
+                                                    <input node-data-field="checked"
+                                                        node="backgroundOptionsHelper.colorType.single"
+                                                        id="form-background-color-type-single" type="radio"
+                                                        name="background-color-type" checked />
+                                                    <label for="form-background-color-type-single"
+                                                        class="text-color-normal text-small">لون واحد</label>
+                                                </div>
+                                                <div>
+                                                    <input node-data-field="checked"
+                                                        node="backgroundOptionsHelper.colorType.gradient"
+                                                        id="form-background-color-type-gradient" type="radio"
+                                                        name="background-color-type" />
+                                                    <label for="form-background-color-type-gradient"
+                                                        class="text-color-normal text-small">تدرج لوني</label>
+                                                </div>
+                                            </div>
+                                            <label
+                                                class="backgroundOptionsHelper.colorType.single text-color-normal text-small"
+                                                for="form-background-color">خلفية
+                                                تدرجية</label>
+                                            <div class="backgroundOptionsHelper.colorType.single">
+                                                <input node="backgroundOptions.color" id="form-background-color"
+                                                    type="color" value="#ffffff" />
+                                            </div>
+                                            <label
+                                                class="backgroundOptionsHelper.colorType.gradient text-color-normal text-small"
+                                                style="visibility: hidden; height: 0">نوع التدرج</label>
+                                            <div class="backgroundOptionsHelper.colorType.gradient space-between-container"
+                                                style="visibility: hidden; height: 0">
+                                                <div>
+                                                    <input node-data-field="checked"
+                                                        node="backgroundOptionsHelper.gradient.linear"
+                                                        id="form-background-gradient-type-linear" type="radio"
+                                                        name="background-gradient-type" checked />
+                                                    <label for="form-background-gradient-type-linear"
+                                                        class="text-color-normal text-small">خطي</label>
+                                                </div>
+                                                <div>
+                                                    <input node-data-field="checked"
+                                                        node="backgroundOptionsHelper.gradient.radial"
+                                                        id="form-background-gradient-type-radial" type="radio"
+                                                        name="background-gradient-type" />
+                                                    <label for="form-background-gradient-type-radial" class="text-color-normal
+                                                    text-small">دائري</label>
+                                                </div>
+                                            </div>
+                                            <label
+                                                class="backgroundOptionsHelper.colorType.gradient text-color-normal text-small"
+                                                style="visibility: hidden; height: 0">اختر الوان الخلفية</label>
+                                            <div class="backgroundOptionsHelper.colorType.gradient"
+                                                style="visibility: hidden; height: 0">
+                                                <input node="backgroundOptionsHelper.gradient.color1" type="color"
+                                                    value="#ffffff" />
+                                                <input node="backgroundOptionsHelper.gradient.color2" type="color"
+                                                    value="#ffffff" />
+                                            </div>
+
+                                        </div>
+                                        <button type="button"
+                                            class="accordion text-color-normal text-small  mt-2 mb-2">اعدادت
+                                            الصورة</button>
+                                        <div class="panel mb-2">
+                                            <div class="row row-gab">
+                                                <div class="col-12">
+                                                    <div class=" d-flex justify-content-between align-items-center">
+                                                        <label for="form-hide-background-dots"
+                                                            class="text-color-normal text-small">اخفاء النقاط حول
+                                                            الصورة</label>
+                                                        <div>
+                                                            <input node="imageOptions.hideBackgroundDots"
+                                                                node-data-field="checked" id="form-hide-background-dots"
+                                                                type="checkbox" checked />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-6">
+                                                    <div class="">
+                                                        <label for="form-image-size"
+                                                            class="text-color-normal text-small">حجم
+                                                            الصورة</label>
+                                                        <div>
+                                                            <input class="w-100 input-one" node="imageOptions.imageSize"
+                                                                id="form-image-size" type="number" min="0" max="1"
+                                                                step="0.1" value="0.4" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-6">
+                                                    <div class="">
+                                                        <label for="form-image-margin"
+                                                            class="text-color-normal text-small">الحدد
+                                                            الخارجية</label>
+                                                        <div>
+                                                            <input class="w-100 input-one" node="imageOptions.margin"
+                                                                id="form-image-margin" type="number" min="0" max="10000"
+                                                                value="0" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+                                        <button type="button" class="accordion"
+                                            class="text-color-normal text-Small-Bold">QR اعدادت</button>
+                                        <div class="panel">
+                                            <label for="form-qr-type-number"
+                                                class="mt-1 text-color-normal text-small">عدد
+                                                النقاط</label>
+                                            <div>
+                                                <input class="input-one w-100" node="qrOptions.typeNumber"
+                                                    id="form-qr-type-number" type="number" min="0" max="40" value="0" />
+                                            </div>
+                                            <label for="form-qr-mode"
+                                                class="text-color-darck text-small ">الصيغة</label>
+                                            <div>
+                                                <select node="qrOptions.mode" id="form-qr-mode"
+                                                    class="w-100 input-one text-small">
+                                                    <option value="Numeric">رقم </option>
+                                                    <option value="Alphanumeric">رقم ابجدي</option>
+                                                    <option value="Byte" selected>بايت</option>
+                                                    <option value="Kanji">افتراضي</option>
+                                                </select>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <label for="form-qr-error-correction-level"
+                                                    class="text-color-darck text-small mb-1">مستوى تصحيح الخطأ</label>
+                                                <div>
+                                                    <select node="qrOptions.errorCorrectionLevel" class="input-one"
+                                                        id="form-qr-error-correction-level">
+                                                        <option value="L">L</option>
+                                                        <option value="M">M</option>
+                                                        <option value="Q" selected>Q</option>
+                                                        <option value="H">H</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="options-export-group">
+                                            <a class="button" id="export-options">Export Options as JSON</a>
+                                        </div> -->
+                                    </form>
+                                </div>
+
+                            </section>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="barcode-one barcode-img  card-tow rounded-10 p-2 ">
+                            <div class="col qr-code-container">
+                                <div class="qr-code" id="qr-code-generated"></div>
+                                <!-- <div class="qr-download-group">
+                                    <button id="qr-download" class="buttom-4 bg-custom-color w-100">تـــنزيل</button>
+                                    <label class="hide" for="qr-extension">Extension</label>
+                                    <select id="qr-extension">
+                                        <option value="png" selected>PNG</option>
+                                        <option value="jpeg">JPEG</option>
+                                    </select>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="barcode-one card-tow rounded-0 p-3 ">
+                            <div class="qr-download-group">
+                                <button id="qr-download" class="download-qrcode bg-custom-color w-100">تـــنزيل</button>
+                                <label class="hide" for="qr-extension">Extension</label>
+                                <select id="qr-extension">
+                                    <option value="png" selected>PNG</option>
+                                    <option value="jpeg">JPEG</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 
+############################################
+## footer 
+############################################
+-->
+    <div class="footer">
+        <p class="text-color-normal text-small">Arabia food 2024</p>
+    </div>
+
+    <script src="assets/script/lib/jquery.min.js"></script>
+    <script src="assets/script/lib/owl.carousel.min.js"></script>
+    <script src="assets/script/lib/international-telephone-input.js"></script>
+
+    <script src="assets/script/lib/chartjs.min.js"></script>
+    <script src="assets/script/lib/chartone.min.js"></script>
+    <script src="assets/script/chart.min.js"></script>
+    <script src="assets/script/lib/qrcode.min.js"></script>
+    <!-- <script src="assets/script/lib/multi-select-tag.js"></script> -->
+    <script src="assets/script/lib/jquery.mousewheel.js"></script>
+    <script src="assets/script/lib/jquery.mCustomScrollbar.js"></script>
+    <script src="assets/script/lib/barcode.js"></script>
+    <!-- <script src="index.81a8ec691dad584770c3.js"></script> -->
+
+    <script src="assets/script/mian.js"></script>
+
+
+</body>
+
+</html>
