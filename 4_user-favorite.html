@@ -1,0 +1,2066 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="assets/css/bootstrap.rtl.min.css"> -->
+    <!-- owl carousel  -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <!-- css style  -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="assets/css/international-telephone-input.css">
+    <link rel="stylesheet" href="assets/css/lib/countrySelect.min.css">
+    <link rel="stylesheet" href="assets/css/lib/datatable.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.css">
+    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/lib/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- 
+############################################
+## 1- language 
+############################################
+-->
+
+    <!-- 
+    ############################################
+    ## 2- primary menu
+    ############################################
+    -->
+    <div class="main-menu-one">
+        <div class="top-info bg-gry pt-1 pb-1">
+            <div class="container-lg">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="whatsapp-info d-flex align-items-center text-color-normal">
+                        <span><i class="fa-brands fa-whatsapp"></i></span>
+                        <h3 class="text-X-Small me-2 ms-2">راسلنا عبر الواتساب</h3>
+                        <h3 class="text-X-Small">0097125511633</h3>
+                    </div>
+                    <div class=" d-flex align-items-center text-color-normal">
+                        <div class="website-mode me-2 ms-2" id="toggle-dark-mode">
+                            <span class="theme-color  icon-size-one"><i class="fa fa-moon"></i></span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <h3 class="text-X-Small">التقييم</h3>
+                            <span class="me-1 ms-1 gold"><i class="fa fa-star"></i></span>
+                            <h3 class="text-Small-Bolder">4.5</h3>
+                        </div>
+
+
+                        <select id="lang-select"
+                            class="text-X-Small dropdown-tow lang-changer text-color-normal lang-1 ms-2 me-2">
+                            <option id="btn-ar" value="ar">اللغة العربية</option>
+                            <option id="btn-en" value="en">اللغة الانجليزية</option>
+                        </select>
+                        <select id="" class="text-X-Small dropdown-tow text-color-normal">
+                            <option value="monthly">U.S Dollar $</option>
+                            <option value="monthly">S.R Riual $</option>
+                        </select>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="admin-top-bar">
+            <div class=" container-lg">
+                <div class="d-flex justify-content-between  align-items-center">
+                    <div class="top-bar-right d-flex align-items-center">
+                        <div class="logo">
+                            <a href=""> <img src="assets/image/Logo.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="nav-items">
+                        <ul>
+                            <li><a href="#" class="text-Small-regular text-color-normal">الرئيسية</a></li>
+                            <li><a href="#" class="text-Small-regular text-color-normal open-modal"
+                                    data-modal="about-us">نبذة</a></li>
+                            <li><a href="#" class="text-Small-regular text-color-normal open-modal"
+                                    data-modal="servicess">الخدمات</a></li>
+                            <li><a href="#" class="text-Small-regular text-color-normal open-modal"
+                                    data-modal="features">المميزات</a></li>
+                            <li><a href=" #" class="text-Small-regular text-color-normal">لغات التواصل</a></li>
+                            <li><a href="#" class="text-Small-regular text-color-normal open-modal"
+                                    data-modal="unts">حجز</a></li>
+                            <li><a href="#" class="text-Small-regular text-color-normal">نداء الموظف</a></li>
+                            <li><a href="#" class="text-Small-regular text-color-normal open-modal"
+                                    data-modal="contact">تواصل معنا </a></li>
+                            <li><a href="#" class="text-Small-regular text-color-normal open-modal"
+                                    data-modal="choice-branch">الفروع </a></li>
+                        </ul>
+                    </div>
+                    <div class=" d-flex align-items-center">
+                        <div class="d-flex align-items-center">
+                            <div class="notefication-icon d-flex position-relative">
+                                <a href="6_shop-cart.html" class=" hide-mobile icon-box-2 icon-size-one theme-color">
+                                    <i class="fa fa-basket-shopping"></i>
+                                </a>
+
+                                <a href="#" class="icon-box icon-size-one  theme-color position-relative"
+                                    data-target=".notification"><span
+                                        class="sms-notification bg-custom-color">18</span><i class="fa fa-bell"></i></a>
+                                <div class="popup-box notification">
+                                    <div class="notification-box new-order notification-type-new-order d-flex">
+                                        <div class="notification-icon">
+                                            <i class="fa fa-basket-shopping-plus"></i>
+                                        </div>
+                                        <div class="notification-content w-100">
+                                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                                <h3 class="user-name text-Small-Bold">طلب جديد</h3>
+                                                <p class="time text-small">5:19 AM</p>
+                                            </div>
+                                            <div class="notification-supcontent d-flex">
+                                                <h3 class="text-Small-light">رقم الطلب : <span
+                                                        class="text-XX-Small">334222</span>
+                                                </h3>
+                                                <h3 class="text-Small-light">طريقة الدفع : <span
+                                                        class="text-XX-Small">حوالة
+                                                        بنكية</span></h3>
+                                                <h3 class="text-Small-light">نوع الوحدة : <span
+                                                        class="text-XX-Small">هنا</span>
+                                                </h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="notification-box order-done notification-type-done d-flex">
+                                        <div class="notification-icon theme-color">
+                                            <i class="fa fa-check-circle"></i>
+                                        </div>
+                                        <div class="notification-content w-100">
+                                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                                <h3 class="user-name text-Small-Bold">تم تاكيد الحجز</h3>
+                                                <p class="time text-small">5:19 AM</p>
+                                            </div>
+                                            <div class="notification-supcontent d-flex">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="notification-box new-book notification-type-cancel-order d-flex">
+                                        <div class="notification-icon theme-color">
+                                            <i class="fa fa-basket-shopping-plus"></i>
+                                        </div>
+                                        <div class="notification-content w-100">
+                                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                                <h3 class="user-name text-Small-Bold">طلب جديد</h3>
+                                                <p class="time text-small">AM 5:19 </p>
+                                            </div>
+                                            <div class="notification-supcontent d-flex">
+                                                <h3 class="text-Small-light">رقم الطلب : <span
+                                                        class="text-XX-Small">334222</span>
+                                                </h3>
+                                                <h3 class="text-Small-light">اسم الموظف : <span
+                                                        class="text-XX-Small">حمد
+                                                        هلال</span></h3>
+                                                <h3 class="text-Small-light">المبلغ : <span class="text-XX-Small">120
+                                                        ريال</span>
+                                                </h3>
+                                                <h3 class="text-Small-light">طريقة الاستلام : <span
+                                                        class="text-XX-Small">
+                                                        <i class="fa-regular fa-envelope"></i> البريد</span></h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="notification-box cancel-order notification-type-new-order d-flex">
+                                        <div class="notification-icon">
+                                            <i class="fa fa-circle-xmark"></i>
+                                        </div>
+                                        <div class="notification-content w-100">
+                                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                                <h3 class="user-name text-Small-Bold">طلب ملغي</h3>
+                                                <p class="time text-small">5:19 AM</p>
+                                            </div>
+                                            <div class="notification-supcontent d-flex justify-content-between">
+                                                <h3 class="text-Small-light">رقم الطلب : <span
+                                                        class="text-XX-Small">334222</span>
+                                                </h3>
+                                                <h3 class="text-Small-light">اسم الموظف : <span
+                                                        class="text-XX-Small">حمد
+                                                        هلال</span></h3>
+                                                <h3 class="text-Small-light">المبلغ : <span class="text-XX-Small">120
+                                                        ريال</span>
+                                                </h3>
+                                                <h3 class="text-Small-light">طريقة الاستلام : <span
+                                                        class="text-XX-Small">
+                                                        <i class="fa-thin fa-envelope"></i>البريد </span></h3>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <a href="" class="all-message text-Small-Bold">مشاهدة كل الاشعارات</a>
+                                </div>
+                                <!-- <a href="#" class="sms-popup icon-box icon-size-one theme-color position-relative"
+                            data-target=".sms"><span class="sms-notification bg-custom-color">12</span><i
+                                class="fa fa-envelope"></i></a> -->
+                                <div class="popup-box sms">
+                                    <div class="message-box d-flex align-items-center">
+                                        <div class="user-img">
+                                            <img src="assets/image/Avatar.png" alt="" width="50px" height="50px">
+                                        </div>
+                                        <div class="mesage-content">
+                                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                                <h3 class="user-name text-Small-Bold">حسن حسني</h3>
+                                                <p class="time text-small">5:19 AM</p>
+                                            </div>
+                                            <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، </p>
+                                        </div>
+                                    </div>
+                                    <div class="message-box d-flex align-items-center">
+                                        <div class="user-img">
+                                            <img src="assets/image/Avatar.png" alt="" width="50px" height="50px">
+                                        </div>
+                                        <div class="mesage-content">
+                                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                                <h3 class="user-name text-Small-Bold">حسن حسني</h3>
+                                                <p class="time text-small">5:19 AM</p>
+                                            </div>
+                                            <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، </p>
+                                        </div>
+                                    </div>
+                                    <div class="message-box d-flex align-items-center">
+                                        <div class="user-img">
+                                            <img src="assets/image/Avatar.png" alt="" width="50px" height="50px">
+                                        </div>
+                                        <div class="mesage-content">
+                                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                                <h3 class="user-name text-Small-Bold">حسن حسني</h3>
+                                                <p class="time text-small">5:19 AM</p>
+                                            </div>
+                                            <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، </p>
+                                        </div>
+                                    </div>
+                                    <a href="" class="all-message text-Small-Bold">مشاهدة كل الرسائل</a>
+                                </div>
+                            </div>
+                            <div class=" user-account-top d-flex align-items-center icon-box position-relative"
+                                data-target=".user-box">
+
+                                <div class="option-one p-1">
+                                    <img src="assets/image/icon/arrow-down.png" alt="">
+                                </div>
+                                <div class="user-info">
+                                    <h3 class="u-name text-Small-Bold text-color-darck">محمد عبد الحميد ناجي</h3>
+                                    <p class="u-name text-color-normal text-X-Small">مسؤول مبيعات</p>
+                                </div>
+                                <div class="user-avatar">
+                                    <img src="assets/image/icon/02.png" alt="">
+                                    <i class="icon-home"></i>
+
+                                </div>
+                                <div class="popup-box user-box">
+                                    <ul class="user-list-links">
+                                        <li class="text-X-Small text-color-normal"><span><i
+                                                    class="fa-regular fa-pen-line"></i></span><a href=""
+                                                class="text-color-normal">تعديل بياناتي </a> </li>
+                                        <li class="text-X-Small text-color-normal"><span><i
+                                                    class="fa-regular fa-location-dot"></i></span><a href=""
+                                                class="text-color-normal">عنواني </a> </li>
+                                        <li class="text-X-Small text-color-normal"><span><i
+                                                    class="fa-regular fa-heart"></i></span><a href=""
+                                                class="text-color-normal">المفضلة </a> </li>
+                                        <li class="text-X-Small text-color-normal"><span><i
+                                                    class="fa-regular fa-cart-arrow-up"></i></span><a href=""
+                                                class="text-color-normal">طلباتي السابقة </a> </li>
+                                        <li class="text-X-Small text-color-normal"><span><i
+                                                    class="fa-regular fa-dashboard"></i></span><a href=""
+                                                class="text-color-normal">لوحة التحكم </a> </li>
+                                        <li class="text-X-Small text-color-normal"><span><i
+                                                    class="fa-regular fa-right-from-bracket"></i></span><a href=""
+                                                class="text-color-normal"> تسجيل الخروج</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mobile-icon" id="mobile-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <div class="menu-btn">
+                        <a class="menu-btn-link bg-red pe-3 ps-3 text-color-white  text-X-Small" href="#"
+                            title="تسجيل جديد">
+                            خروج
+                        </a>
+                        <!-- <div class="d-flex">
+                        <a class="menu-btn-link  me-2 ms-2 text-color-white blue text-X-Small" href="#"
+                            title="دخول">دخول</a>
+                        <a class="menu-btn-link orange-tow text-color-white  text-X-Small" href="#" title="تسجيل جديد">
+                            تسجيل جديد </a>
+                    </div> -->
+                    </div>
+
+
+
+                    <!-- 
+                <div class="top-bar-left d-flex align-items-center">
+                    <div class="lang-changer bg-custom-color lang-1">
+                        <button id="btn-en" class="text-Small-Bold">EN</button>
+                        <button id="btn-ar" class="text-Small-Bold">AR</button>
+                    </div>
+                    <div class="order-status d-flex align-items-center me-2 ms-2">
+                        <span class="toggle-text text-X-Small text-color-darck"></span>
+                        <div class="toggle-btn" data-toggle-id="open-close-toggole" data-on-text="مفتوح"
+                            data-off-text="مغلق">
+                            <span class="toggle-circle noyes bg-custom-color"></span>
+                        </div>
+                    </div>
+                    <div class="website-mode" id="toggle-dark-mode">
+                        <span class="theme-color  icon-size-one"><i class="fa fa-moon"></i></span>
+                    </div>
+
+                    <div class="color-option d-flex position-relative">
+                        <a href="#" class="hide-mobile icon-box icon-size-one select-color theme-color"><i
+                                class="fa-solid fa-circle-half-stroke "></i></a>
+
+                        <div class="color-slection">
+                            <p class="text-color-normal text-small mb-2">اللون:</p>
+                            <div class="colors-box d-flex">
+                                <button class="color-btn red" data-color="#FA5050"> </button>
+                                <button class="color-btn green" data-color="green"> </button>
+                                <button class="color-btn yellow" data-color="yellow"></button>
+                                <button class="color-btn orange" data-color="orange"></button>
+                                <button class="color-btn blue" data-color="blue"></button>
+                                <button class="color-btn purple" data-color="purple"></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                            
+                            
+
+
+                        </div>
+                        <a href="#" class="sms-popup icon-box icon-size-one theme-color position-relative"
+                            data-target=".sms"><span class="sms-notification bg-custom-color">12</span><i
+                                class="fa fa-envelope"></i></a>
+                        <div class="popup-box sms">
+                            <div class="message-box d-flex align-items-center">
+                                <div class="user-img">
+                                    <img src="assets/image/Avatar.png" alt="" width="50px" height="50px">
+                                </div>
+                                <div class="mesage-content">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <h3 class="user-name text-Small-Bold">حسن حسني</h3>
+                                        <p class="time text-small">5:19 AM</p>
+                                    </div>
+                                    <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، </p>
+                                </div>
+                            </div>
+                            <div class="message-box d-flex align-items-center">
+                                <div class="user-img">
+                                    <img src="assets/image/Avatar.png" alt="" width="50px" height="50px">
+                                </div>
+                                <div class="mesage-content">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <h3 class="user-name text-Small-Bold">حسن حسني</h3>
+                                        <p class="time text-small">5:19 AM</p>
+                                    </div>
+                                    <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، </p>
+                                </div>
+                            </div>
+                            <div class="message-box d-flex align-items-center">
+                                <div class="user-img">
+                                    <img src="assets/image/Avatar.png" alt="" width="50px" height="50px">
+                                </div>
+                                <div class="mesage-content">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <h3 class="user-name text-Small-Bold">حسن حسني</h3>
+                                        <p class="time text-small">5:19 AM</p>
+                                    </div>
+                                    <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، </p>
+                                </div>
+                            </div>
+                            <a href="" class="all-message text-Small-Bold">مشاهدة كل الرسائل</a>
+                        </div>
+                    </div>
+
+                    
+
+                </div> 
+                -->
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="test-menu ">
+        <ul class="test-menu-ul">
+            <li><a href="index.html" class="text-color-white text-Small-regular mb-2">الرئيسية-1</a></li>
+            <li><a href="1_home-2.html" class="text-color-white text-Small-regular mb-2">الرئيسية-2</a></li>
+            <li><a href="2_home-3.html" class="text-color-white text-Small-regular mb-2">الرئيسية-3</a></li>
+            <li><a href="3_home-4.html" class="text-color-white text-Small-regular mb-2">الرئيسية-4</a></li>
+            <li><a href="5_order-tracking.html" class="text-color-white text-Small-regular mb-2">تتبع الطلب</a></li>
+            <li><a href="6_shop-cart.html" class="text-color-white text-Small-regular mb-2">عربة التسوق</a></li>
+            <li><a href="7_login.html" class="text-color-white text-Small-regular mb-2">تسجيل الدخول</a></li>
+            <li><a href="8_singup.html" class="text-color-white text-Small-regular mb-2">انشاء حساب</a></li>
+            <li><a href="9_phone-verfication.html" class="text-color-white text-Small-regular mb-2">كود التحقق
+                    للهاتف</a>
+            </li>
+            <li><a href="10_email-verfication.html" class="text-color-white text-Small-regular mb-2">كود التحقق
+                    للبريد</a>
+            </li>
+            <li><a href="10_message.html" class="text-color-white text-Small-regular mb-2">الرسائل</a></li>
+            <li><a href="11_notification.html" class="text-color-white text-Small-regular mb-2">الاشعارات</a></li>
+
+        </ul>
+        <a href="#" class="text-color-white show-test-menu" id="show-test-menu"> <i class="fa fa-home"></i></a>
+    </div>
+    <!-- 
+    ############################################
+    ## mobile menu 
+    ############################################
+    -->
+    <div class="sidpar">
+        <div class="main-menu " id="mein-menu">
+            <!-- <div class="lang-changer-2 bg-custom-color">
+                <button id="btn-en-2" class="text-Small-Bold">EN</button>
+                <button id="btn-ar-2" class="text-Small-Bold">AR</button>
+            </div> -->
+            <ul>
+                <li><a href="#" class="text-Small-regular text-color-normal">الرئيسية</a></li>
+                <li><a href="#" class="text-Small-regular text-color-normal">نبذة</a></li>
+                <li><a href="#" class="text-Small-regular text-color-normal">الخدمات</a></li>
+                <li><a href="#" class="text-Small-regular text-color-normal">المميزات</a></li>
+                <li><a href="#" class="text-Small-regular text-color-normal">لغات التواصل</a></li>
+                <li><a href="#" class="text-Small-regular text-color-normal">حجز</a></li>
+                <li><a href="#" class="text-Small-regular text-color-normal">نداء الموظف</a></li>
+                <li><a href="#" class="text-Small-regular text-color-normal">تواصل معنا </a></li>
+                <li><a href="#" class="text-Small-regular text-color-normal">الفروع </a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="sticky-cat bg-gry " id="scroall-2" style="display: none !important; visibility: hidden;">
+
+    </div>
+    <!-- 
+    ############################################
+    ## show review
+    ############################################
+    -->
+    <div class="modal-overlay" data-modal="show-review"></div>
+    <div class="modal-box" data-modal="show-review">
+        <div class="modal-box-header text-color-normal mb-3 d-flex justify-content-between align-items-center">
+            <h3 class="primary-text-color tetx text-Small-midium">التقييمات </h3>
+            <h4 class="text-X-Small modal-close-icon-2 modal-close" data-modal="show-review"><i class="fa fa-close"></i>
+            </h4>
+            <!-- <span class="modal-close-icon"><i class="fa fa-close"></i></span> -->
+        </div>
+        <div class="">
+            <h3 class="text-Small-Bolder text-color-normal mb-3">رقم الطلب : 665444</h3>
+            <div class="d-flex justify-content-between  align-items-center mb-2">
+                <h3 class=" text-Small-Bolder text-color-normal">الصنف</h3>
+                <h3 class="text-Small-light text-color-normal">التقييم</h3>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-between  align-items-center  mb-2">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="old-order-img " style="width: 40px !important; height: 40px !important;">
+                        <img src="assets/image/items/05.png" alt="">
+                    </div>
+                    <div class=" ms-3 me-3">
+                        <h3 class=" mb-2 text-Small-Bold text-color-darck align-self-lg-start">
+                            اسم الصنف
+                        </h3>
+                    </div>
+
+                </div>
+                <div class="ratting-start text-color-normal">
+                    <span class="gold"><i class="fa fa-star"></i></span>
+                    <span class="gold"><i class="fa fa-star"></i></span>
+                    <span class="gold"><i class="fa fa-star"></i></span>
+                    <span class=""><i class="fa fa-star"></i></span>
+                    <span class=""><i class="fa fa-star"></i></span>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between  align-items-center  mb-2">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="old-order-img " style="width: 40px !important; height: 40px !important;">
+                        <img src="assets/image/items/05.png" alt="">
+                    </div>
+                    <div class=" ms-3 me-3">
+                        <h3 class=" mb-2 text-Small-Bold text-color-darck align-self-lg-start">
+                            اسم الصنف
+                        </h3>
+                    </div>
+                </div>
+                <div class="ratting-start text-color-normal">
+                    <span class="gold"><i class="fa fa-star"></i></span>
+                    <span class="gold"><i class="fa fa-star"></i></span>
+                    <span class="gold"><i class="fa fa-star"></i></span>
+                    <span class=""><i class="fa fa-star"></i></span>
+                    <span class=""><i class="fa fa-star"></i></span>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between  align-items-center  mb-2">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="old-order-img " style="width: 40px !important; height: 40px !important;">
+                        <img src="assets/image/items/05.png" alt="">
+                    </div>
+                    <div class=" ms-3 me-3">
+                        <h3 class=" mb-2 text-Small-Bold text-color-darck align-self-lg-start">
+                            اسم الصنف
+                        </h3>
+                    </div>
+                </div>
+                <div class="ratting-start text-color-normal">
+                    <span class="gold"><i class="fa fa-star"></i></span>
+                    <span class="gold"><i class="fa fa-star"></i></span>
+                    <span class="gold"><i class="fa fa-star"></i></span>
+                    <span class=""><i class="fa fa-star"></i></span>
+                    <span class=""><i class="fa fa-star"></i></span>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between  align-items-center  mb-2">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="old-order-img " style="width: 40px !important; height: 40px !important;">
+                        <img src="assets/image/items/05.png" alt="">
+                    </div>
+                    <div class=" ms-3 me-3">
+                        <h3 class=" mb-2 text-Small-Bold text-color-darck align-self-lg-start">
+                            اسم الصنف
+                        </h3>
+                    </div>
+                </div>
+                <div class="ratting-start text-color-normal">
+                    <span class="gold"><i class="fa fa-star"></i></span>
+                    <span class="gold"><i class="fa fa-star"></i></span>
+                    <span class="gold"><i class="fa fa-star"></i></span>
+                    <span class=""><i class="fa fa-star"></i></span>
+                    <span class=""><i class="fa fa-star"></i></span>
+                </div>
+            </div>
+            <hr>
+
+
+        </div>
+        <div class="order-deny-box mt-3">
+            <div class="d-flex justify-content-between  align-items-center ">
+                <h3 class="text-Small-midium text-color-darck"> التقييم العام</h3>
+                <div class="d-flex align-items-center">
+                    <span class="text-color-darck text-Small-Bolder  me-2 ms-2">4.5</span>
+                    <div class="ratting-start text-color-normal ">
+                        <span class="gold"><i class="fa fa-star"></i></span>
+                        <span class="gold"><i class="fa fa-star"></i></span>
+                        <span class="gold"><i class="fa fa-star"></i></span>
+                        <span class="gold"><i class="fa fa-star"></i></span>
+                        <span class=""><i class="fa fa-star"></i></span>
+                    </div>
+                </div>
+            </div>
+            <!-- <label for="text" class="text-small text-color-darck"> اضافة ملاحظة</label> -->
+            <textarea name="" class="text-color-normal" placeholder=" اضافة ملاحظة"> </textarea>
+        </div>
+
+
+
+        <div class="model-btn  mt-3">
+
+            <a class="save-btn-three d-block  text-center" href="#" title="send review">ارسال التقييم</a>
+        </div>
+    </div>
+
+
+
+    <div class="main">
+
+
+        <div class="container-lg">
+            <div class="user-favorite-page pt-4">
+                <div id="main-div">
+                    <div class="row row-gab">
+                        <div class="col-lg-4">
+                            <div class="user-menu p-3 rounded-10 bg-white-1">
+                                <ul>
+                                    <li class="order-box-tow33 active-user-link" data-target="personal-info">
+                                        <a href="#" class="active">البيانات الشخصية</a>
+                                    </li>
+                                    <li class="order-box-tow33" data-target="my-locations"><a href="#">عناويني</a></li>
+                                    <li class="order-box-tow33" data-target="old-order"><a href="#">الطلبات السابقة</a>
+                                    </li>
+                                    <li class="order-box-tow33" data-target="myfavorite"><a href="#">المفضلة</a></li>
+                                    <li class="order-box-tow33" data-target="workwithus"><a href="#">اعمل معنا</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div id="catego">
+                                <!-- personal infornations -->
+                                <div class="content active" id="personal-info">
+                                    <div class=" user-page-header p-2 rounded-5 bg-white-1 d-flex justify-content-between
+                                    align-items-center">
+                                        <h3 class="text-Small-midium text-color-normal">البيانات الشخصية</h3>
+                                        <a href="" class="add-loaction">حفظ</a>
+                                    </div>
+                                    <div class="personal-info mt-3 bg-white-1 rounded-10 p-2">
+                                        <div class="row">
+                                            <div class="col-lg-8">
+                                                <div class="row row-gab">
+                                                    <div class="col-lg-6 ">
+                                                        <label for="text" class="text-Sall-Bold text-color-normal mb-2">
+                                                            الاسم الاول
+                                                        </label>
+                                                        <div class="input-container position-relative ">
+                                                            <input type="url"
+                                                                class="position-relative input-one w-100 text-X-Small text-color-normal"
+                                                                placeholder="نص افتراضي">
+                                                            <span class="input-icon-one  text-color-normal">
+                                                                <i class="fa-regular fa-user"></i>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <label for="text"
+                                                            class="text-Small-Bold text-color-normal mb-2">
+                                                            الاسم الثاني
+                                                        </label>
+                                                        <div class="input-container position-relative ">
+                                                            <input type="url"
+                                                                class="position-relative input-one w-100 text-X-Small text-color-normal"
+                                                                placeholder="نص افتراضي">
+                                                            <span class="input-icon-one  text-color-normal">
+                                                                <i class="fa-regular fa-user"></i>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-6">
+                                                        <label for="text"
+                                                            class="text-Small-Bold text-color-normal mb-1">
+                                                            الدولة
+                                                        </label>
+                                                        <div class="input-container position-relative ">
+                                                            <div class="">
+                                                                <input type="text" id="country_selector"
+                                                                    class="position-relative input-one w-100 text-X-Small text-color-normal"
+                                                                    placeholder="نص افتراضي">
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <label for="text"
+                                                            class="text-Small-Bold text-color-normal mb-1">
+                                                            المدينة
+                                                        </label>
+                                                        <div class="input-container position-relative ">
+                                                            <input type="url"
+                                                                class="position-relative input-one w-100 text-X-Small text-color-normal"
+                                                                placeholder="نص افتراضي">
+                                                            <span class="input-icon-one  text-color-normal">
+                                                                <i class="fa-regular fa-user"></i>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <label for="text"
+                                                            class="text-Small-Bold text-color-normal mb-1">
+                                                            Email
+                                                        </label>
+                                                        <div class="input-container position-relative ">
+                                                            <input type="email"
+                                                                class="position-relative input-one w-100 text-X-Small text-color-normal"
+                                                                placeholder="البريد الالكتروني">
+                                                            <span class="input-icon-one  text-color-normal">
+                                                                <i class="fa-regular fa-envelope"></i>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <label for="text"
+                                                            class="text-Small-Bold text-color-normal mb-1">
+                                                            رقم الجوال
+                                                        </label>
+
+                                                        <div class="add-user-input position-relative">
+                                                            <input t type="tel" name="phone"
+                                                                class="input-one rounded-5 w-100 text-X-Small text-color-normal "
+                                                                placeholder="+249 99999999">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <label for="text"
+                                                            class="text-Small-Bold text-color-normal mb-1">
+                                                            الرقم السري الحالي
+                                                        </label>
+                                                        <div class="input-container position-relative ">
+                                                            <input type="password"
+                                                                class="position-relative input-one w-100 text-X-Small text-color-normal"
+                                                                placeholder="اكتب الرقم السري الحالي">
+                                                            <span class="input-icon-one  text-color-normal">
+                                                                <i class="fa-regular fa-eye-slash"></i>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <label for="text"
+                                                            class="text-Small-Bold text-color-normal mb-1">
+                                                            الرقم السري الجديد
+                                                        </label>
+                                                        <div class="input-container position-relative ">
+                                                            <input type="password"
+                                                                class="position-relative input-one w-100 text-X-Small text-color-normal"
+                                                                placeholder="اكتب الرقم السري الجديد">
+                                                            <span class="input-icon-one  text-color-normal">
+                                                                <i class="fa-regular fa-eye-slash"></i>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <label for="text"
+                                                            class="text-Small-Bold text-color-normal mb-1">
+                                                            تاكيد الرقم السري الجديد
+                                                        </label>
+                                                        <div class="input-container position-relative ">
+                                                            <input type="password"
+                                                                class="position-relative input-one w-100 text-X-Small text-color-normal"
+                                                                placeholder="اعد كتابة الرقم السري ">
+                                                            <span class="input-icon-one  text-color-normal">
+                                                                <i class="fa-regular fa-eye-slash"></i>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="user-profile-img">
+                                                    <h3 class="text-Small-regular text-color-darck mb-3 mt-3">صورة
+                                                        البروفايل
+                                                    </h3>
+                                                    <div
+                                                        class="upload-container restrant-setting-uploads upload-offer position-relative mt-0 border-one">
+
+                                                        <div class="image-box position-relative">
+                                                            <input type="file" class="file-upload" id="file-upload-1"
+                                                                accept="image/*">
+
+                                                            <div class="upload-box user-profile-img-1">
+                                                                <label for="file-upload-1"
+                                                                    class="upload-label text-Small-Bold text-color-normal">
+                                                                    <i class="fa-regular fa-file-upload"></i>
+                                                                </label>
+                                                                <img class="uploaded-image" src="" alt="">
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="img-info">
+                                                            <div
+                                                                class="image-info mb-2 mt-2 d-flex justify-content-between align-items-center">
+                                                                <p class="text-Small-Bold"> صورة رقم 1 </p>
+                                                                <div class="d-flex align-items-center">
+                                                                    <a href="#" class="icon-box-tow me-2 ms-2"> <i
+                                                                            class="fas fa-pencil-square"></i> </a>
+                                                                    <h3 class="delete-icon delete-icon-id icon-bg-one">
+                                                                        <i class="fas fa-trash"></i>
+                                                                    </h3>
+                                                                </div>
+                                                                <!-- <p class="text-color-normal"> <span
+                                                                        id="image-size"></span>
+                                                                </p> -->
+                                                            </div>
+                                                            <div class="img-info" style="display: none;">
+                                                                <div class="image-info-one">
+                                                                    <!-- <p class="text-color-normal">
+                                                                    <span class="image-size"></span>
+                                                                </p>
+                                                                <span class="delete-icon" style="display: none;">
+                                                                    <i class="fas fa-trash"></i>
+                                                                </span> -->
+                                                                </div>
+                                                                <div class="progress-bar-container"
+                                                                    style="display: none;">
+                                                                    <div class="progress-bar"></div>
+                                                                    <p class="text-color-normal">
+                                                                        <span class="upload-percentage">0%</span>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+
+                                                        <p class="completion-message text-Small-Bold">تم الرفع بنجاح !
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- work with us -->
+                                <div class="content" id="workwithus">
+                                    <div class="user-page-header p-2 rounded-5 bg-white-1 d-flex justify-content-between
+                                        align-items-center">
+                                        <h3 class="text-Small-midium text-color-normal">اعمل معنا</h3>
+                                        <a href="" class="add-loaction">سحب الارباح</a>
+                                    </div>
+                                    <div class="work-with-us mt-3 bg-white-1 rounded-10 p-2">
+                                        <div class="">
+                                            <div class="row">
+                                                <div class="col-lg-4 ">
+                                                    <label for="text" class="text-Small-Bold text-color-normal mb-2">
+                                                        الاسم
+                                                    </label>
+                                                    <div class="input-container position-relative ">
+                                                        <input type="url"
+                                                            class="position-relative input-one w-100 text-X-Small text-color-normal"
+                                                            placeholder="نص افتراضي">
+                                                        <span class="input-icon-one  text-color-normal">
+                                                            <i class="fa-regular fa-user"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 ">
+                                                    <label for="text" class="text-Small-Bold text-color-normal mb-2">
+                                                        البريد الالكتروني
+                                                    </label>
+                                                    <div class="input-container position-relative ">
+                                                        <input type="url"
+                                                            class="position-relative input-one w-100 text-X-Small text-color-normal"
+                                                            placeholder="نص افتراضي">
+                                                        <span class="input-icon-one  text-color-normal">
+                                                            <i class="fa-regular fa-envelope"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 ">
+                                                    <label for="text" class="text-Small-Bold text-color-normal mb-2">
+                                                        المجال الذي تعمل فيه
+                                                    </label>
+                                                    <div class="input-container position-relative ">
+                                                        <input type="url"
+                                                            class="position-relative input-one w-100 text-X-Small text-color-normal"
+                                                            placeholder="تسويق">
+                                                        <span class="input-icon-one  text-color-normal">
+                                                            <i class="fa-regular fa-envelope"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 ">
+                                                    <label for="text" class="text-Small-Bold text-color-normal mb-2">
+                                                        الخبرة
+                                                    </label>
+                                                    <div class="input-container position-relative ">
+                                                        <input type="url"
+                                                            class="position-relative input-one w-100 text-X-Small text-color-normal"
+                                                            placeholder="5 سنوات في التسويق الرقمي">
+                                                        <span class="input-icon-one  text-color-normal">
+                                                            <i class="fa-regular fa-fast"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <label for="text"
+                                                                class="text-Small-Bold text-color-normal mb-2">
+                                                                الدولة
+                                                            </label>
+                                                            <div class="">
+                                                                <input type="text" id="country_selector2"
+                                                                    class="position-relative input-one w-100 text-X-Small text-color-normal"
+                                                                    placeholder="نص افتراضي">
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <label for="text"
+                                                                class="text-Small-Bold text-color-normal mb-2">
+                                                                المدينة
+                                                            </label>
+                                                            <div class="input-container position-relative ">
+                                                                <input type="url"
+                                                                    class="position-relative input-one w-100 text-X-Small text-color-normal"
+                                                                    placeholder=" الدوحة ">
+                                                                <span class="input-icon-one  text-color-normal">
+                                                                    <i class="fa-regular fa-envelope"></i>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <label for="text" class="text-Small-Bold text-color-normal mb-1">
+                                                        رقم الجوال
+                                                    </label>
+
+                                                    <div class="add-user-input position-relative">
+                                                        <input t type="tel" name="phone"
+                                                            class="input-one rounded-5 w-100 text-X-Small text-color-normal "
+                                                            placeholder="+249 99999999">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <label for="text"
+                                                        class="text-Small-Bold text-color-normal mb-1 mt-3">
+                                                        اشرح لنا خبرتك
+                                                    </label>
+                                                    <textarea name="" id=""
+                                                        class="textarea-tow w-100 text-X-Small text-color-normal"
+                                                        placeholder="5 سنوات في مجال التسويق مع عدة شركات منها: شركة1 و شركة 2">
+                                                </textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr class="mt-2 mb-2">
+                                        <div class="status-tow">
+                                            <div class="d-flex align-items-center">
+                                                <h3 class="text-color-darck text-Small-regular"> كود الكوبون : </h3>
+                                                <h3 class=" text-color-normal text-Small-Bold me-2 ms-2"> Gaza</h3>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <h3 class="text-color-darck text-Small-regular"> عدد العملاء المشتركين :
+                                                </h3>
+                                                <h3 class=" text-color-normal text-Small-Bold me-2 ms-2"> 500</h3>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <h3 class="text-color-darck text-Small-regular"> نسبة الارباح : </h3>
+                                                <h3 class=" text-color-normal text-Small-Bold me-2 ms-2"> 500</h3>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <h3 class="text-color-darck text-Small-regular"> المبلغ : </h3>
+                                                <h3 class=" text-color-normal text-Small-Bold me-2 ms-2"> 300 ريال</h3>
+                                            </div>
+                                        </div>
+                                        <div class="table-container">
+                                            <table class="table-one nowrap stripe hover row-border " id="datatable6"
+                                                style="width: 100% !important;">
+                                                <thead class="table-headre bg-custom-color-2">
+                                                    <tr class="primary-text-color text-X-Small">
+                                                        <th class="theme-color">اسم العميل </th>
+                                                        <th class="theme-color">تاريخ التسجيل </th>
+                                                        <th class="theme-color">المبلغ</th>
+                                                        <th class="text-center theme-color">الحالة</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="text-x-Small">
+                                                        <td><a href="6_user-info.html">محمد حسن</a></td>
+                                                        <td class="text-XX-Small"> 12/5/2025 </td>
+                                                        <td class="text-XX-Small"> 30 ريال</td>
+                                                        <td class="text-XX-Small text-center">
+                                                            <span class=" visit-done p-1 rounded-5">تم السحب</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="text-x-Small">
+                                                        <td><a href="6_user-info.html">محمد حسن</a></td>
+                                                        <td class="text-XX-Small"> 12/5/2025 </td>
+                                                        <td class="text-XX-Small"> 30 ريال</td>
+                                                        <td class="text-XX-Small text-center">
+                                                            <span class=" visit-done p-1 rounded-5">تم السحب</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="text-x-Small">
+                                                        <td><a href="6_user-info.html">محمد حسن</a></td>
+                                                        <td class="text-XX-Small"> 12/5/2025 </td>
+                                                        <td class="text-XX-Small"> 30 ريال</td>
+                                                        <td class="text-XX-Small text-center">
+                                                            <span class=" visit-done p-1 rounded-5">تم السحب</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="text-x-Small">
+                                                        <td><a href="6_user-info.html">محمد حسن</a></td>
+                                                        <td class="text-XX-Small"> 12/5/2025 </td>
+                                                        <td class="text-XX-Small"> 30 ريال </td>
+                                                        <td class="text-XX-Small text-center">
+                                                            <span class="visit-done p-1 rounded-5">تم السحب</span>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- my loaction -->
+                                <div class="content" id="my-locations">
+                                    <div class=" user-page-header p-2 rounded-5 bg-white-1 d-flex justify-content-between
+                                align-items-center">
+                                        <h3 class="text-Small-midium text-color-normal">عناوين</h3>
+                                        <a href="" class="add-loaction">اضافة عنوان</a>
+                                    </div>
+                                    <div class="location-box bg-white-1 rounded-10 p-2 mt-3">
+                                        <div class="loaction-right">
+                                            <span><i class="fa fa-home"></i></span>
+                                            <div class="">
+                                                <h3 class="text-Small-regular text-color-normal">المنزل</h3>
+                                                <p class="text-X-Small">32 شارع 543 مع شارع 324 - فكتوريا المعادي -
+                                                    القاهرة
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="">
+                                            <div class="loaction-box-option">
+                                                <a href="#">
+                                                    <span class="edit-icon-2"><i
+                                                            class="fa-solid fa-pencil-square"></i></span>
+                                                </a>
+                                                <a href="#">
+                                                    <span class="delete-icon-2"><i
+                                                            class="fa-regular fa-trash"></i></span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="location-box bg-white-1 rounded-10 p-2 mt-3">
+                                        <div class="loaction-right">
+                                            <span><i class="fa fa-home"></i></span>
+                                            <div class="">
+                                                <h3 class="text-Small-regular text-color-normal">المنزل</h3>
+                                                <p class="text-X-Small">32 شارع 543 مع شارع 324 - فكتوريا المعادي -
+                                                    القاهرة
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="">
+                                            <div lass="loaction-box-option">
+                                                <a href="#">
+                                                    <span class="edit-icon-2"><i
+                                                            class="fa-solid fa-pencil-square"></i></span>
+                                                </a>
+                                                <a href="#">
+                                                    <span class="delete-icon-2"><i
+                                                            class="fa-regular fa-trash"></i></span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- old order -->
+                                <div class="content" id="old-order">
+                                    <div class=" user-page-header p-2 rounded-5 bg-white-1">
+                                        <h3 class="text-Small-midium text-color-normal">طلباتي السابقة</h3>
+                                    </div>
+                                    <div class="old-order bg-white-1 mt-3 rounded-10">
+                                        <div
+                                            class="old-order-box ps-3 pe-3 pt-2 pb-1 d-flex justify-content-between align-items-center">
+                                            <div class="d-flex justify-content-between align-items-center flex-wrap">
+                                                <div class="order-number-1">
+                                                    <div class="">
+                                                        <h3 class="text-small text-color-normal mb-1">رقم الطلب</h3>
+                                                        <h3 class="text-Small-regular text-color-darck">91.46 ريال</h3>
+                                                    </div>
+                                                    <div class="">
+                                                        <div class="old-order-img-mobile">
+                                                            <img src="assets/image/items/05.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="old-order-img ms-3 me-3">
+                                                        <img src="assets/image/items/05.png" alt="">
+                                                    </div>
+                                                    <div class="h-100 d-flex flex-column justify-content-between">
+                                                        <h3
+                                                            class=" mb-2 text-Small-Bolder text-color-darck align-self-lg-start">
+                                                            برجر
+                                                            الفا هيتا الاصلي
+                                                            المميز
+                                                            الجديد
+                                                        </h3>
+                                                        <h3 class="text-small text-color-normal align-self-end">
+                                                            اضافة فلافل عادي بابا غنوج عادي اسكندراني عادي
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="raing-btn-total  d-flex justify-content-between align-items-center">
+                                                <div class="">
+                                                    <h3 class="text-Small-light text-color-normal">اجمالى</h3>
+                                                    <h3 class="text-Small-regular text-color-darck">91.55 ريال</h3>
+                                                </div>
+                                                <a href="#" class="add-rattings"> اضافة تقييم </a>
+                                            </div>
+                                        </div>
+                                        <hr class="p-0 m-0">
+                                        <div
+                                            class="d-flex justify-content-between align-items-center  ps-3 pe-3 pt-1 pb-2">
+                                            <div class="">
+                                                <div class="ratting-start text-color-normal">
+                                                    <span class=""><i class="fa fa-star"></i></span>
+                                                    <span class=""><i class="fa fa-star"></i></span>
+                                                    <span class=""><i class="fa fa-star"></i></span>
+                                                    <span class=""><i class="fa fa-star"></i></span>
+                                                    <span class=""><i class="fa fa-star"></i></span>
+                                                </div>
+                                                <p class="date-2 text-small text-color-normal">لم تقم بتقييم الطلب</p>
+                                            </div>
+                                            <h3 class="date-2 text-Small-regular text-color-normal">2 فبراير</h3>
+                                        </div>
+                                    </div>
+                                    <div class="old-order bg-white-1 mt-3 rounded-10">
+                                        <div
+                                            class="old-order-box ps-3 pe-3 pt-2 pb-1 d-flex justify-content-between align-items-center">
+                                            <div class="d-flex justify-content-between align-items-center flex-wrap">
+                                                <div class="order-number-1">
+                                                    <div class="">
+                                                        <h3 class="text-small text-color-normal mb-1">رقم الطلب</h3>
+                                                        <h3 class="text-Small-regular text-color-darck">91.46 ريال</h3>
+                                                    </div>
+                                                    <div class="">
+                                                        <div class="old-order-img-mobile">
+                                                            <img src="assets/image/items/05.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="old-order-img ms-3 me-3">
+                                                        <img src="assets/image/items/05.png" alt="">
+                                                    </div>
+                                                    <div class="h-100 d-flex flex-column justify-content-between">
+                                                        <h3
+                                                            class=" mb-2 text-Small-Bolder text-color-darck align-self-lg-start">
+                                                            برجر
+                                                            الفا هيتا الاصلي
+                                                            المميز
+                                                            الجديد
+                                                        </h3>
+                                                        <h3 class="text-small text-color-normal align-self-end">
+                                                            اضافة فلافل عادي بابا غنوج عادي اسكندراني عادي
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="raing-btn-total  d-flex justify-content-between align-items-center">
+                                                <div class="">
+                                                    <h3 class="text-Small-light text-color-normal">اجمالى</h3>
+                                                    <h3 class="text-Small-regular text-color-darck">91.55 ريال</h3>
+                                                </div>
+                                                <a href="#" class="view-rattings open-modal" data-modal="show-review">
+                                                    اضافة
+                                                    تقييم
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <hr class="p-0 m-0">
+                                        <div
+                                            class="d-flex justify-content-between align-items-center  ps-3 pe-3 pt-1 pb-2">
+                                            <div class="">
+                                                <div class="ratting-start text-color-normal">
+                                                    <span class="gold"><i class="fa fa-star"></i></span>
+                                                    <span class="gold"><i class="fa fa-star"></i></span>
+                                                    <span class="gold"><i class="fa fa-star"></i></span>
+                                                    <span class="gold"><i class="fa fa-star"></i></span>
+                                                    <span class="gold"><i class="fa fa-star"></i></span>
+                                                </div>
+                                                <p class="date-2 text-small text-color-normal">لم تقم بتقييم الطلب</p>
+                                            </div>
+                                            <h3 class="date-2 text-Small-regular text-color-normal">2 فبراير</h3>
+                                        </div>
+                                    </div>
+                                    <div class="old-order bg-white-1 mt-3 rounded-10">
+                                        <div
+                                            class="old-order-box ps-3 pe-3 pt-2 pb-1 d-flex justify-content-between align-items-center">
+                                            <div class="d-flex justify-content-between align-items-center flex-wrap">
+                                                <div class="order-number-1">
+                                                    <div class="">
+                                                        <h3 class="text-small text-color-normal mb-1">رقم الطلب</h3>
+                                                        <h3 class="text-Small-regular text-color-darck">91.46 ريال</h3>
+                                                    </div>
+                                                    <div class="">
+                                                        <div class="old-order-img-mobile">
+                                                            <img src="assets/image/items/05.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="old-order-img ms-3 me-3">
+                                                        <img src="assets/image/items/05.png" alt="">
+                                                    </div>
+                                                    <div class="h-100 d-flex flex-column justify-content-between">
+                                                        <h3
+                                                            class=" mb-2 text-Small-Bolder text-color-darck align-self-lg-start">
+                                                            برجر
+                                                            الفا هيتا الاصلي
+                                                            المميز
+                                                            الجديد
+                                                        </h3>
+                                                        <h3 class="text-small text-color-normal align-self-end">
+                                                            اضافة فلافل عادي بابا غنوج عادي اسكندراني عادي
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="raing-btn-total  d-flex justify-content-between align-items-center">
+                                                <div class="">
+                                                    <h3 class="text-Small-light text-color-normal">اجمالى</h3>
+                                                    <h3 class="text-Small-regular text-color-darck">91.55 ريال</h3>
+                                                </div>
+                                                <a href="#" class="view-rattings open-modal" data-modal="show-review">
+                                                    اضافة
+                                                    تقييم </a>
+                                            </div>
+                                        </div>
+                                        <hr class="p-0 m-0">
+                                        <div
+                                            class="d-flex justify-content-between align-items-center  ps-3 pe-3 pt-1 pb-2">
+                                            <div class="">
+                                                <div class="ratting-start text-color-normal">
+                                                    <span class="gold"><i class="fa fa-star"></i></span>
+                                                    <span class="gold"><i class="fa fa-star"></i></span>
+                                                    <span class="gold"><i class="fa fa-star"></i></span>
+                                                    <span class=""><i class="fa fa-star"></i></span>
+                                                    <span class=""><i class="fa fa-star"></i></span>
+                                                </div>
+                                                <p class="date-2 text-small text-color-normal">لم تقم بتقييم الطلب</p>
+                                            </div>
+                                            <h3 class="date-2 text-Small-regular text-color-normal">2 فبراير</h3>
+                                        </div>
+                                    </div>
+                                    <div class="old-order bg-white-1 mt-3 rounded-10">
+                                        <div
+                                            class="old-order-box ps-3 pe-3 pt-2 pb-1 d-flex justify-content-between align-items-center">
+                                            <div class="d-flex justify-content-between align-items-center flex-wrap">
+                                                <div class="order-number-1">
+                                                    <div class="">
+                                                        <h3 class="text-small text-color-normal mb-1">رقم الطلب</h3>
+                                                        <h3 class="text-Small-regular text-color-darck">91.46 ريال</h3>
+                                                    </div>
+                                                    <div class="">
+                                                        <div class="old-order-img-mobile">
+                                                            <img src="assets/image/items/05.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="old-order-img ms-3 me-3">
+                                                        <img src="assets/image/items/05.png" alt="">
+                                                    </div>
+                                                    <div class="h-100 d-flex flex-column justify-content-between">
+                                                        <h3
+                                                            class=" mb-2 text-Small-Bolder text-color-darck align-self-lg-start">
+                                                            برجر
+                                                            الفا هيتا الاصلي
+                                                            المميز
+                                                            الجديد
+                                                        </h3>
+                                                        <h3 class="text-small text-color-normal align-self-end">
+                                                            اضافة فلافل عادي بابا غنوج عادي اسكندراني عادي
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="raing-btn-total  d-flex justify-content-between align-items-center">
+                                                <div class="">
+                                                    <h3 class="text-Small-light text-color-normal">اجمالى</h3>
+                                                    <h3 class="text-Small-regular text-color-darck">91.55 ريال</h3>
+                                                </div>
+                                                <a href="#" class="view-rattings open-modal" data-modal="show-review">
+                                                    اضافة
+                                                    تقييم </a>
+                                            </div>
+                                        </div>
+                                        <hr class="p-0 m-0">
+                                        <div
+                                            class="d-flex justify-content-between align-items-center  ps-3 pe-3 pt-1 pb-2">
+                                            <div class="">
+                                                <div class="ratting-start text-color-normal">
+                                                    <span class="gold"><i class="fa fa-star"></i></span>
+                                                    <span class="gold"><i class="fa fa-star"></i></span>
+                                                    <span class=""><i class="fa fa-star"></i></span>
+                                                    <span class=""><i class="fa fa-star"></i></span>
+                                                    <span class=""><i class="fa fa-star"></i></span>
+                                                </div>
+                                                <p class="date-2 text-small text-color-normal">لم تقم بتقييم الطلب</p>
+                                            </div>
+                                            <h3 class="date-2 text-Small-regular text-color-normal">2 فبراير</h3>
+                                        </div>
+                                    </div>
+                                    <div class="old-order bg-white-1 mt-3 rounded-10">
+                                        <div
+                                            class="old-order-box ps-3 pe-3 pt-2 pb-1 d-flex justify-content-between align-items-center">
+                                            <div class="d-flex justify-content-between align-items-center flex-wrap">
+                                                <div class="order-number-1">
+                                                    <div class="">
+                                                        <h3 class="text-small text-color-normal mb-1">رقم الطلب</h3>
+                                                        <h3 class="text-Small-regular text-color-darck">91.46 ريال</h3>
+                                                    </div>
+                                                    <div class="">
+                                                        <div class="old-order-img-mobile">
+                                                            <img src="assets/image/items/05.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="old-order-img ms-3 me-3">
+                                                        <img src="assets/image/items/05.png" alt="">
+                                                    </div>
+                                                    <div class="h-100 d-flex flex-column justify-content-between">
+                                                        <h3
+                                                            class=" mb-2 text-Small-Bolder text-color-darck align-self-lg-start">
+                                                            برجر
+                                                            الفا هيتا الاصلي
+                                                            المميز
+                                                            الجديد
+                                                        </h3>
+                                                        <h3 class="text-small text-color-normal align-self-end">
+                                                            اضافة فلافل عادي بابا غنوج عادي اسكندراني عادي
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="raing-btn-total  d-flex justify-content-between align-items-center">
+                                                <div class="">
+                                                    <h3 class="text-Small-light text-color-normal">اجمالى</h3>
+                                                    <h3 class="text-Small-regular text-color-darck">91.55 ريال</h3>
+                                                </div>
+                                                <a href="#" class="view-rattings open-modal" data-modal="show-review">
+                                                    اضافة
+                                                    تقييم </a>
+                                            </div>
+                                        </div>
+                                        <hr class="p-0 m-0">
+                                        <div
+                                            class="d-flex justify-content-between align-items-center  ps-3 pe-3 pt-1 pb-2">
+                                            <div class="">
+                                                <div class="ratting-start text-color-normal">
+                                                    <span class="gold"><i class="fa fa-star"></i></span>
+                                                    <span class="gold"><i class="fa fa-star"></i></span>
+                                                    <span class=""><i class="fa fa-star"></i></span>
+                                                    <span class=""><i class="fa fa-star"></i></span>
+                                                    <span class=""><i class="fa fa-star"></i></span>
+                                                </div>
+                                                <p class="date-2 text-small text-color-normal">لم تقم بتقييم الطلب</p>
+                                            </div>
+                                            <h3 class="date-2 text-Small-regular text-color-normal">2 فبراير</h3>
+                                        </div>
+                                    </div>
+                                    <div class="old-order bg-white-1 mt-3 rounded-10">
+                                        <div
+                                            class="old-order-box ps-3 pe-3 pt-2 pb-1 d-flex justify-content-between align-items-center">
+                                            <div class="d-flex justify-content-between align-items-center flex-wrap">
+                                                <div class="order-number-1">
+                                                    <div class="">
+                                                        <h3 class="text-small text-color-normal mb-1">رقم الطلب</h3>
+                                                        <h3 class="text-Small-regular text-color-darck">91.46 ريال</h3>
+                                                    </div>
+                                                    <div class="">
+                                                        <div class="old-order-img-mobile">
+                                                            <img src="assets/image/items/05.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="old-order-img ms-3 me-3">
+                                                        <img src="assets/image/items/05.png" alt="">
+                                                    </div>
+                                                    <div class="h-100 d-flex flex-column justify-content-between">
+                                                        <h3
+                                                            class=" mb-2 text-Small-Bolder text-color-darck align-self-lg-start">
+                                                            برجر
+                                                            الفا هيتا الاصلي
+                                                            المميز
+                                                            الجديد
+                                                        </h3>
+                                                        <h3 class="text-small text-color-normal align-self-end">
+                                                            اضافة فلافل عادي بابا غنوج عادي اسكندراني عادي
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="raing-btn-total  d-flex justify-content-between align-items-center">
+                                                <div class="">
+                                                    <h3 class="text-Small-light text-color-normal">اجمالى</h3>
+                                                    <h3 class="text-Small-regular text-color-darck">91.55 ريال</h3>
+                                                </div>
+                                                <a href="#" class="view-rattings open-modal" data-modal="show-review">
+                                                    اضافة
+                                                    تقييم </a>
+                                            </div>
+                                        </div>
+                                        <hr class="p-0 m-0">
+                                        <div
+                                            class="d-flex justify-content-between align-items-center  ps-3 pe-3 pt-1 pb-2">
+                                            <div class="">
+                                                <div class="ratting-start text-color-normal">
+                                                    <span class="gold"><i class="fa fa-star"></i></span>
+                                                    <span class="gold"><i class="fa fa-star"></i></span>
+                                                    <span class=""><i class="fa fa-star"></i></span>
+                                                    <span class=""><i class="fa fa-star"></i></span>
+                                                    <span class=""><i class="fa fa-star"></i></span>
+                                                </div>
+                                                <p class="date-2 text-small text-color-normal">لم تقم بتقييم الطلب</p>
+                                            </div>
+                                            <h3 class="date-2 text-Small-regular text-color-normal">2 فبراير</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- favorite items -->
+                                <div class="content" id="myfavorite">
+                                    <div class=" user-page-header p-2 rounded-5 bg-white-1">
+                                        <h3 class="text-Small-midium text-color-normal">المفضلة</h3>
+                                    </div>
+                                    <div class="user-fav-items mt-3">
+                                        <div class="row row-gab">
+                                            <div class="col-lg-4 col-md-6 col-sm-6  sm-mb-2 mb-3">
+                                                <div class="items-three bg-white-1 h-100  p-3 rounded-10">
+                                                    <div
+                                                        class="items-three-header d-flex align-items-center justify-content-between">
+                                                        <div
+                                                            class="items-badge bg-gry rounded-2 p-1  d-flex align-items-center">
+                                                            <div class="badge-icon ">
+                                                                <img src="assets/image/icon-2/3.PNG" alt="">
+                                                            </div>
+                                                            <h3 class="text-X-Small text-color-normal">جديد</h3>
+                                                        </div>
+                                                        <div class="item-three-rattings">
+                                                            <div class="d-flex align-items-center">
+                                                                <span class="me-1 ms-1 gold"><i
+                                                                        class="fa fa-star"></i></span>
+                                                                <h3 class="text-Small-Bold text-color-normal">4.5</h3>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="items-three-img text-center mb-3 mt-3">
+                                                        <img src="assets/image/items/04.png" alt="items-img">
+                                                    </div>
+                                                    <div class="items-three-content text-center">
+                                                        <h3 class="main-title text-Small-Bolder text-color-darck mb-2">
+                                                            برجر
+                                                            الفا
+                                                            هيتا
+                                                            الاصلي المميز الجديد </h3>
+
+
+                                                        <div class="items-three-price mt-2 mb-2">
+                                                            <h3
+                                                                class="main-title text-Small-Bolder text-color-darck mb-2 gold">
+                                                                25
+                                                                ريال
+                                                            </h3>
+                                                        </div>
+
+                                                        <div
+                                                            class="items-three-footer d-flex justify-content-center mt-3">
+                                                            <a href="#" class="basket-shopping me-1 ms-1"
+                                                                title="add-to-cart">
+                                                                <i class="fa-regular fa-basket-shopping"></i>
+                                                            </a>
+                                                            <!-- <a href="#" class="heart me-1 ms-1" title="like">
+                                                        <i class="fa-thin fa-heart"></i>
+                                                    </a> -->
+                                                            <a href="#" class="heart-favorite me-1 ms-1" title="like">
+                                                                <i class="fa fa-heart"></i>
+                                                            </a>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-6  sm-mb-2 mb-3">
+                                                <div class="items-three bg-white-1 h-100  p-3 rounded-10">
+                                                    <div
+                                                        class="items-three-header d-flex align-items-center justify-content-between">
+                                                        <div
+                                                            class="items-badge bg-gry rounded-2 p-1  d-flex align-items-center">
+                                                            <div class="badge-icon ">
+                                                                <img src="assets/image/icon-2/3.PNG" alt="">
+                                                            </div>
+                                                            <h3 class="text-X-Small text-color-normal">جديد</h3>
+                                                        </div>
+                                                        <div class="item-three-rattings">
+                                                            <div class="d-flex align-items-center">
+                                                                <span class="me-1 ms-1 gold"><i
+                                                                        class="fa fa-star"></i></span>
+                                                                <h3 class="text-Small-Bold text-color-normal">4.5</h3>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="items-three-img text-center mb-3 mt-3">
+                                                        <img src="assets/image/items/04.png" alt="items-img">
+                                                    </div>
+                                                    <div class="items-three-content text-center">
+                                                        <h3 class="main-title text-Small-Bolder text-color-darck mb-2">
+                                                            برجر
+                                                            الفا
+                                                            هيتا
+                                                            الاصلي المميز الجديد </h3>
+
+
+                                                        <div class="items-three-price mt-2 mb-2">
+                                                            <h3
+                                                                class="main-title text-Small-Bolder text-color-darck mb-2 gold">
+                                                                25
+                                                                ريال
+                                                            </h3>
+                                                        </div>
+
+                                                        <div
+                                                            class="items-three-footer d-flex justify-content-center mt-3">
+                                                            <a href="#" class="basket-shopping me-1 ms-1"
+                                                                title="add-to-cart">
+                                                                <i class="fa-regular fa-basket-shopping"></i>
+                                                            </a>
+                                                            <!-- <a href="#" class="heart me-1 ms-1" title="like">
+                                                        <i class="fa-thin fa-heart"></i>
+                                                    </a> -->
+                                                            <a href="#" class="heart-favorite me-1 ms-1" title="like">
+                                                                <i class="fa fa-heart"></i>
+                                                            </a>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-6  sm-mb-2 mb-3">
+                                                <div class="items-three bg-white-1 h-100  p-3 rounded-10">
+                                                    <div
+                                                        class="items-three-header d-flex align-items-center justify-content-between">
+                                                        <div
+                                                            class="items-badge bg-gry rounded-2 p-1  d-flex align-items-center">
+                                                            <div class="badge-icon ">
+                                                                <img src="assets/image/icon-2/3.PNG" alt="">
+                                                            </div>
+                                                            <h3 class="text-X-Small text-coor-normal">جديد</h3>
+                                                        </div>
+                                                        <div class="item-three-rattings">
+                                                            <div class="d-flex align-items-center">
+                                                                <span class="me-1 ms-1 gold"><i
+                                                                        class="fa fa-star"></i></span>
+                                                                <h3 class="text-Small-Bold text-color-normal">4.5</h3>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="items-three-img text-center mb-3 mt-3">
+                                                        <img src="assets/image/items/04.png" alt="items-img">
+                                                    </div>
+                                                    <div class="items-three-content text-center">
+                                                        <h3 class="main-title text-Small-Bolder text-color-darck mb-2">
+                                                            برجر
+                                                            الفا
+                                                            هيتا
+                                                            الاصلي المميز الجديد </h3>
+
+
+                                                        <div class="items-three-price mt-2 mb-2">
+                                                            <h3
+                                                                class="main-title text-Small-Bolder text-color-darck mb-2 gold">
+                                                                25
+                                                                ريال
+                                                            </h3>
+                                                        </div>
+
+                                                        <div
+                                                            class="items-three-footer d-flex justify-content-center mt-3">
+                                                            <a href="#" class="basket-shopping me-1 ms-1"
+                                                                title="add-to-cart">
+                                                                <i class="fa-regular fa-basket-shopping"></i>
+                                                            </a>
+                                                            <!-- <a href="#" class="heart me-1 ms-1" title="like">
+                                                        <i class="fa-thin fa-heart"></i>
+                                                    </a> -->
+                                                            <a href="#" class="heart-favorite me-1 ms-1" title="like">
+                                                                <i class="fa fa-heart"></i>
+                                                            </a>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-6  sm-mb-2 mb-3">
+                                                <div class="items-three bg-white-1 h-100  p-3 rounded-10">
+                                                    <div
+                                                        class="items-three-header d-flex align-items-center justify-content-between">
+                                                        <div
+                                                            class="items-badge bg-gry rounded-2 p-1  d-flex align-items-center">
+                                                            <div class="badge-icon ">
+                                                                <img src="assets/image/icon-2/3.PNG" alt="">
+                                                            </div>
+                                                            <h3 class="text-X-Small text-color-normal">جديد</h3>
+                                                        </div>
+                                                        <div class="item-three-rattings">
+                                                            <div class="d-flex align-items-center">
+                                                                <span class="me-1 ms-1 gold"><i
+                                                                        class="fa fa-star"></i></span>
+                                                                <h3 class="text-Small-Bold text-color-normal">4.5</h3>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="items-three-img text-center mb-3 mt-3">
+                                                        <img src="assets/image/items/04.png" alt="items-img">
+                                                    </div>
+                                                    <div class="items-three-content text-center">
+                                                        <h3 class="main-title text-Small-Bolder text-color-darck mb-2">
+                                                            برجر
+                                                            الفا
+                                                            هيتا
+                                                            الاصلي المميز الجديد </h3>
+
+
+                                                        <div class="items-three-price mt-2 mb-2">
+                                                            <h3
+                                                                class="main-title text-Small-Bolder text-color-darck mb-2 gold">
+                                                                25
+                                                                ريال
+                                                            </h3>
+                                                        </div>
+
+                                                        <div
+                                                            class="items-three-footer d-flex justify-content-center mt-3">
+                                                            <a href="#" class="basket-shopping me-1 ms-1"
+                                                                title="add-to-cart">
+                                                                <i class="fa-regular fa-basket-shopping"></i>
+                                                            </a>
+                                                            <!-- <a href="#" class="heart me-1 ms-1" title="like">
+                                                        <i class="fa-thin fa-heart"></i>
+                                                    </a> -->
+                                                            <a href="#" class="heart-favorite me-1 ms-1" title="like">
+                                                                <i class="fa fa-heart"></i>
+                                                            </a>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-6  sm-mb-2 mb-3">
+                                                <div class="items-three bg-white-1 h-100  p-3 rounded-10">
+                                                    <div
+                                                        class="items-three-header d-flex align-items-center justify-content-between">
+                                                        <div
+                                                            class="items-badge bg-gry rounded-2 p-1  d-flex align-items-center">
+                                                            <div class="badge-icon ">
+                                                                <img src="assets/image/icon-2/3.PNG" alt="">
+                                                            </div>
+                                                            <h3 class="text-X-Small text-color-normal">جديد</h3>
+                                                        </div>
+                                                        <div class="item-three-rattings">
+                                                            <div class="d-flex align-items-center">
+                                                                <span class="me-1 ms-1 gold"><i
+                                                                        class="fa fa-star"></i></span>
+                                                                <h3 class="text-Small-Bold text-color-normal">4.5</h3>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="items-three-img text-center mb-3 mt-3">
+                                                        <img src="assets/image/items/04.png" alt="items-img">
+                                                    </div>
+                                                    <div class="items-three-content text-center">
+                                                        <h3 class="main-title text-Small-Bolder text-color-darck mb-2">
+                                                            برجر
+                                                            الفا
+                                                            هيتا
+                                                            الاصلي المميز الجديد </h3>
+
+
+                                                        <div class="items-three-price mt-2 mb-2">
+                                                            <h3
+                                                                class="main-title text-Small-Bolder text-color-darck mb-2 gold">
+                                                                25
+                                                                ريال
+                                                            </h3>
+                                                        </div>
+
+                                                        <div
+                                                            class="items-three-footer d-flex justify-content-center mt-3">
+                                                            <a href="#" class="basket-shopping me-1 ms-1"
+                                                                title="add-to-cart">
+                                                                <i class="fa-regular fa-basket-shopping"></i>
+                                                            </a>
+                                                            <!-- <a href="#" class="heart me-1 ms-1" title="like">
+                                                        <i class="fa-thin fa-heart"></i>
+                                                    </a> -->
+                                                            <a href="#" class="heart-favorite me-1 ms-1" title="like">
+                                                                <i class="fa fa-heart"></i>
+                                                            </a>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-6  sm-mb-2 mb-3">
+                                                <div class="items-three bg-white-1 h-100  p-3 rounded-10">
+                                                    <div
+                                                        class="items-three-header d-flex align-items-center justify-content-between">
+                                                        <div
+                                                            class="items-badge bg-gry rounded-2 p-1  d-flex align-items-center">
+                                                            <div class="badge-icon ">
+                                                                <img src="assets/image/icon-2/3.PNG" alt="">
+                                                            </div>
+                                                            <h3 class="text-X-Small text-color-normal">جديد</h3>
+                                                        </div>
+                                                        <div class="item-three-rattings">
+                                                            <div class="d-flex align-items-center">
+                                                                <span class="me-1 ms-1 gold"><i
+                                                                        class="fa fa-star"></i></span>
+                                                                <h3 class="text-Small-Bold text-color-normal">4.5</h3>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="items-three-img text-center mb-3 mt-3">
+                                                        <img src="assets/image/items/04.png" alt="items-img">
+                                                    </div>
+                                                    <div class="items-three-content text-center">
+                                                        <h3 class="main-title text-Small-Bolder text-color-darck mb-2">
+                                                            برجر
+                                                            الفا
+                                                            هيتا
+                                                            الاصلي المميز الجديد </h3>
+
+
+                                                        <div class="items-three-price mt-2 mb-2">
+                                                            <h3
+                                                                class="main-title text-Small-Bolder text-color-darck mb-2 gold">
+                                                                25
+                                                                ريال
+                                                            </h3>
+                                                        </div>
+
+                                                        <div
+                                                            class="items-three-footer d-flex justify-content-center mt-3">
+                                                            <a href="#" class="basket-shopping me-1 ms-1"
+                                                                title="add-to-cart">
+                                                                <i class="fa-regular fa-basket-shopping"></i>
+                                                            </a>
+                                                            <!-- <a href="#" class="heart me-1 ms-1" title="like">
+                                                        <i class="fa-thin fa-heart"></i>
+                                                    </a> -->
+                                                            <a href="#" class="heart-favorite me-1 ms-1" title="like">
+                                                                <i class="fa fa-heart"></i>
+                                                            </a>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-6  sm-mb-2 mb-3">
+                                                <div class="items-three bg-white-1 h-100  p-3 rounded-10">
+                                                    <div
+                                                        class="items-three-header d-flex align-items-center justify-content-between">
+                                                        <div
+                                                            class="items-badge bg-gry rounded-2 p-1  d-flex align-items-center">
+                                                            <div class="badge-icon ">
+                                                                <img src="assets/image/icon-2/3.PNG" alt="">
+                                                            </div>
+                                                            <h3 class="text-X-Small text-color-normal">جديد</h3>
+                                                        </div>
+                                                        <div class="item-three-rattings">
+                                                            <div class="d-flex align-items-center">
+                                                                <span class="me-1 ms-1 gold"><i
+                                                                        class="fa fa-star"></i></span>
+                                                                <h3 class="text-Small-Bold text-color-normal">4.5</h3>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="items-three-img text-center mb-3 mt-3">
+                                                        <img src="assets/image/items/04.png" alt="items-img">
+                                                    </div>
+                                                    <div class="items-three-content text-center">
+                                                        <h3 class="main-title text-Small-Bolder text-color-darck mb-2">
+                                                            برجر
+                                                            الفا
+                                                            هيتا
+                                                            الاصلي المميز الجديد </h3>
+
+
+                                                        <div class="items-three-price mt-2 mb-2">
+                                                            <h3
+                                                                class="main-title text-Small-Bolder text-color-darck mb-2 gold">
+                                                                25
+                                                                ريال
+                                                            </h3>
+                                                        </div>
+
+                                                        <div
+                                                            class="items-three-footer d-flex justify-content-center mt-3">
+                                                            <a href="#" class="basket-shopping me-1 ms-1"
+                                                                title="add-to-cart">
+                                                                <i class="fa-regular fa-basket-shopping"></i>
+                                                            </a>
+                                                            <!-- <a href="#" class="heart me-1 ms-1" title="like">
+                                                        <i class="fa-thin fa-heart"></i>
+                                                    </a> -->
+                                                            <a href="#" class="heart-favorite me-1 ms-1" title="like">
+                                                                <i class="fa fa-heart"></i>
+                                                            </a>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-6  sm-mb-2 mb-3">
+                                                <div class="items-three bg-white-1 h-100  p-3 rounded-10">
+                                                    <div
+                                                        class="items-three-header d-flex align-items-center justify-content-between">
+                                                        <div
+                                                            class="items-badge bg-gry rounded-2 p-1  d-flex align-items-center">
+                                                            <div class="badge-icon ">
+                                                                <img src="assets/image/icon-2/3.PNG" alt="">
+                                                            </div>
+                                                            <h3 class="text-X-Small text-color-normal">جديد</h3>
+                                                        </div>
+                                                        <div class="item-three-rattings">
+                                                            <div class="d-flex align-items-center">
+                                                                <span class="me-1 ms-1 gold"><i
+                                                                        class="fa fa-star"></i></span>
+                                                                <h3 class="text-Small-Bold text-color-normal">4.5</h3>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="items-three-img text-center mb-3 mt-3">
+                                                        <img src="assets/image/items/04.png" alt="items-img">
+                                                    </div>
+                                                    <div class="items-three-content text-center">
+                                                        <h3 class="main-title text-Small-Bolder text-color-darck mb-2">
+                                                            برجر
+                                                            الفا
+                                                            هيتا
+                                                            الاصلي المميز الجديد </h3>
+
+
+                                                        <div class="items-three-price mt-2 mb-2">
+                                                            <h3
+                                                                class="main-title text-Small-Bolder text-color-darck mb-2 gold">
+                                                                25
+                                                                ريال
+                                                            </h3>
+                                                        </div>
+
+                                                        <div
+                                                            class="items-three-footer d-flex justify-content-center mt-3">
+                                                            <a href="#" class="basket-shopping me-1 ms-1"
+                                                                title="add-to-cart">
+                                                                <i class="fa-regular fa-basket-shopping"></i>
+                                                            </a>
+                                                            <!-- <a href="#" class="heart me-1 ms-1" title="like">
+                                                        <i class="fa-thin fa-heart"></i>
+                                                    </a> -->
+                                                            <a href="#" class="heart-favorite me-1 ms-1" title="like">
+                                                                <i class="fa fa-heart"></i>
+                                                            </a>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-6  sm-mb-2 mb-3">
+                                                <div class="items-three bg-white-1 h-100  p-3 rounded-10">
+                                                    <div
+                                                        class="items-three-header d-flex align-items-center justify-content-between">
+                                                        <div
+                                                            class="items-badge bg-gry rounded-2 p-1  d-flex align-items-center">
+                                                            <div class="badge-icon ">
+                                                                <img src="assets/image/icon-2/3.PNG" alt="">
+                                                            </div>
+                                                            <h3 class="text-X-Small text-color-normal">جديد</h3>
+                                                        </div>
+                                                        <div class="item-three-rattings">
+                                                            <div class="d-flex align-items-center">
+                                                                <span class="me-1 ms-1 gold"><i
+                                                                        class="fa fa-star"></i></span>
+                                                                <h3 class="text-Small-Bold text-color-normal">4.5</h3>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="items-three-img text-center mb-3 mt-3">
+                                                        <img src="assets/image/items/04.png" alt="items-img">
+                                                    </div>
+                                                    <div class="items-three-content text-center">
+                                                        <h3 class="main-title text-Small-Bolder text-color-darck mb-2">
+                                                            برجر
+                                                            الفا
+                                                            هيتا
+                                                            الاصلي المميز الجديد </h3>
+
+
+                                                        <div class="items-three-price mt-2 mb-2">
+                                                            <h3
+                                                                class="main-title text-Small-Bolder text-color-darck mb-2 gold">
+                                                                25
+                                                                ريال
+                                                            </h3>
+                                                        </div>
+
+                                                        <div
+                                                            class="items-three-footer d-flex justify-content-center mt-3">
+                                                            <a href="#" class="basket-shopping me-1 ms-1"
+                                                                title="add-to-cart">
+                                                                <i class="fa-regular fa-basket-shopping"></i>
+                                                            </a>
+                                                            <!-- <a href="#" class="heart me-1 ms-1" title="like">
+                                                        <i class="fa-thin fa-heart"></i>
+                                                    </a> -->
+                                                            <a href="#" class="heart-favorite me-1 ms-1" title="like">
+                                                                <i class="fa fa-heart"></i>
+                                                            </a>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 
+    ############################################
+    ## footer 
+    ############################################
+    -->
+    <div class=" footer">
+        <div class="container-lg">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-sm-12 col-12">
+                    <div class="footer-logo">
+                        <img src="assets/image/Logo.png" alt="">
+                    </div>
+                    <p class="text-small text-color-normal mt-1 mb-1">
+                        المطعم هو المكان الذي تقدم فيه الماكولات والمشروبات للزبائنتم تشغيل
+                        المطاعم في بداية الامر على
+                        حوانب
+                        طرق السفر ليتمكن المسافرون من التوقف للراحة واستعادة حيويتهم
+                    </p>
+                    <div class=" d-flex align-items-center">
+                        <span><i class="fa-regular fa-mobile-phone"></i></span>
+                        <h3 class="text-X-Small me-2 ms-2">+243 883799377</h3>
+                        <span>|</span>
+                        <h3 class="text-X-Small me-2 ms-2">+977 776353882</h3>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-3 col-6">
+                    <div class="footer-link-1">
+                        <h3 class="main-title text-Small-Bolder text-color-darck mb-2">القائمة
+                        </h3>
+                        <ul>
+                            <li><a href="#" class="text-small">الرئيسية</a></li>
+                            <li><a href="#" class="text-small">نبذة عنا</a></li>
+                            <li><a href="#" class="text-small">الفروع</a></li>
+                            <li><a href="#" class="text-small">المميزات</a></li>
+                            <li><a href="#" class="text-small">تواصل معنا</a></li>
+                            <li><a href="#" class="text-small">نداء الموظف</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-3 col-6">
+                    <div class="footer-link-1">
+                        <h3 class="main-title text-Small-Bolder text-color-darck mb-2">راوابط
+                            هامة</h3>
+                        <ul>
+                            <li><a href="#" class="text-small">نبذة عنا</a></li>
+                            <li><a href="#" class="text-small">الفروع</a></li>
+                            <li><a href="#" class="text-small">المميزات</a></li>
+                            <li><a href="#" class="text-small">تواصل معنا</a></li>
+                            <li><a href="#" class="text-small">نداء الموظف</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-3 col-6">
+                    <div class="footer-link-1">
+                        <h3 class="main-title text-Small-Bolder text-color-darck mb-2">الخدمات
+                        </h3>
+                        <ul>
+
+                            <li><a href="#" class="text-small">المميزات</a></li>
+                            <li><a href="#" class="text-small">تواصل معنا</a></li>
+                            <li><a href="#" class="text-small">نداء الموظف</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-3 col-6">
+                    <div class="footer-link-1">
+                        <h3 class="main-title text-Small-Bolder text-color-darck mb-2">حسابي
+                        </h3>
+                        <ul>
+                            <li><a href="#" class="text-small">تسجيل الدخول</a></li>
+                            <li><a href="#" class="text-small">تسجيل</a></li>
+                            <li><a href="#" class="text-small">استعادة كلمة المرور</a></li>
+                            <li><a href="#" class="text-small">المميزات</a></li>
+                            <li><a href="#" class="text-small">المفضلة</a></li>
+                            <li><a href="#" class="text-small">طلباتي</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-lg">
+            <div class="payment-option bg-gry p-3 rounded-10 mt-3">
+                <h4 class="text-Small-lighter text-center mb-2 text-color-normal">طرق الدفع
+                    المتاحة</h4>
+                <ul class="  d-flex justify-content-center">
+                    <li><img src="assets/image/payment option/stc.svg" alt=""></li>
+                    <li><img src="assets/image/payment option/googlepay.svg" alt=""></li>
+                    <li><img src="assets/image/payment option/mastercard.svg" alt=""></li>
+                    <li><img src="assets/image/payment option/tamar.svg" alt=""></li>
+                    <li><img src="assets/image/payment option/tapey.svg" alt=""></li>
+                    <li><img src="assets/image/payment option/visa.svg" alt=""></li>
+                    <li><img src="assets/image/payment option/mada.svg" alt=""></li>
+                    <li><img src="assets/image/payment option/نقدا.svg" alt=""></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="payment-option p-3 rounded-10 mb-4 ">
+                <h4 class="text-Small-lighter text-center mb-2 text-color-normal">طرق الشحن</h4>
+                <ul class="  d-flex justify-content-center">
+                    <li><img src="assets/image/deilvvey/armax.svg" alt=""></li>
+                    <li><img src="assets/image/deilvvey/exprex.svg" alt=""></li>
+                    <li><img src="assets/image/deilvvey/nagel.svg" alt=""></li>
+                    <li><img src="assets/image/deilvvey/dhl.svg" alt=""></li>
+                    <li><img src="assets/image/deilvvey/mprsall.svg" alt=""></li>
+                    <li><img src="assets/image/deilvvey/zagel.svg" alt=""></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="payment-option p-3 rounded-10 blue rounded-10 ">
+                <h4 class="text-Small-lighter text-center text-color-white">جميع الحقوق محفوظة
+                    لنا2024 </h4>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/script/lib/jquery.min.js"></script>
+
+    <script src="assets/script/lib/emoji.min.js"></script>
+    <script src="assets/script/lib/owl.carousel.min.js"></script>
+    <script src="assets/script/lib/international-telephone-input.js"></script>
+    <script src="assets/script/lib/datatable-bootstrapp.js"></script>
+    <script src="assets/script/lib/datatables.js"></script>
+
+
+    <script src="assets/script/lib/countrySelect.min.js"></script>
+    <script src="assets/script/lib/jquery.mousewheel.js"></script>
+    <script src="assets/script/lib/jquery.mCustomScrollbar.js"></script>
+    <script src="assets/script/table.js"></script>
+
+    <script src="assets/script/mian.js"></script>
+
+</body>
+
+</html>
