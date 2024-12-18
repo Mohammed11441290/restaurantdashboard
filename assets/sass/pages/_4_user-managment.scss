@@ -1,0 +1,203 @@
+.serach-one .search-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-49%);
+    // padding: 7px 11px;
+    cursor: pointer;
+    right: 8px;
+}
+// .serach-one .input-one {
+//     height: 0px;
+// }
+
+.icon-tow i {
+    padding: 7px;
+    font-size: 17px;
+    border-radius: 8px;
+    background-color: var(--primary-color-red-light-active);
+    color: var(--primary-color-red-Normal);
+}
+.user-info-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .main-section {
+   height: 100%;
+  }
+// user madl boc
+.add-user-box {
+    width: 650px !important;
+}
+.add-user-input input {
+    position: relative;
+    padding-left: 32px;
+}
+
+.add-user-input i {
+    position: absolute;
+    left: 12px;
+    top: 56%;
+    transform: translatey(-50%);
+}
+
+
+.iti {
+    position: relative;
+    display: inline-block;
+}
+
+input[type=tel] {
+    padding-right: 6px;
+    padding-left: 52px;
+    margin-left: 0;
+
+    position: relative;
+    z-index: 0;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    margin-right: 0;
+    border: 1px solid #CCC;
+    width: 270px;
+    height: 35px;
+    /* padding: 6px 12px; */
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 100%;
+    color: inherit;
+}
+
+
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.modal-box {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+     width: 350px;
+    padding: 20px;
+    background: var(--surface-bright);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    z-index: 7;
+}
+
+
+
+
+.add-items-input-one {
+    padding: 3px 4px;
+    width: 140px;
+    border-radius: 6px;
+    border: 1px solid var(--input-border-color);
+    font-family: var(--cairo-Bold);
+    font-size: 11px;
+}
+
+.add-items-one {
+    background-color:var(--primary-color-Normal);
+    padding: 7px 10px;
+    border: none;
+    color: var(--text-color-light);
+    border-radius: 6px;
+}
+.list-items-one {
+    // height: 40px;
+    margin-top: 10px;
+}
+#item-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+#item-list li {
+    background-color: var(--text-color-light);
+    padding: 1px 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--cairo-Regular);
+    font-size: 13px;
+}
+
+#item-list li .delete-item {
+    color: red;
+    cursor: pointer;
+    margin-left: 10px;
+    padding: 7px;
+    width: 10px;
+    height: 11px;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    border-radius: 10px;
+}
+
+.dayly-works .qtagselect .qtagselect__container {
+    width: 100%;
+} 
+.dayly-works .qtagselect .qtagselect__container .qtagselect__choices {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 14px 16px;
+} 
+.dayly-works .qtagselect .qtagselect__container .qtagselect__choices .qtagselect__choice, 
+.qtagselect__del {
+    display: flex;
+    align-items: center;
+} 
+.qtagselect__choice .qtagselect__del{
+    position: relative;
+    display: flex;
+    right: 0px;
+    top: 0px;
+}
+.qtagselect__choice .qtagselect__del i{
+    color: var(--primary-color-Light);
+    background-color: var(--text-color-Normal);
+    padding: 4px 5px;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+}
+.qtagselect__choice {
+    padding: 14px 20px;
+    font-family: var(--cairo-Bold);
+}
+.dayly-works .qtagselect .qtagselect__container .qtagselect__choices .qtagselect__choice {
+    background-color: var(--primary-color-Light);
+    border-radius: 19px;
+}
+.qtagselect__placeholder {
+    color: #999999;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }

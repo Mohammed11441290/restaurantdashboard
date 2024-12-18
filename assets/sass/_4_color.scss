@@ -1,0 +1,83 @@
+
+/* color */
+.text-color-white {
+   color: var(--primary-color-white);
+}
+.primary-text-color {
+    color: var(--primary-color-Normal);
+}
+.text-color-normal {
+    color: var(--text-color-Normal);
+}
+.text-color-darck {
+    color: var(--text-color-Darker);
+}
+
+
+// theme -chang
+.red {
+    background-color: #FA5050;
+}
+.green {
+    background-color: #4BF9A5;
+}
+.yellow {
+    background-color: #F9F24B;
+}
+.orange {
+    background-color: #F9944B;
+}
+.blue {
+    background-color: #634BF9;
+}
+.purple {
+    background-color: #E04BF9;
+}
+.gold {
+    color: var(--secondary-color-Normal);
+}
+.bg-white-1 {
+    background-color: var(--primary-color-white);
+}
+.bg-gry {
+    background-color: var(--primary-color-Light);
+  }
+
+.color-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.color-btn[data-color="red"] {
+    background-color: red;
+    color: white;
+}
+
+.color-btn[data-color="green"] {
+    background-color: green;
+    color: white;
+}
+
+.color-btn[data-color="yellow"] {
+    background-color: #F9F24B;
+    color: white;
+}
+.color-btn[data-color="orange"] {
+    background-color: #F9944B;
+    color: white;
+}
+.color-btn[data-color="purple"] {
+    background-color: #E04BF9;
+    color: white;
+}
+
+.curent-theme-color {
+    transition: background-color 0.3s;
+}
+.bg-custom-color {
+    transition: background-color 0.3s;
+}

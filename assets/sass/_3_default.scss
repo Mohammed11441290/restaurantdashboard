@@ -1,0 +1,124 @@
+
+/* Reset some default browser styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    
+}
+@media print{
+    // header{
+    //     // display: none;
+    //     // padding: 20px;
+    // }
+    body {
+        padding: 20px;
+    }
+    #archive-invoice, 
+    #new-order-invoice, 
+    #total-invoices {
+        width: 350px;
+        border: 1px solid gray;
+    }
+    #tablecontent {
+        width: 100%;
+        border-radius: 10px;
+        border: 1px solid gray;
+        padding: 10px;
+    }
+   
+
+}
+
+body {
+    background-color:var(--surface-container) ;
+    position: relative;
+}
+
+p,ul {
+    margin: 0px;
+    padding: 0px;
+}
+h2, h3,h4, h5, h6 {
+    margin: 0px;
+    padding: 0px;
+
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+// .col-lg-8, .col-lg-4, .col-lg-3 {
+//     margin-top: 10px;
+// }   
+/* img {
+    width: 100%;
+    height: 100%;
+} */
+
+
+// lang setting
+.lang-changer {
+    background-color: var(--surface-container);
+    width: fit-content;
+    padding: 3px 3px;
+    border-radius: 8px;
+    // position: absolute;
+ 
+  }
+  #btn-ar {
+    border: 1;
+    border: none;
+    padding: 7px;
+    border-radius: 6px;
+    background-color: white;
+  }
+  #btn-en {
+    border: 1;
+    border: none;
+    padding: 7px;
+    border-radius: 6px;
+    background-color: white;
+  }
+.lang-changer-2 {
+    background-color: var(--surface-container);
+    width: fit-content;
+    padding: 3px 3px;
+    border-radius: 8px;
+    // position: absolute;
+    bottom: 23px;
+    left: 10px;
+    z-index: 10;
+  }
+  #btn-ar-2 {
+    border: 1;
+    border: none;
+    padding: 7px;
+    border-radius: 6px;
+    background-color: white;
+  }
+  #btn-en-2 {
+    border: 1;
+    border: none;
+    padding: 7px;
+    border-radius: 6px;
+    background-color: white;
+  }
+  // .lang-changer-2 {
+  //   display: none;
+  // }
+  #customSearchBox {
+    color: var(--text-color-Normal);
+  }
+
+button.active {
+    background-color: #000000 !important;
+    color: white;
+}
+
+#mCSB_1_scrollbar_vertical {
+  right: -11px;
+}
+

@@ -1,0 +1,283 @@
+// ##################################
+//      Arabic lang suport
+// ##################################
+
+// top
+
+html[lang="ar"] .user-info {
+  text-align: start;
+}
+
+html[lang="ar"] .color-slection {
+  right: -180px;
+}
+html[lang="ar"] .user-box {
+  right: 0px;
+}
+html[lang="ar"] .input-icon-one {
+  right: auto;
+  left: 10px;
+}
+html[lang="ar"] .input-container .input-one {
+  padding-right: 9px;
+}
+
+// char js
+html[lang="ar"] .items-name {
+  margin-right: 10px;
+}
+html[lang="ar"] #details2 li,
+#details4 li,
+#details3 li {
+  padding-right: 27px;
+}
+html[lang="ar"] .cahrt-one-content div {
+  margin-right: 0px;
+}
+html[lang="ar"] .cahrt-one-content div h4 {
+  margin-right: 0px;
+}
+html[lang="ar"] .order-status {
+  margin-left: 20px;
+}
+html[lang="ar"] .fa-arrow-right::before {
+  content: "\f060";
+}
+html[lang="ar"] .stepper-item::before {
+  left: 47%;
+}
+html[lang="ar"] .stepper-item.completed::after {
+  left: -131px;
+}
+html[lang="ar"] .add-user-input input {
+  padding-right: 32px;
+  text-align: right;
+}
+html[lang="ar"] .add-user-input i {
+  right: 12px;
+  display: inline-table;
+}
+html[lang="ar"] .toggle-btn.active .toggle-circle {
+  transform: translateX(-26px);
+}
+html[lang="ar"] .delete-item {
+  margin-right: 7px;
+  margin-left: 0px;
+}
+html[lang="ar"] .item-list li {
+  padding-right: 8px;
+  padding-left: 0px;
+}
+html[lang="ar"] .upload-box-1 {
+  margin-left: 5px;
+}
+html[lang="ar"] tr td:first-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+html[lang="ar"] tr td:last-child {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+html[lang="ar"] .fa-arrow-alt-right::before,
+.fa-right::before {
+  content: "\f355";
+}
+html[lang="ar"] .color-slection::before {
+  left: 16px;
+}
+html[lang="ar"] .active-link-one {
+  border-radius: 50px 0px 0px 50px;
+}
+html[lang="ar"] .main-menu {
+  padding-left: 10px;
+}
+html[lang="ar"] .dropdown-container {
+  border-radius: 20px 0px 0px 20px;
+}
+html[lang="ar"] .message-icon {
+  left: 13px;
+  right: auto;
+}
+html[lang="ar"] #mCSB_1_scrollbar_vertical {
+  left: -11px;
+  right: auto;
+}
+html[lang="ar"] .uploaded-text {
+  padding-right: 10px;
+  //   padding-inline: ;
+  //   padding-right: auto;
+}
+html[lang="ar"] .accordion {
+  text-align: right;
+}
+html[lang="ar"] .accordion::after {
+  float: left;
+}
+html[lang="ar"] .password-container .toggle-password {
+  left: 10px;
+  right: auto;
+}
+html[lang="ar"] .add-rattings , .view-rattings {
+  margin-right: 11px;
+  margin-left: 0px;
+}
+
+html[lang="ar"] .country-select .selected-flag {
+  padding: 0 0 0 0px;
+}
+html[lang="ar"] .country-select.inside .selected-flag {
+    width: 35px;
+}
+html[lang="ar"] .country-select .selected-flag .flag {
+  right: 7px;
+}
+html[lang="ar"] .country-select .country-list-1 .country {
+    text-align: right;
+}
+html[lang="ar"] .settings span {
+  margin-right: 4px;
+}
+html[lang="ar"] .show-option-menu {
+  right: 0px;
+}
+// ###############################
+// #### user managnemt   #########
+// ###############################
+
+html[lang="ar"] .serach-one .search-btn {
+  left: 8px;
+  right: auto;
+}
+html[lang="ar"] .country-list {
+  left: 0px;
+}
+html[lang="ar"] input[type="tel"] {
+  padding-right: 59px;
+  padding-left: 11px;
+}
+
+@media only screen and (max-width: 390px) {
+  html[lang="ar"] .sms {
+    right: -200px;
+  }
+  html[lang="ar"] .notification {
+    right: -199px;
+  }
+  html[lang="ar"] .toggle-btn.active .toggle-circle {
+    transform: translateX(-18px);
+  }
+  html[lang="ar"] .order-status {
+    margin-left: 0px;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  html[lang="ar"] .toggle-btn.active .toggle-circle {
+    transform: translateX(-25px);
+  }
+  html[lang="ar"] .sms {
+    right: -175px;
+  }
+  html[lang="ar"] .notification {
+    right: -232px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  html[lang="ar"] .sms {
+    right: -200px;
+  }
+  html[lang="ar"] .notification {
+    right: -199px;
+  }
+  html[lang="ar"] .toggle-btn.active .toggle-circle {
+    transform: translateX(-25px);
+  }
+  html[lang="ar"] .order-status {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+.menu1 > li {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-toggle .arrow {
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  margin-left: 10px;
+}
+
+.dropdown-toggle .arrow.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.dropdown-menu1 {
+  display: none;
+  position: absolute;
+  background-color: var(--surface-bright);
+  box-shadow: 0px 8px 16px 0px rgb(0, 0, 0);
+  z-index: 1;
+  min-width: 186%;
+  border-radius: 5px;
+  overflow: hidden;
+  top: 100%; /* Position below the parent */
+  right: 13px;
+}
+
+.dropdown-menu1 li {
+  list-style-type: none;
+  padding: 0px 10px !important;
+
+  padding: 0px 0px !important;
+}
+
+.dropdown-menu1 li a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-menu1 li a:hover {
+  background-color: var(--surface-bright);
+  box-shadow: 0px 8px 16px 0px rgb(0, 0, 0);
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.icon img {
+  vertical-align: middle;
+}
+
+.footer {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px 5px;
+  background-color: var(--surface-bright);
+}
+
+.my-svg-object {
+  filter: invert(29%) sepia(100%) saturate(7485%) hue-rotate(190deg)
+    brightness(96%) contrast(106%);
+}
